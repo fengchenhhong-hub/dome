@@ -1,6 +1,6 @@
 {
   "source": "https://feng-content-work-20261022.fengchenhhong.chatgpt.site/",
-  "source_commit": "f2e91cfe803adef2460c3f1d5cbfdcd282fbe6e7",
+  "source_commit": "7e1e11c33ee187057926dfd14c5c5d545045e04a",
   "files": [
     {
       "path": "assets/FONT-LICENSE.txt",
@@ -1408,33 +1408,18 @@
       "sha256": "597f06b4ecec98b7f363c214d03dba3164011f3f846fa632e15f9ad03d95c18b"
     }
   ],
-  "assembled": [
+  "derived": [
     {
       "path": "assets/konglou-lite-720p.mp4",
-      "bytes": 73554325,
-      "sha256": "98721ebf415d6f2513b0ff3f3534b13342f36cd1ce8f0b56756bfdcc22bc8e71",
-      "parts": [
-        {
-          "path": "assets/transfer-lite/part-00.bin",
-          "bytes": 20971520,
-          "sha256": "28efafaf5c4cda19c627c4d344538d53d31c3f1d001f1a76b85b5bc11e3cfc22"
-        },
-        {
-          "path": "assets/transfer-lite/part-01.bin",
-          "bytes": 20971520,
-          "sha256": "8c4c2063b32664b1a1a351be9a07839fcb9d27a40f5477c6ca5b1242c13c3e6c"
-        },
-        {
-          "path": "assets/transfer-lite/part-02.bin",
-          "bytes": 20971520,
-          "sha256": "0168fec21a1c516db06456327bbcc19b96813c8c01e90da9f61c18e597f384d9"
-        },
-        {
-          "path": "assets/transfer-lite/part-03.bin",
-          "bytes": 10639765,
-          "sha256": "a4cea22013aaef8e6c721a96eb0f9ae93c36b05a0e55886d1a3e6df454fa8c4d"
-        }
-      ]
+      "source_playlist": "assets/film-lite/index.m3u8",
+      "expected": {
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "width": 1280,
+        "height": 720,
+        "duration_s": 609.24,
+        "duration_tolerance_s": 1.0
+      }
     }
   ]
 }
