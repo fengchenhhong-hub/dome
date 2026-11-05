@@ -1391,21 +1391,6 @@
       "path": "assets/tutorial.mp4",
       "bytes": 10742630,
       "sha256": "9c7c59f83963418a9b4cde8873b72a260e7f43693b2011dc3f5a071139e63807"
-    },
-    {
-      "path": "index.html",
-      "bytes": 35005,
-      "sha256": "0ae88bbf552b1098ce5f92dca83b4ccd9bf62804edce4c080ba0747bbfc1d7eb"
-    },
-    {
-      "path": "room.css",
-      "bytes": 14706,
-      "sha256": "f9d3d3cc9d0c2c3ebe2fd0beae69dfbb1e77640cd589a6cc9a71dc0c448812ad"
-    },
-    {
-      "path": "room.js",
-      "bytes": 12938,
-      "sha256": "597f06b4ecec98b7f363c214d03dba3164011f3f846fa632e15f9ad03d95c18b"
     }
   ],
   "derived": [
