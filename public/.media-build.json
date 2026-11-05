@@ -1,0 +1,14 @@
+{
+  "assets/konglou-lite-720p.mp4": {
+    "bytes": 73554325,
+    "input_fingerprint": "3f61c4bce610e4abc470382ada452ee99e520f94fb2de9b338ce6c7ba4d261f1",
+    "media": {
+      "audio_codec": "aac",
+      "duration_s": 609.262969,
+      "height": 720,
+      "video_codec": "h264",
+      "width": 1280
+    },
+    "sha256": "6a8118c2320974007c60d7f85975137c45e00c25afd107727616c762aebfc837"
+  }
+}
