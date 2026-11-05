@@ -1,6 +1,6 @@
 {
   "source": "https://feng-content-work-20261022.fengchenhhong.chatgpt.site/",
-  "source_commit": "3f9bbe59db22772cc569a712220c04f5519cfb35",
+  "source_commit": "f2e91cfe803adef2460c3f1d5cbfdcd282fbe6e7",
   "files": [
     {
       "path": "assets/FONT-LICENSE.txt",
@@ -13,14 +13,19 @@
       "sha256": "ca8773cf798c7ed997d4dd7c8e23c348699f8d5b7462636694cc14de6cda12db"
     },
     {
+      "path": "assets/ai-cover-medium.jpg",
+      "bytes": 59924,
+      "sha256": "294d3a36fe4b909c6836b67cb932b02fb95cf1d8f0efb3d2e4161145a4986288"
+    },
+    {
       "path": "assets/ai-demo.mp4",
       "bytes": 3580905,
       "sha256": "f8d42cc08d1c53f09a2d64ef42391e81580de62a529edaa186689f6840992638"
     },
     {
       "path": "assets/ai-poster.jpg",
-      "bytes": 23747,
-      "sha256": "2e4367bf143ac3cda9a9a482f23de681366b25985ef8b8a0cd1f76931d0e7815"
+      "bytes": 59924,
+      "sha256": "294d3a36fe4b909c6836b67cb932b02fb95cf1d8f0efb3d2e4161145a4986288"
     },
     {
       "path": "assets/cake-fruit.jpg",
@@ -558,6 +563,781 @@
       "sha256": "dac0cb00f67e49c0b6baa5c62195198fb64dc88dcedee99562374d7a43e5fa18"
     },
     {
+      "path": "assets/film-lite/index.m3u8",
+      "bytes": 5369,
+      "sha256": "1aed4ba477196ae0da5076a00e2c46e0a9766de617db7a7a6ab1e05d3f8b1e3d"
+    },
+    {
+      "path": "assets/film-lite/init.mp4",
+      "bytes": 1402,
+      "sha256": "9b69882255b5b62e09efae2fe9e03007592fd58fc578cb4cfe4444e95c436d52"
+    },
+    {
+      "path": "assets/film-lite/segment-000.m4s",
+      "bytes": 416974,
+      "sha256": "c1c322079bbd71551d16c5fd4a15da102011234fbe1f8980bbcdda93c0a749f9"
+    },
+    {
+      "path": "assets/film-lite/segment-001.m4s",
+      "bytes": 356005,
+      "sha256": "ac29b62b9346a7dc12b35d026053083d1c9ce630e9412e21bd83f82f330b67b3"
+    },
+    {
+      "path": "assets/film-lite/segment-002.m4s",
+      "bytes": 561086,
+      "sha256": "1e5ba3e9559b5d9948a9644907f45358b05765fc66a13c363d2d62bc8515e639"
+    },
+    {
+      "path": "assets/film-lite/segment-003.m4s",
+      "bytes": 494468,
+      "sha256": "c99001a1b86ac4825ec470fec3f7251e524d87ada996789f70dfbd6b093d8d82"
+    },
+    {
+      "path": "assets/film-lite/segment-004.m4s",
+      "bytes": 475124,
+      "sha256": "abdb1a46babe55749e2118cc0af91c3897a35e5c118aad33c16d7466d4e88055"
+    },
+    {
+      "path": "assets/film-lite/segment-005.m4s",
+      "bytes": 460797,
+      "sha256": "56267faa38888f16d026601bba0db3654026739f64be6e1d91620f8b507bf6ad"
+    },
+    {
+      "path": "assets/film-lite/segment-006.m4s",
+      "bytes": 667532,
+      "sha256": "5dfad75e29e4a29001bccfd31a3cd282688ba1d12320b6ac1f6aca12e5e523ee"
+    },
+    {
+      "path": "assets/film-lite/segment-007.m4s",
+      "bytes": 371744,
+      "sha256": "037d4a5049914cfa814f3bf9099cbaa0e639d1acff8ab10b72400f7f31295812"
+    },
+    {
+      "path": "assets/film-lite/segment-008.m4s",
+      "bytes": 600040,
+      "sha256": "7da3e1388b260437acd54232c2bdde5958de007eff11e8951e4bb6465c26693e"
+    },
+    {
+      "path": "assets/film-lite/segment-009.m4s",
+      "bytes": 163310,
+      "sha256": "410a4ba2113aa517f7bdd73856c30fbfa72b1b59990669f47e4ecee3ca79c667"
+    },
+    {
+      "path": "assets/film-lite/segment-010.m4s",
+      "bytes": 694594,
+      "sha256": "a77d56fb4698704c9a931071b25b28e2e9d548418575479f3f6585415c1616f0"
+    },
+    {
+      "path": "assets/film-lite/segment-011.m4s",
+      "bytes": 625435,
+      "sha256": "7ed1a0bb318be682d8678b7e0ac9c7a401d0bc27fcfa082980c94c297b293464"
+    },
+    {
+      "path": "assets/film-lite/segment-012.m4s",
+      "bytes": 674011,
+      "sha256": "101452cba4e18d979395471501bff757f4ee4a5751d07aa498e01e2ce241e7cd"
+    },
+    {
+      "path": "assets/film-lite/segment-013.m4s",
+      "bytes": 597477,
+      "sha256": "df0e3cbe56b86a8025ede43bb6bcaf7d713c85c6e631d376092f3db259fb62c2"
+    },
+    {
+      "path": "assets/film-lite/segment-014.m4s",
+      "bytes": 542567,
+      "sha256": "c1679c8ffa964595e21c69413315c4f627b9d3ea5c4a089b4b0a0aaf027c32c8"
+    },
+    {
+      "path": "assets/film-lite/segment-015.m4s",
+      "bytes": 492413,
+      "sha256": "5d4b773c3192c839d3d5da0bf62c68ba9be4221687122adeb7e40428578fd2ec"
+    },
+    {
+      "path": "assets/film-lite/segment-016.m4s",
+      "bytes": 409179,
+      "sha256": "ff276823bef6140dc0fbef61fead67e1090e9248e093e40560eb4dca5e636ebe"
+    },
+    {
+      "path": "assets/film-lite/segment-017.m4s",
+      "bytes": 562116,
+      "sha256": "97a315e88366506e26243488a34d511a38505e25d3831d82ded771c424312f43"
+    },
+    {
+      "path": "assets/film-lite/segment-018.m4s",
+      "bytes": 573893,
+      "sha256": "cc586fc9a7a7205a36b6165b79549e5031b06fe1ededd5ca931a742dd376241f"
+    },
+    {
+      "path": "assets/film-lite/segment-019.m4s",
+      "bytes": 525442,
+      "sha256": "4cdeb42e91110dbe4a0b461fb79dfe35cf6cbc77591452601e5728bbea48f299"
+    },
+    {
+      "path": "assets/film-lite/segment-020.m4s",
+      "bytes": 498393,
+      "sha256": "de6d10be3cfc75fdb620453f8bace516a915bebb15d9b60f7f82e262e7a325b2"
+    },
+    {
+      "path": "assets/film-lite/segment-021.m4s",
+      "bytes": 562840,
+      "sha256": "3f28c931ced8aa6b8ebbfcf7ecbdd3719a5ec1150644e51bc003ad5fb4b6b796"
+    },
+    {
+      "path": "assets/film-lite/segment-022.m4s",
+      "bytes": 566769,
+      "sha256": "14fc2a7c9e8da61cfd321ba0dc29683df81e8852354e84821b6c3d3d3950f8b7"
+    },
+    {
+      "path": "assets/film-lite/segment-023.m4s",
+      "bytes": 446255,
+      "sha256": "80ffc1e0f1cf93941fa2843de42c1b5f2e1e6c9909ccbd558d17cac5ed00b53b"
+    },
+    {
+      "path": "assets/film-lite/segment-024.m4s",
+      "bytes": 581140,
+      "sha256": "b7418272692ac422429a966a556467b5387c7b368168ae2a0a392ba20cf14d3d"
+    },
+    {
+      "path": "assets/film-lite/segment-025.m4s",
+      "bytes": 672171,
+      "sha256": "ea92d303a10ffc20f189fdf83ea22f34501e376330ef30403ddbdf41e8ae0950"
+    },
+    {
+      "path": "assets/film-lite/segment-026.m4s",
+      "bytes": 369729,
+      "sha256": "75d8763ce7ed3310c0cd4739c44b63733a4578f277d4faccfca46efcfd99654d"
+    },
+    {
+      "path": "assets/film-lite/segment-027.m4s",
+      "bytes": 390619,
+      "sha256": "50dbd933c21c9f2b3b918aa08909acfc026660df331f2f319bdd0193401a8957"
+    },
+    {
+      "path": "assets/film-lite/segment-028.m4s",
+      "bytes": 568595,
+      "sha256": "17205710b3b3ba06dcfcbf91609f519101222ba98fdb0bba23fca865270ec1bb"
+    },
+    {
+      "path": "assets/film-lite/segment-029.m4s",
+      "bytes": 648268,
+      "sha256": "12b87343dbad0bc9ab419eb5060283ee5d23756f4a3f08749da70e71ac481595"
+    },
+    {
+      "path": "assets/film-lite/segment-030.m4s",
+      "bytes": 490214,
+      "sha256": "c69d9e083b74656f67efd6701d84df99965f6069d81354d5a4a6a4f62d30a5a7"
+    },
+    {
+      "path": "assets/film-lite/segment-031.m4s",
+      "bytes": 404850,
+      "sha256": "fe297ab147a36019380631914c0b98de164423ead9260a2e4e73bc230944b4d1"
+    },
+    {
+      "path": "assets/film-lite/segment-032.m4s",
+      "bytes": 673435,
+      "sha256": "06972a82669324e1756ba3f7fd34852cb5048db316e971d7e14f46163ca8a115"
+    },
+    {
+      "path": "assets/film-lite/segment-033.m4s",
+      "bytes": 679290,
+      "sha256": "8d27841b83fd4d7287b0972f7f93ad1ed39a2a8ee3785557b34995698d3fb97e"
+    },
+    {
+      "path": "assets/film-lite/segment-034.m4s",
+      "bytes": 488608,
+      "sha256": "929be3e3ca2bd45f42adf1b7ac3e626347154cca597665c8b727ed9a71c10e69"
+    },
+    {
+      "path": "assets/film-lite/segment-035.m4s",
+      "bytes": 308230,
+      "sha256": "41cab337196ed335f06bdb79fd8feca8a74abaad540ba91c7a513ac84051c608"
+    },
+    {
+      "path": "assets/film-lite/segment-036.m4s",
+      "bytes": 384921,
+      "sha256": "9e9bc441bafe51f89791ba14c50e36bd467ec712866a79288091410aa2d3baa3"
+    },
+    {
+      "path": "assets/film-lite/segment-037.m4s",
+      "bytes": 148270,
+      "sha256": "db36cdf2f0d3bd7668638bd80457548d5ba893d317394d43c8b33c131d9b8cf5"
+    },
+    {
+      "path": "assets/film-lite/segment-038.m4s",
+      "bytes": 252181,
+      "sha256": "234eea1865bcef01fea119cb680905efa5b25a83fe681cc7587d623df47f4d7b"
+    },
+    {
+      "path": "assets/film-lite/segment-039.m4s",
+      "bytes": 141391,
+      "sha256": "d544d292ec2fffd953ea5c9d81ddd447e71b717b419fcf5c0f67183f29657cb0"
+    },
+    {
+      "path": "assets/film-lite/segment-040.m4s",
+      "bytes": 435260,
+      "sha256": "a0499387ac3883d3a7f09dba8915ecae72daaf0290076570b8eb74d6a3acc142"
+    },
+    {
+      "path": "assets/film-lite/segment-041.m4s",
+      "bytes": 461301,
+      "sha256": "7dd77a2b85a51e07ab405bcdbdd48fc469d2dfaa158ee262960737c6fc7a9cca"
+    },
+    {
+      "path": "assets/film-lite/segment-042.m4s",
+      "bytes": 447453,
+      "sha256": "5879c2dbfa7cdb07385bd180b62e4c49e93a1614e4c4e7aff4e6a6d410d3d73d"
+    },
+    {
+      "path": "assets/film-lite/segment-043.m4s",
+      "bytes": 502360,
+      "sha256": "9f536fe1f2f06b0bc73be343fd4e7411e135748e0b6ea6440de3094982c2ac14"
+    },
+    {
+      "path": "assets/film-lite/segment-044.m4s",
+      "bytes": 367016,
+      "sha256": "1a82be7effbe430068cdde101321a101f9be96109f4b4650333dfbcdf30d6378"
+    },
+    {
+      "path": "assets/film-lite/segment-045.m4s",
+      "bytes": 365293,
+      "sha256": "abd2759cf149b9f4ba50411815107676df6a2e298b4de59f3fe8c6cd2b39d4a8"
+    },
+    {
+      "path": "assets/film-lite/segment-046.m4s",
+      "bytes": 563287,
+      "sha256": "17d1acde07e1311e7dda42a4ac148bf9acec4897f298a8acf441668707a4b9d6"
+    },
+    {
+      "path": "assets/film-lite/segment-047.m4s",
+      "bytes": 495084,
+      "sha256": "916525cecea10b76c79ef8544b05ae995dee7f0259c7ee7e6a5f866e6b771f82"
+    },
+    {
+      "path": "assets/film-lite/segment-048.m4s",
+      "bytes": 294898,
+      "sha256": "a149b8a05db7a3c23a78acd6008dde581bfad47753ac1069e328820dfc0d80da"
+    },
+    {
+      "path": "assets/film-lite/segment-049.m4s",
+      "bytes": 685209,
+      "sha256": "46ac3902905bff3ff014b4bb5d8ace03ebbe98148dc0b8730247e88a76e5f176"
+    },
+    {
+      "path": "assets/film-lite/segment-050.m4s",
+      "bytes": 545617,
+      "sha256": "211e0fa180909711e64d31452a30ffa09f716cdbab003233b43ab4366654c7e2"
+    },
+    {
+      "path": "assets/film-lite/segment-051.m4s",
+      "bytes": 505606,
+      "sha256": "9bd58447bbe66e29c38780f21ec192b3f4c68b5c799dc1e2072b5c8012ae1bee"
+    },
+    {
+      "path": "assets/film-lite/segment-052.m4s",
+      "bytes": 328101,
+      "sha256": "3e2c69e795eefc83b7b09c253e99e5f7298820159c3bf17b7439c3bb728cd7b1"
+    },
+    {
+      "path": "assets/film-lite/segment-053.m4s",
+      "bytes": 451811,
+      "sha256": "17ac742b771df487d4634c65e8fbe241ebdec899d9c7b786542f346733360297"
+    },
+    {
+      "path": "assets/film-lite/segment-054.m4s",
+      "bytes": 502394,
+      "sha256": "572e6f8428dbcf9bd003af8ba3c69064e331c8f8f5b9a1e92a23899723995468"
+    },
+    {
+      "path": "assets/film-lite/segment-055.m4s",
+      "bytes": 541362,
+      "sha256": "a6a1950eb8a5266386c296836a13136bbbac8c1833c8b6706eae6ebdead9a413"
+    },
+    {
+      "path": "assets/film-lite/segment-056.m4s",
+      "bytes": 521921,
+      "sha256": "4fc6e1ffbeca97c52da320940f0763a3816d63b08d0433c757b15927e0a27860"
+    },
+    {
+      "path": "assets/film-lite/segment-057.m4s",
+      "bytes": 622342,
+      "sha256": "dd956e1608d15b179c109cc1fe3b424e83f996d47cf2f47f3dcbd832158b004d"
+    },
+    {
+      "path": "assets/film-lite/segment-058.m4s",
+      "bytes": 510031,
+      "sha256": "7c5803dcbac3b56b7ac5af7b746169041f21bf4d7b3c5820102988ba5ed80a85"
+    },
+    {
+      "path": "assets/film-lite/segment-059.m4s",
+      "bytes": 459220,
+      "sha256": "5ace0e6612f379be844f17cfaf40a45a1a3108371018a43ba30593c8627fd3f0"
+    },
+    {
+      "path": "assets/film-lite/segment-060.m4s",
+      "bytes": 419710,
+      "sha256": "7d6195b4b3d05943a7cd3f3149224808a39a0fb769864fa730175f7a414c11d5"
+    },
+    {
+      "path": "assets/film-lite/segment-061.m4s",
+      "bytes": 438334,
+      "sha256": "84d2a52a5a13d7b5c0e6fcf26011af4a03addc086cac36345302cfcadd0ca397"
+    },
+    {
+      "path": "assets/film-lite/segment-062.m4s",
+      "bytes": 521975,
+      "sha256": "c70eeded1142899ea41231404ee3c0714be520c4c3803ee85e8f963a7383905c"
+    },
+    {
+      "path": "assets/film-lite/segment-063.m4s",
+      "bytes": 451129,
+      "sha256": "b487dbc21ae436fa362b8731931265bb3f4d70ab4a274bde8cd02c955b30293e"
+    },
+    {
+      "path": "assets/film-lite/segment-064.m4s",
+      "bytes": 618695,
+      "sha256": "1df55cee8cf98f09d8dc20b0d59e9e5ef10ab94f7a4703fddcbd650d4dab96b4"
+    },
+    {
+      "path": "assets/film-lite/segment-065.m4s",
+      "bytes": 416318,
+      "sha256": "cb14de58b319589344cab3e46cef0aa5757ac89c82de4badcf20737d323c27b1"
+    },
+    {
+      "path": "assets/film-lite/segment-066.m4s",
+      "bytes": 499921,
+      "sha256": "45323907ba2a43077f2f61f2ad29ff733267aa450b0ddff5fa79d865d1c959aa"
+    },
+    {
+      "path": "assets/film-lite/segment-067.m4s",
+      "bytes": 571050,
+      "sha256": "01c8d22dd709673a76d34f9b7cc1d2b568fc3f628ef0a3734265e5b153fec42a"
+    },
+    {
+      "path": "assets/film-lite/segment-068.m4s",
+      "bytes": 498356,
+      "sha256": "671570f2feaf52fcd35180178eca34bb6a742643c5ff82f52e49d4038efd5db7"
+    },
+    {
+      "path": "assets/film-lite/segment-069.m4s",
+      "bytes": 551462,
+      "sha256": "8b83d6a8b60fe6cec32268ff77ce27be7f70ff04dc842feda4d2431d51ae57fc"
+    },
+    {
+      "path": "assets/film-lite/segment-070.m4s",
+      "bytes": 622916,
+      "sha256": "ebc13953f2de739f89e735e9e752b31fc8e13fe4c54dd4a6d496953789a71c80"
+    },
+    {
+      "path": "assets/film-lite/segment-071.m4s",
+      "bytes": 639037,
+      "sha256": "70676c1c0449e7ba4e813a56d4f136fbadc2961552cc0a8dabcb719d45b3e374"
+    },
+    {
+      "path": "assets/film-lite/segment-072.m4s",
+      "bytes": 605705,
+      "sha256": "edd7a272ca6a5b30295a311a35f12c210120c7d390a703d728d9dd4c70505780"
+    },
+    {
+      "path": "assets/film-lite/segment-073.m4s",
+      "bytes": 595545,
+      "sha256": "5ecb98cabbbbe122a316f2c25e10e2f0690c64fdfe73126747ae486915321be9"
+    },
+    {
+      "path": "assets/film-lite/segment-074.m4s",
+      "bytes": 681133,
+      "sha256": "17226952a74662647d9278dfb241da78cdfef6249cf45ed0b8cd39dc76fd1007"
+    },
+    {
+      "path": "assets/film-lite/segment-075.m4s",
+      "bytes": 612057,
+      "sha256": "c629ccf064a30e6a0a3b86665c2cd7c308dab108eb4dc5bf346b67dd145c3e83"
+    },
+    {
+      "path": "assets/film-lite/segment-076.m4s",
+      "bytes": 651561,
+      "sha256": "f02562cbbbf9c08fb208b32a41023d44cd67f2893b98bc0ad280089627a5ebf3"
+    },
+    {
+      "path": "assets/film-lite/segment-077.m4s",
+      "bytes": 680767,
+      "sha256": "7db935c46fc725eb9098ea66ce6637791920bb6e46a9882e00b02bbc5e5b0d3e"
+    },
+    {
+      "path": "assets/film-lite/segment-078.m4s",
+      "bytes": 673459,
+      "sha256": "20632de7595651fae51941cb9744b238a982eb49d2a73f3a1c5eb8007202bae1"
+    },
+    {
+      "path": "assets/film-lite/segment-079.m4s",
+      "bytes": 613272,
+      "sha256": "66a0f73010155ebd91d728ac6e87f56e6fb8496fbe8cc694f029a7a0e12fc34e"
+    },
+    {
+      "path": "assets/film-lite/segment-080.m4s",
+      "bytes": 626424,
+      "sha256": "7352c6596ac41c3be19f8b79a293ca09349626c1ac46bb259355a954552692d4"
+    },
+    {
+      "path": "assets/film-lite/segment-081.m4s",
+      "bytes": 653141,
+      "sha256": "b1dfb0fd9ea46cf93807628c9677b78f8d669982a8d3c3edc4969984da4593c6"
+    },
+    {
+      "path": "assets/film-lite/segment-082.m4s",
+      "bytes": 522765,
+      "sha256": "3ef67f3fb28c435007928e7be72314484988a5ce891479f42aa8c636013b7f9a"
+    },
+    {
+      "path": "assets/film-lite/segment-083.m4s",
+      "bytes": 655662,
+      "sha256": "7172859e1be12a763530803ccce69043c748c752816a7a9e8286dd55631e7056"
+    },
+    {
+      "path": "assets/film-lite/segment-084.m4s",
+      "bytes": 664987,
+      "sha256": "ef2b505b67e8f7e4fff2d73f6233432107955b21d37ccc71f6d6dfe431d96a57"
+    },
+    {
+      "path": "assets/film-lite/segment-085.m4s",
+      "bytes": 682768,
+      "sha256": "8201b736cdd3ba87f802725f4f59a33708e1a19be05d033ede1e82a81c1ee365"
+    },
+    {
+      "path": "assets/film-lite/segment-086.m4s",
+      "bytes": 633357,
+      "sha256": "6e9197272c75213542521289242519f3c55bd4820051448258c95a12f2128471"
+    },
+    {
+      "path": "assets/film-lite/segment-087.m4s",
+      "bytes": 638313,
+      "sha256": "aab2e2f7a8e7825fd9052fadfa930fd2b4a595439f4789a1a6805a114970729c"
+    },
+    {
+      "path": "assets/film-lite/segment-088.m4s",
+      "bytes": 602255,
+      "sha256": "0d00c0525cb4487feb5e234a68c21daa2ab6528733f006c31375e96d36b784a3"
+    },
+    {
+      "path": "assets/film-lite/segment-089.m4s",
+      "bytes": 406863,
+      "sha256": "a5c012cbd53a205bfb378efd2f54ef9a381f622e3a663898584c38abcdc08225"
+    },
+    {
+      "path": "assets/film-lite/segment-090.m4s",
+      "bytes": 616072,
+      "sha256": "933f6b3446cda5c9fc1ee9318fbf453f6d7150d702c66c344a68025143de7d99"
+    },
+    {
+      "path": "assets/film-lite/segment-091.m4s",
+      "bytes": 339982,
+      "sha256": "8a695e203b2b25b99e56b3b8e7847fdf1260357490a711b12b096746aefc7493"
+    },
+    {
+      "path": "assets/film-lite/segment-092.m4s",
+      "bytes": 427921,
+      "sha256": "80424e7be754cb8190c78d58c188cdd1d51eb2be38cf72070f3dff995f8f3610"
+    },
+    {
+      "path": "assets/film-lite/segment-093.m4s",
+      "bytes": 473393,
+      "sha256": "20aff000e6322f9c17a273938222ae11655f04e374660647cf6a8b4c9d96dd39"
+    },
+    {
+      "path": "assets/film-lite/segment-094.m4s",
+      "bytes": 380958,
+      "sha256": "17268547c358cf303fc51fd96b5db4ef9bd2c815f89c05b7e574906a9cab1f8b"
+    },
+    {
+      "path": "assets/film-lite/segment-095.m4s",
+      "bytes": 491530,
+      "sha256": "351a6ff8ba716e5a7ad328e10504da4a93629519c1a36e5b973077792dbe1d7c"
+    },
+    {
+      "path": "assets/film-lite/segment-096.m4s",
+      "bytes": 605109,
+      "sha256": "aeb0431f6706970b1ff711507fec06daba2bc1a22eabca493f0f5aac70e1fbca"
+    },
+    {
+      "path": "assets/film-lite/segment-097.m4s",
+      "bytes": 640284,
+      "sha256": "a67963c4c9636c55992da66fbbad008e011e333efe63ad33f5965be60a7087d3"
+    },
+    {
+      "path": "assets/film-lite/segment-098.m4s",
+      "bytes": 485331,
+      "sha256": "288c1c1c1a274aca38a3219df2ba0f73a08ccffac221ae93b37ece7d9eff0f66"
+    },
+    {
+      "path": "assets/film-lite/segment-099.m4s",
+      "bytes": 606645,
+      "sha256": "aa729c6be99c6328a76666958d9e1e197263075fff37aec9f4162cf7300c1bea"
+    },
+    {
+      "path": "assets/film-lite/segment-100.m4s",
+      "bytes": 554306,
+      "sha256": "939ff997370d053518c2aeb57af2a2d69c1ae6ff87bbc792de0f7a5f8e3d52ba"
+    },
+    {
+      "path": "assets/film-lite/segment-101.m4s",
+      "bytes": 722368,
+      "sha256": "50b11458e3ff8f95dab539807d1599929deb9e5817a9d7ae63cd912df520786d"
+    },
+    {
+      "path": "assets/film-lite/segment-102.m4s",
+      "bytes": 647133,
+      "sha256": "b342e11362b6728e4af3d104f5f512f437e9b25b768ddd23db5ecf1297a4e448"
+    },
+    {
+      "path": "assets/film-lite/segment-103.m4s",
+      "bytes": 603544,
+      "sha256": "c8d0688bedf6e80b4b52fa327e1ce19671a65c746cbeb6d371189d7a28377ad5"
+    },
+    {
+      "path": "assets/film-lite/segment-104.m4s",
+      "bytes": 485591,
+      "sha256": "c4d5885be3423983aee8d5c6332fbbf0d5c876331a2db6569a1bf4adeae828b9"
+    },
+    {
+      "path": "assets/film-lite/segment-105.m4s",
+      "bytes": 492809,
+      "sha256": "cbc048fcf6a632cd84710208700f44d31970a8839d654d0e65ecd38292d337b5"
+    },
+    {
+      "path": "assets/film-lite/segment-106.m4s",
+      "bytes": 512570,
+      "sha256": "1612fe6d57aebdea8a21e51ff9fbdbc91ab2b2eec47aa8db1b559c6d8af2055d"
+    },
+    {
+      "path": "assets/film-lite/segment-107.m4s",
+      "bytes": 491594,
+      "sha256": "e8170e6401082cc5c22c35f9827766b0f014aadf972004acd2fb0819666863e6"
+    },
+    {
+      "path": "assets/film-lite/segment-108.m4s",
+      "bytes": 472799,
+      "sha256": "5f4d36902fb428f7aa76b1e3ccff2332d8e785f7c73992730503c459f1666fbe"
+    },
+    {
+      "path": "assets/film-lite/segment-109.m4s",
+      "bytes": 646724,
+      "sha256": "1cc360f2c41e206752163ca8d9210b8b6040e16277640d77f6080e250fc227b0"
+    },
+    {
+      "path": "assets/film-lite/segment-110.m4s",
+      "bytes": 433051,
+      "sha256": "4d3ab871284da4ca9bf52d15bdccba9aeb42de5062d773b6c7bb75fa4c6930a2"
+    },
+    {
+      "path": "assets/film-lite/segment-111.m4s",
+      "bytes": 588997,
+      "sha256": "8e550802749a84fffb495736e3f0a9b60e85efe27bc55b6448a6bb79797f8224"
+    },
+    {
+      "path": "assets/film-lite/segment-112.m4s",
+      "bytes": 414707,
+      "sha256": "4f91939e864bd168e442a1037c0a05e8313ee4ae4ef00f951d2cf86434fa7fcc"
+    },
+    {
+      "path": "assets/film-lite/segment-113.m4s",
+      "bytes": 258478,
+      "sha256": "5e115ce0802cf9bbf33ee88097490eec763c9808088976889dbea0aab0f8908f"
+    },
+    {
+      "path": "assets/film-lite/segment-114.m4s",
+      "bytes": 339694,
+      "sha256": "149d891cb5816e4ef4abab216b02ad7d27fbdb8e44b8e19695fe1f2b07f96a22"
+    },
+    {
+      "path": "assets/film-lite/segment-115.m4s",
+      "bytes": 268013,
+      "sha256": "88c1e21906ba3f7560d0c8297b62cccf850daee0cbbd81983be37fe1f3808f43"
+    },
+    {
+      "path": "assets/film-lite/segment-116.m4s",
+      "bytes": 422411,
+      "sha256": "b5e99ce39ca88b385649c58a4da51ad763ca972ba68f3ad8499daba428fe3586"
+    },
+    {
+      "path": "assets/film-lite/segment-117.m4s",
+      "bytes": 455605,
+      "sha256": "63f01e9900711f476e19ed16cccd60173c0d9065dae05c16cec728ac08576c6d"
+    },
+    {
+      "path": "assets/film-lite/segment-118.m4s",
+      "bytes": 318823,
+      "sha256": "a57dcd2058d8b62d86786d0fb3b2e48ad15fa16f4b7fc36971b8ff55d5ea61e1"
+    },
+    {
+      "path": "assets/film-lite/segment-119.m4s",
+      "bytes": 481945,
+      "sha256": "c27694254c5881c38696075b162373c84761ebf8993d62abf5feadee8dee82cb"
+    },
+    {
+      "path": "assets/film-lite/segment-120.m4s",
+      "bytes": 684152,
+      "sha256": "8ebbc6b793822ca2d1a9b7d86bc71a304c0e4b76e5307989ce33d3c0e9c1abee"
+    },
+    {
+      "path": "assets/film-lite/segment-121.m4s",
+      "bytes": 460589,
+      "sha256": "a174d1d85e99e610573392caf4177de1215665596f494c6d283dbc41b76cc0ce"
+    },
+    {
+      "path": "assets/film-lite/segment-122.m4s",
+      "bytes": 497890,
+      "sha256": "dee6eca1e03924f6742095d1ed4f65ff8c76d31a428b3652b883efb1dcb8515b"
+    },
+    {
+      "path": "assets/film-lite/segment-123.m4s",
+      "bytes": 550973,
+      "sha256": "2dd9664b377bbafa081f88a07dee797ae383903c5d7491b2d02bb65d623f6ad0"
+    },
+    {
+      "path": "assets/film-lite/segment-124.m4s",
+      "bytes": 706806,
+      "sha256": "2d8eddd313933392ef829d9fde5a812643def109883d21c68ff8e4b6a8faed65"
+    },
+    {
+      "path": "assets/film-lite/segment-125.m4s",
+      "bytes": 618607,
+      "sha256": "65c29c541d5ff6fe104feefef101b079d18fa9444a0029ab2c06c4bc9a480b25"
+    },
+    {
+      "path": "assets/film-lite/segment-126.m4s",
+      "bytes": 347261,
+      "sha256": "5e17c1c05a6cf5c023bb37cbf71d64ffb92b8c82b9bdfbe8dd814c172f49cb4f"
+    },
+    {
+      "path": "assets/film-lite/segment-127.m4s",
+      "bytes": 588894,
+      "sha256": "8a191e6697ab5fdc0d4983a19fdb2d7a93e8a6ee5a9b29f699dbed48bd419f59"
+    },
+    {
+      "path": "assets/film-lite/segment-128.m4s",
+      "bytes": 708688,
+      "sha256": "d0e9b470d87bdf1c84899473bd3453c320646464564ccb8ab779d6070f29fd62"
+    },
+    {
+      "path": "assets/film-lite/segment-129.m4s",
+      "bytes": 614721,
+      "sha256": "7a5e6f51b45fc633bd54c1edd7ceec4bc25d6cf9d0e1bc0be8fa8499a73656d1"
+    },
+    {
+      "path": "assets/film-lite/segment-130.m4s",
+      "bytes": 640867,
+      "sha256": "2a2aae320e8fd21f2b9fee4dc9d8fcc1152873b001fffa574a3b3718fb67ffd1"
+    },
+    {
+      "path": "assets/film-lite/segment-131.m4s",
+      "bytes": 587726,
+      "sha256": "80b53f06b411aa3b4684fe4159a7bcd07cb1dc3dad65c74cfae7b94414b9ef75"
+    },
+    {
+      "path": "assets/film-lite/segment-132.m4s",
+      "bytes": 425341,
+      "sha256": "62eaa881d7e88c6266dfbf21f247b9d23948d4d1d3397e697914703c3f87f09d"
+    },
+    {
+      "path": "assets/film-lite/segment-133.m4s",
+      "bytes": 253053,
+      "sha256": "318805f4552ec920b1a98572040baa08341b8b5b0b1ad92e98d2beec4f34f6f7"
+    },
+    {
+      "path": "assets/film-lite/segment-134.m4s",
+      "bytes": 40492,
+      "sha256": "a63879e2d5416f1eddf55724cdd00813f34a594f389503c9be0183e63b6b16f4"
+    },
+    {
+      "path": "assets/film-lite/segment-135.m4s",
+      "bytes": 397765,
+      "sha256": "93509fb92d4ed0e3f3472e3d573f20994aaf09f7bf4949df378b2fddba4e00df"
+    },
+    {
+      "path": "assets/film-lite/segment-136.m4s",
+      "bytes": 543667,
+      "sha256": "f4ce4ff14cdb0ffcc0887c6b9ad13388c5d1216ba413d6fb394fab2c9af609d1"
+    },
+    {
+      "path": "assets/film-lite/segment-137.m4s",
+      "bytes": 535391,
+      "sha256": "bc9ea04e6fb681c734659dce2242fce2cd782ddb7dd410b89962f8adb6712a92"
+    },
+    {
+      "path": "assets/film-lite/segment-138.m4s",
+      "bytes": 527528,
+      "sha256": "17ea330a6e42a14997e9aed213a84edd5b7419ff4576fd6e95c7cde00a5c17ea"
+    },
+    {
+      "path": "assets/film-lite/segment-139.m4s",
+      "bytes": 568514,
+      "sha256": "44f904bfbf9a9f04de38af9c9d76e373a1ec1de94969983cf66c1bb101bce5f2"
+    },
+    {
+      "path": "assets/film-lite/segment-140.m4s",
+      "bytes": 291412,
+      "sha256": "eb0c7f92f812714c645f726b4dd526139d4cd9eaa5bc8d662e241bdf98c03f6e"
+    },
+    {
+      "path": "assets/film-lite/segment-141.m4s",
+      "bytes": 103928,
+      "sha256": "b1a21a1a77324020d7b10da0204c4547a74e73ad4b77eadab8a8bbe514eda7d3"
+    },
+    {
+      "path": "assets/film-lite/segment-142.m4s",
+      "bytes": 154857,
+      "sha256": "8be9b951ba27ed17476dd1b6434abb31d635014b9b4a2414024ab30e84d5e20d"
+    },
+    {
+      "path": "assets/film-lite/segment-143.m4s",
+      "bytes": 202881,
+      "sha256": "3e0cc748b63993d95b7e5c614b3281c2efe70f9ef9a436a01a05c7e33917d9ff"
+    },
+    {
+      "path": "assets/film-lite/segment-144.m4s",
+      "bytes": 179571,
+      "sha256": "0b7d897242619ed51a0c361de605e1c918e5416f9c550cdbf7781a799b305d6a"
+    },
+    {
+      "path": "assets/film-lite/segment-145.m4s",
+      "bytes": 146869,
+      "sha256": "66d3ef3008f9431c11a12dbc1f48169153f83d4902e7883b4e4a297d9f495012"
+    },
+    {
+      "path": "assets/film-lite/segment-146.m4s",
+      "bytes": 147430,
+      "sha256": "b2942da6b0f4f49c69ab1e188fec9cdb0fd7e0f20929975c94bf2ec457aac2bd"
+    },
+    {
+      "path": "assets/film-lite/segment-147.m4s",
+      "bytes": 146873,
+      "sha256": "3ad8bedb4a0540841e6a64393d06d3ca74547cf582f2d6b6099ece74b59ca49a"
+    },
+    {
+      "path": "assets/film-lite/segment-148.m4s",
+      "bytes": 143892,
+      "sha256": "47303faf2069207a1bb446e71dc47352540d612ea2da1e1fe468a91e3e5454ef"
+    },
+    {
+      "path": "assets/film-lite/segment-149.m4s",
+      "bytes": 103435,
+      "sha256": "5078304b6fd8e1e88ee78c0d27518877145e94390324b96eb2b2a8c549ee961f"
+    },
+    {
+      "path": "assets/film-lite/segment-150.m4s",
+      "bytes": 73002,
+      "sha256": "f8695e4bda920b317f6f9c369e3b39ba54ec9a6900b6fb405c30d476d0605098"
+    },
+    {
+      "path": "assets/film-lite/segment-151.m4s",
+      "bytes": 51120,
+      "sha256": "3b70c8d83a4e868571bd4559c08ecc3b89c9ea3440d20ffc063933331869a115"
+    },
+    {
+      "path": "assets/film-lite/segment-152.m4s",
+      "bytes": 16412,
+      "sha256": "64d7ada644e70141baee3e5c2726eb46bf581f969b8d9d4addf99b1a8816eb21"
+    },
+    {
       "path": "assets/film-still-120.jpg",
       "bytes": 83267,
       "sha256": "cb30ea6ba02a427e2631ef74933adc30af189eff9251632e9f7d443f92b657dd"
@@ -614,18 +1394,47 @@
     },
     {
       "path": "index.html",
-      "bytes": 32966,
-      "sha256": "bfab403c95e8500b41c6e876c790c691a45b1a41d480e2e21c49f783d17df46c"
+      "bytes": 35005,
+      "sha256": "0ae88bbf552b1098ce5f92dca83b4ccd9bf62804edce4c080ba0747bbfc1d7eb"
     },
     {
       "path": "room.css",
-      "bytes": 13732,
-      "sha256": "881a758c43ba1b6b313fbaf991303064272d02a17db8c5cf2aa2b774b23c3a1e"
+      "bytes": 14706,
+      "sha256": "f9d3d3cc9d0c2c3ebe2fd0beae69dfbb1e77640cd589a6cc9a71dc0c448812ad"
     },
     {
       "path": "room.js",
-      "bytes": 11760,
-      "sha256": "7c5e26b2008296cebf7ba3cc9650ff90de48c7fd89a7e35fbff522dcda218bb4"
+      "bytes": 12938,
+      "sha256": "597f06b4ecec98b7f363c214d03dba3164011f3f846fa632e15f9ad03d95c18b"
+    }
+  ],
+  "assembled": [
+    {
+      "path": "assets/konglou-lite-720p.mp4",
+      "bytes": 73554325,
+      "sha256": "98721ebf415d6f2513b0ff3f3534b13342f36cd1ce8f0b56756bfdcc22bc8e71",
+      "parts": [
+        {
+          "path": "assets/transfer-lite/part-00.bin",
+          "bytes": 20971520,
+          "sha256": "28efafaf5c4cda19c627c4d344538d53d31c3f1d001f1a76b85b5bc11e3cfc22"
+        },
+        {
+          "path": "assets/transfer-lite/part-01.bin",
+          "bytes": 20971520,
+          "sha256": "8c4c2063b32664b1a1a351be9a07839fcb9d27a40f5477c6ca5b1242c13c3e6c"
+        },
+        {
+          "path": "assets/transfer-lite/part-02.bin",
+          "bytes": 20971520,
+          "sha256": "0168fec21a1c516db06456327bbcc19b96813c8c01e90da9f61c18e597f384d9"
+        },
+        {
+          "path": "assets/transfer-lite/part-03.bin",
+          "bytes": 10639765,
+          "sha256": "a4cea22013aaef8e6c721a96eb0f9ae93c36b05a0e55886d1a3e6df454fa8c4d"
+        }
+      ]
     }
   ]
 }
