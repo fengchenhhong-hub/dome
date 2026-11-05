@@ -18,7 +18,7 @@ jobs:
       - name: Prepare local page sources
         run: |
           mkdir -p public
-          cp index.html room.css room.js ping.html public/
+          cp index.html room.css room.js ping.html lite.html public/
       - name: Import and verify public assets
         env:
           DEBIAN_FRONTEND: noninteractive
