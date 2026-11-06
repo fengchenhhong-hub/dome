@@ -1434,5 +1434,25 @@
         "duration_tolerance_s": 1.0
       }
     }
+  ],
+  "local_public_files": [
+    {
+      "source": "konglou-review-18s.mp4",
+      "path": "assets/konglou-review-18s.mp4",
+      "bytes": 763175,
+      "sha256": "b558079fffe5888756b90892dff185627958b587a86480b7b1f06dfe1957ba81"
+    },
+    {
+      "source": "konglou-poster.jpg",
+      "path": "assets/konglou-poster.jpg",
+      "bytes": 35583,
+      "sha256": "525670da0ee4a4149fe2be59b6910981272765d11e6927c95838c452cb0456a2"
+    },
+    {
+      "source": "review-frames.jpg",
+      "path": "assets/review-frames.jpg",
+      "bytes": 15275,
+      "sha256": "c52362efb09d112ea7d6b3e40cd0f6f77a126bd1ba1188800a56e63f4a8f3b57"
+    }
   ]
 }

@@ -4,6 +4,7 @@ import concurrent.futures
 import hashlib
 import json
 import subprocess
+import shutil
 from fractions import Fraction
 from pathlib import Path, PurePosixPath
 from urllib.parse import quote, urljoin
@@ -139,6 +140,22 @@ for item in manifest.get('derived', []):
         print('Generated verified MP4: ' + item['path'])
     finally:
         temporary.unlink(missing_ok=True)
+
+# Small reviewed excerpts and poster are committed locally, never fetched from a private URL.
+for item in manifest.get('local_public_files', []):
+    local = Path(item['source'])
+    if local.is_absolute() or '..' in local.parts or len(local.parts) != 1:
+        raise ValueError('Invalid local public source')
+    target = root.joinpath(*relative_path(item).parts)
+    if not valid(local, item):
+        raise ValueError('Local public file verification failed: ' + str(local))
+    if args.verify_only:
+        if not valid(target, item):
+            raise ValueError('Missing or changed local public file: ' + item['path'])
+    else:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(local, target)
+    print('Verified local public file: ' + item['path'])
 
 if not args.verify_only and manifest.get('derived'):
     state_path.write_text(json.dumps(state, indent=2, sort_keys=True) + '\n')

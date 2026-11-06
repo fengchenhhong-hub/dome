@@ -29,3 +29,7 @@
 .room-nav a.view-toggle{display:inline-flex;align-items:center;min-height:36px;color:#e4d3b8;text-decoration:none;white-space:nowrap}
 
 @media(min-width:651px){.room-hint{bottom:9%}}
+
+.modal-note .domestic-watch{display:inline-flex;align-items:center;min-height:40px;padding:5px 12px;border:1px solid #b9b28c;color:#f4ebd5;border-radius:4px;background:#3e4937;text-decoration:none}.modal-note .domestic-watch:hover,.modal-note .domestic-watch:focus-visible{background:#506047}
+
+.review-switch{display:inline-flex;gap:5px;flex-wrap:wrap}.review-switch[hidden]{display:none}.review-switch button{min-height:38px;padding:6px 9px;border:1px solid #807659;background:transparent;color:#eddfc4;border-radius:3px;font-size:11px}.review-switch button:hover,.review-switch button:focus-visible{background:#40503c;color:#fff8e9}
