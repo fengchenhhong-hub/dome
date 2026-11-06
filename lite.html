@@ -66,7 +66,7 @@
   PortfolioReview.warm(true).then(function(url){
    if(request!==token||mode!=='review')return;
    first.dataset.cacheReady=String(PortfolioReview.isLocal(url));
-   var apply=function(){if(request!==token||mode!=='review')return;first.currentTime=at;if(shouldPlay)play();};
+   var apply=function(){if(request!==token||mode!=='review')return;if(shouldPlay||at>0)first.currentTime=at;if(shouldPlay)play();};
    if(first.getAttribute('src')===url&&first.readyState>0){apply();}
    else{first.pause();first.addEventListener('loadedmetadata',apply,{once:true});first.src=url;first.preload='auto';first.load();}
    start.hidden=true;report(PortfolioReview.isLocal(url)?'18秒选段已缓存，可切换前、中、后三段。':'轻触播放；网络较慢时可切换飞书观看。','ready');
