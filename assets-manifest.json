@@ -1403,7 +1403,7 @@
         "width": 1280,
         "height": 720,
         "duration_s": 609.24,
-        "duration_tolerance_s": 1.0
+        "duration_tolerance_s": 1
       }
     },
     {
@@ -1417,7 +1417,7 @@
         "height": 720,
         "fps": 25,
         "duration_s": 609.24,
-        "duration_tolerance_s": 1.0
+        "duration_tolerance_s": 1
       }
     },
     {
@@ -1431,7 +1431,7 @@
         "height": 480,
         "fps": 25,
         "duration_s": 609.24,
-        "duration_tolerance_s": 1.0
+        "duration_tolerance_s": 1
       }
     }
   ],
@@ -1501,6 +1501,73 @@
       "path": "assets/cake-poster-v10.jpg",
       "bytes": 290042,
       "sha256": "b22ff4ecc0af3885e62ba6d3d6d31a40303495f379d91a4a08df846f533e324b"
+    },
+    {
+      "source": "beam-ai.webp",
+      "path": "preview-assets/beam-ai.webp",
+      "bytes": 5506,
+      "sha256": "18e9530eec9a14c4989095af257e57f2412388e976df175f428d7cd1a575de79"
+    },
+    {
+      "source": "beam-film-red.webp",
+      "path": "preview-assets/beam-film-red.webp",
+      "bytes": 2118,
+      "sha256": "d49dfc879edcec9b4c06e35478018c60fd10564f9392130926f1ef113cc0a9e9"
+    },
+    {
+      "source": "beam-film-warm.webp",
+      "path": "preview-assets/beam-film-warm.webp",
+      "bytes": 14960,
+      "sha256": "f9d80e4058c4f9df22f348e2d6cfb327b16308c50a3e0472856b1627169bec40"
+    },
+    {
+      "source": "beam-film.webp",
+      "path": "preview-assets/beam-film.webp",
+      "bytes": 5516,
+      "sha256": "8e785ecf9dc736ecfe201997baadfa8387e8d0ffd6ed6d3a5b2e8883757491e9"
+    },
+    {
+      "source": "beam-hangxiang.webp",
+      "path": "preview-assets/beam-hangxiang.webp",
+      "bytes": 4616,
+      "sha256": "35cb2c66fd957246d45954afa17ea3649768f724efa255517707d7f6aab975de"
+    },
+    {
+      "source": "beam-jewelry.webp",
+      "path": "preview-assets/beam-jewelry.webp",
+      "bytes": 3464,
+      "sha256": "0053dfab04ecf515c9a02382b856820af7297acc0ed55b623fde8aae2e9bb4b0"
+    },
+    {
+      "source": "beam-real.webp",
+      "path": "preview-assets/beam-real.webp",
+      "bytes": 7250,
+      "sha256": "7bf422e6b7b8a9085929e02a603964f77bc1d5dce8dc382399f63030591b99fe"
+    },
+    {
+      "source": "beam-shixianzhiwai.webp",
+      "path": "preview-assets/beam-shixianzhiwai.webp",
+      "bytes": 5880,
+      "sha256": "e48634ef3ddd39b71da670a6a7b6810c314d1453678aaab745f99177c83a02bc"
+    },
+    {
+      "source": "beam-visual.webp",
+      "path": "preview-assets/beam-visual.webp",
+      "bytes": 13774,
+      "sha256": "f5e2e3d51c2b2602c82bfb155439ed50e6fa647311fc1e8a6683214a6ea91a57"
+    },
+    {
+      "source": "beam-yueding.webp",
+      "path": "preview-assets/beam-yueding.webp",
+      "bytes": 4928,
+      "sha256": "2537455c3266b24cb0a113f4522fe0a2db4fd150d170c9064d9023d770d0b7aa"
+    },
+    {
+      "source": "real-unboxing.jpg",
+      "path": "preview-assets/real-unboxing.jpg",
+      "bytes": 33816,
+      "sha256": "d2da5dd5819cac2e6c75917e4f08a892b58bfb5c9e0093d5731e191f29db6ca5"
     }
   ]
 }
+
