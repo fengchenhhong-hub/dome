@@ -1437,22 +1437,70 @@
   ],
   "local_public_files": [
     {
-      "source": "konglou-review-18s.mp4",
-      "path": "assets/konglou-review-18s.mp4",
-      "bytes": 763175,
-      "sha256": "b558079fffe5888756b90892dff185627958b587a86480b7b1f06dfe1957ba81"
-    },
-    {
       "source": "konglou-poster.jpg",
       "path": "assets/konglou-poster.jpg",
       "bytes": 35583,
       "sha256": "525670da0ee4a4149fe2be59b6910981272765d11e6927c95838c452cb0456a2"
     },
     {
-      "source": "review-frames.jpg",
-      "path": "assets/review-frames.jpg",
-      "bytes": 15275,
-      "sha256": "c52362efb09d112ea7d6b3e40cd0f6f77a126bd1ba1188800a56e63f4a8f3b57"
+      "source": "film-red-door-v10.jpg",
+      "path": "assets/film-red-door-v10.jpg",
+      "bytes": 17866,
+      "sha256": "89a96c6b405a61a76410721009330e1fe4684dc36ef4cdfddfbbf744502d63c4"
+    },
+    {
+      "source": "film-warm-transition-v10.jpg",
+      "path": "assets/film-warm-transition-v10.jpg",
+      "bytes": 65998,
+      "sha256": "6e9399af6926edfac457fbe83a8603290e6616af4c0121ec32be5d65d94be4b1"
+    },
+    {
+      "source": "film-conflict-v10.jpg",
+      "path": "assets/film-conflict-v10.jpg",
+      "bytes": 30484,
+      "sha256": "3e96fe396d4971be8ee7fb0689566d6ca40170269384dc47573f3b2d4c3aa636"
+    },
+    {
+      "source": "hangxiang-cover-v10.jpg",
+      "path": "assets/hangxiang-cover-v10.jpg",
+      "bytes": 28551,
+      "sha256": "487572a346671ab10133d373d4c7e1f7a1af6529f7a0451af51acdb099f05273"
+    },
+    {
+      "source": "yueding-cover-v10.jpg",
+      "path": "assets/yueding-cover-v10.jpg",
+      "bytes": 36176,
+      "sha256": "173af286d7f092fc9c2442c5b35b2dab67c97fbf19708acefd0a8db9d1e8e2c0"
+    },
+    {
+      "source": "shixianzhiwai-cover-v10.jpg",
+      "path": "assets/shixianzhiwai-cover-v10.jpg",
+      "bytes": 41182,
+      "sha256": "8793702b92dd5ab90674e170065411a65d013587a4aae51255de29a318a8903b"
+    },
+    {
+      "source": "commerce-unboxing-v10.jpg",
+      "path": "assets/commerce-unboxing-v10.jpg",
+      "bytes": 31469,
+      "sha256": "bd7f4adfd2c412a077baee91a72981f83d4c1d2cb66819613057c6c8d7f9db72"
+    },
+    {
+      "source": "bracelet-purelove-v10.jpg",
+      "path": "assets/bracelet-purelove-v10.jpg",
+      "bytes": 54765,
+      "sha256": "8047e9c627e426e9b4d7f88b3be1f7e6f2a6302ac3177bbfffb7dc35bff0cfd7"
+    },
+    {
+      "source": "bracelet-violet-v10.jpg",
+      "path": "assets/bracelet-violet-v10.jpg",
+      "bytes": 56304,
+      "sha256": "d7b04d2c348b2dc3503fc137136f779f2a57a2975ada544d056d0641a607179f"
+    },
+    {
+      "source": "cake-poster-v10.jpg",
+      "path": "assets/cake-poster-v10.jpg",
+      "bytes": 290042,
+      "sha256": "b22ff4ecc0af3885e62ba6d3d6d31a40303495f379d91a4a08df846f533e324b"
     }
   ]
 }
