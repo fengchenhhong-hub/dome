@@ -61,18 +61,23 @@ dialog{padding:0;border:1px solid #71614c;background:#1d1c19;color:var(--paper);
 .room-nav a.view-toggle{display:inline-flex;align-items:center;min-height:36px;color:#e4d3b8;text-decoration:none;white-space:nowrap}
 
 @media(min-width:651px){.room-hint{bottom:9%}}
+
+.modal-note .domestic-watch{display:inline-flex;align-items:center;min-height:40px;padding:5px 12px;border:1px solid #b9b28c;color:#f4ebd5;border-radius:4px;background:#3e4937;text-decoration:none}.modal-note .domestic-watch:hover,.modal-note .domestic-watch:focus-visible{background:#506047}
+
+.review-switch{display:inline-flex;gap:5px;flex-wrap:wrap}.review-switch[hidden]{display:none}.review-switch button{min-height:38px;padding:6px 9px;border:1px solid #807659;background:transparent;color:#eddfc4;border-radius:3px;font-size:11px}.review-switch button:hover,.review-switch button:focus-visible{background:#40503c;color:#fff8e9}
+
 </style>
 
 </head>
 <body>
 <section class="room" aria-label="交互放映室">
 <div class="room-backdrop"><canvas id="water" aria-hidden="true"></canvas></div>
-<div class="room-top"><div class="room-sign">A ROOM OF FRAMES<span>冯丞洪 / 精选作品</span></div><div class="room-nav"><button id="open-index" type="button" aria-expanded="false" aria-controls="room-index">作品清单</button><button type="button" class="about-btn" data-special="about">关于</button><a id="toggle-view" class="view-toggle" href="lite.html">快速浏览 ↗</a></div></div>
+<div class="room-top"><div class="room-sign">A ROOM OF FRAMES<span>冯丞洪 / 精选作品</span></div><div class="room-nav"><button id="open-index" type="button" aria-expanded="false" aria-controls="room-index">作品清单</button><button type="button" class="about-btn" data-special="about">关于</button><a id="toggle-view" class="view-toggle" href="https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg?from=from_copylink" target="_blank" rel="noopener">飞书观看 ↗</a></div></div>
 <div class="room-list" id="room-index" hidden><button data-launch="film">01 / 空楼回响 <small>完整短片</small></button><button data-launch="real">02 / 商业实拍 <small>15秒</small></button><button data-launch="ai">03 / AI影像 <small>15秒</small></button><button data-launch="visual">04 / 商品视觉 <small>3张样例</small></button><button data-launch="production">05 / 空楼余烬 <small>制作中</small></button></div>
 <noscript><div class="no-script-note">此浏览器未启用交互效果，<a href="lite.html">进入普通作品集</a>即可观看全部作品。</div></noscript>
 <div class="room-heading"><div class="eyebrow">FILM · CRAFT · IMAGINATION</div><h1><span class="projection-title">影像，正在发生。</span><span class="projection-grain" data-ink="影像，正在发生。" aria-hidden="true"></span></h1><p>轻触一件作品，进入它的故事。</p></div>
 <div class="room-dock">
-<button class="object" type="button" data-case="film" data-video="assets/konglou-fallback.mp4" data-title="《空楼回响》｜导演、摄影、剪辑" aria-label="打开空楼回响完整短片"><span class="object-icon icon-film"><img src="assets/konglou-icon.png" alt=""></span><span class="object-reflection" aria-hidden="true"><img src="assets/konglou-icon.png" alt=""></span><span class="object-title">空楼回响</span><span class="object-sub">NARRATIVE / 10′09″</span><span class="object-hint">观看完整短片 ↗</span></button>
+<button class="object" type="button" data-case="film" data-video="assets/konglou-fallback.mp4" data-title="《空楼回响》｜导演、摄影、剪辑" aria-label="打开空楼回响选段与完整影片"><span class="object-icon icon-film"><img src="assets/konglou-icon.png" alt=""></span><span class="object-reflection" aria-hidden="true"><img src="assets/konglou-icon.png" alt=""></span><span class="object-title">空楼回响</span><span class="object-sub">NARRATIVE / 10′09″</span><span class="object-hint">观看选段与全片 ↗</span></button>
 <button class="object" type="button" data-case="real" data-video="assets/tutorial.mp4" data-title="实拍商品教程｜脚本、拍摄、剪辑与字幕" aria-label="打开商业实拍视频"><span class="object-icon icon-real"><img src="assets/tutorial-poster.jpg" alt=""></span><span class="object-reflection" aria-hidden="true"><img src="assets/tutorial-poster.jpg" alt=""></span><span class="object-title">商业实拍</span><span class="object-sub">LIVE ACTION / 15″</span><span class="object-hint">查看作品 ↗</span></button>
 <button class="object" type="button" data-case="ai" data-video="assets/ai-demo.mp4" data-title="AI辅助短视频｜创意、素材迭代与剪辑" aria-label="打开AI辅助短视频"><span class="object-icon icon-ai"><img src="assets/ai-cover-medium.jpg" alt=""></span><span class="object-reflection" aria-hidden="true"><img src="assets/ai-cover-medium.jpg" alt=""></span><span class="object-title">AI影像</span><span class="object-sub">AI-ASSISTED / 15″</span><span class="object-hint">查看作品 ↗</span></button>
 <button class="object" type="button" data-case="visual" data-special="visual" aria-label="打开商品视觉案例"><span class="object-icon icon-visual"><img src="assets/cake-pearl.jpg" alt=""></span><span class="object-reflection" aria-hidden="true"><img src="assets/cake-pearl.jpg" alt=""></span><span class="object-title">商品视觉</span><span class="object-sub">COMMERCIAL DESIGN</span><span class="object-hint">翻开三张样例 ↗</span></button>
@@ -98,6 +103,30 @@ dialog{padding:0;border:1px solid #71614c;background:#1d1c19;color:var(--paper);
 <section id="method" class="method"><div><h2>把想法，做成成片。</h2><p>从理解需求开始，<br>在反馈与修改中完成交付。</p></div><div><ol><li>理解需求</li><li>脚本分镜</li><li>拍摄与素材组织</li><li>剪辑调色</li><li>检查修改与交付</li></ol><p class="tools">剪映：剪辑与字幕 / DaVinci Resolve：调色 / Canva、Photoshop：商品视觉与宣传物料 / AI工具：创意辅助与素材迭代</p></div></section><div class="paper-bottom"><span>FENG CHENGHONG / 影视与商业内容作品集</span><span class="mono">ARCHIVE UPDATED / 2026.11</span></div></main>
 <footer class="footer"><div><strong>每一份作品，都附真实分工。</strong><p>本页仅展示作品与制作说明。</p></div><a href="https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg?from=from_copylink" target="_blank" rel="noopener">飞书公开作品集 ↗</a></footer></div>
 <dialog id="viewer" aria-labelledby="viewer-title"><div class="modal-head"><span id="viewer-title"></span><button type="button" id="close-viewer" aria-label="关闭预览">关闭 ×</button></div><div class="modal-body" id="media-body"></div><p class="modal-note" id="media-note"></p><div class="panel-copy" id="panel-copy"></div></dialog>
+<script id="review-loader">
+/* One small, explicitly labelled review asset. No private URLs or external telemetry. */
+(function(){
+  var source='assets/konglou-review-18s.mp4',pending=null,localUrl=null;
+  function warm(force){
+    var connection=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+    if(!force&&connection&&(connection.saveData||/^(slow-)?2g$/.test(connection.effectiveType||'')))return Promise.resolve(null);
+    if(localUrl)return Promise.resolve(localUrl);
+    if(pending)return pending;
+    if(!window.fetch||!window.URL||!URL.createObjectURL)return Promise.resolve(source);
+    pending=fetch(source,{cache:'force-cache'}).then(function(response){
+      if(!response.ok)throw new Error('Review video unavailable');
+      return response.blob();
+    }).then(function(blob){
+      if(!blob.size||blob.size>2*1024*1024)throw new Error('Unexpected review size');
+      localUrl=URL.createObjectURL(new Blob([blob],{type:'video/mp4'}));
+      return localUrl;
+    }).catch(function(){pending=null;return source;});
+    return pending;
+  }
+  window.PortfolioReview={warm:warm,source:source,isLocal:function(url){return !!localUrl&&url===localUrl;}};
+})();
+
+</script>
 <script>
 if(new URLSearchParams(location.search).has('cover'))document.body.classList.add('cover');
 const viewer=document.querySelector('#viewer'),box=document.querySelector('#media-body'),title=document.querySelector('#viewer-title'),note=document.querySelector('#media-note');
@@ -106,11 +135,7 @@ const filmStream='assets/video-fast/konglou-stream-720p.mp4';
 const filmDownload=location.hostname.endsWith('chatgpt.site')?'https://fengchenhhong-hub.github.io/dome/'+filmStream:filmStream;
 let restoreFocus,currentHls=null,hlsLoadPromise=null,warmFilm=null;
 const watched=new Map();
-function prepareFilm(){
- if(warmFilm)return;
- const connection=navigator.connection;if(connection&&(connection.saveData||/2g/.test(connection.effectiveType||'')))return;
- warmFilm=document.createElement('video');warmFilm.preload='metadata';warmFilm.playsInline=true;warmFilm.src=filmDownload;warmFilm.load();
-}
+function prepareFilm(){if(window.PortfolioReview)PortfolioReview.warm(false);}
 setTimeout(prepareFilm,800);
 function ensureHls(){if(window.Hls)return Promise.resolve(true);if(hlsLoadPromise)return hlsLoadPromise;hlsLoadPromise=new Promise(resolve=>{const script=document.createElement('script');script.src='assets/hls.min.js';script.async=true;script.onload=()=>resolve(!!window.Hls);script.onerror=()=>resolve(false);document.head.appendChild(script);});return hlsLoadPromise;}
 function stopStream(){if(currentHls){currentHls.destroy();currentHls=null;}}
@@ -121,23 +146,30 @@ function showMedia(button){
  const media=film&&warmFilm?warmFilm:document.createElement(isVideo?'video':'img');if(film)warmFilm=null;
  if(!isVideo){media.src=button.dataset.image;media.alt=button.dataset.title;box.append(media);note.textContent='商品视觉样例 / 冯丞洪';viewer.showModal();return;}
  media.dataset.key=button.dataset.video;media.controls=true;media.playsInline=true;media.preload='auto';media.setAttribute('aria-label',button.dataset.title);
- media.poster=film?'assets/konglou-icon.png':button.dataset.video.includes('ai-demo')?'assets/ai-cover-medium.jpg':'assets/tutorial-poster.jpg';
+ media.poster=film?'assets/konglou-poster.jpg':button.dataset.video.includes('ai-demo')?'assets/ai-cover-medium.jpg':'assets/tutorial-poster.jpg';
  const status=document.createElement('span');status.className='media-load';status.setAttribute('role','status');status.textContent='正在连接视频…';note.append(status);
  const qualities=[];let filmLoadId=0,pendingRestore=null,firstPlaying=true;
- if(film){const group=document.createElement('span');group.className='quality-switch';group.setAttribute('role','group');group.setAttribute('aria-label','视频清晰度');for(const [key,label] of [['lite','流畅720p'],['original','高清720p']]){const control=document.createElement('button');control.type='button';control.textContent=label;control.dataset.quality=key;control.setAttribute('aria-pressed',String(key==='lite'));control.addEventListener('click',()=>{if(control.getAttribute('aria-pressed')==='true')return;loadFilm(key,media.currentTime,!media.paused);});group.append(control);qualities.push(control);}note.append(group);}
+ if(film){const group=document.createElement('span');group.className='quality-switch';group.setAttribute('role','group');group.setAttribute('aria-label','观看模式与清晰度');for(const [key,label] of [['review','三段速览'],['lite','完整720p'],['original','高清720p']]){const control=document.createElement('button');control.type='button';control.textContent=label;control.dataset.quality=key;control.setAttribute('aria-pressed',String(key==='review'));control.addEventListener('click',()=>{if(control.getAttribute('aria-pressed')==='true')return;const from=media.dataset.mode;const at=key==='review'?(from==='review'?media.currentTime:0):(from==='review'?0:media.currentTime);loadFilm(key,at,true);});group.append(control);qualities.push(control);}note.append(group);}
+ const pointGroup=document.createElement('span');pointGroup.className='review-switch';pointGroup.hidden=!film;if(film){for(const [at,label] of [[0,'前段 01:58'],[6,'中段 05:33'],[12,'后段 07:00']]){const point=document.createElement('button');point.type='button';point.textContent=label;point.addEventListener('click',()=>loadFilm('review',at,true));pointGroup.append(point);}note.append(pointGroup);}
  const direct=document.createElement('a');direct.href=film?filmDownload:button.dataset.video;direct.textContent='单独打开视频 ↗';direct.target='_blank';direct.rel='noopener';note.append(direct);
- const fast=document.createElement('a');fast.href='lite.html';fast.textContent='快速浏览 ↗';note.append(fast);
- const backup=document.createElement('a');backup.href='https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg?from=from_copylink';backup.target='_blank';backup.rel='noopener';backup.textContent='飞书备用入口 ↗';note.append(backup);
+ const fast=document.createElement('a');fast.href='lite.html';fast.textContent='简洁浏览 ↗';note.append(fast);
+ const backup=document.createElement('a');backup.href=film?'https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#doxcnkYwmGN2Kq0LGYmMn5IqDJg':'https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg?from=from_copylink';backup.target='_blank';backup.rel='noopener';backup.className='domestic-watch';backup.textContent='飞书观看 ↗';backup.addEventListener('click',()=>media.pause());note.insertBefore(backup,note.firstChild);
+ let seekStarted=0;media.addEventListener('seeking',()=>{seekStarted=performance.now();});media.addEventListener('seeked',()=>{if(seekStarted){media.dataset.lastSeekMs=String(Math.round(performance.now()-seekStarted));seekStarted=0;}});
  media.addEventListener('waiting',()=>{status.hidden=false;status.textContent='正在缓冲…';});
  media.addEventListener('playing',()=>{status.hidden=true;if(firstPlaying){media.dataset.startupMs=String(Math.round(performance.now()-clickedAt));firstPlaying=false;}});
  media.addEventListener('canplay',()=>{status.hidden=true;});
- media.addEventListener('error',()=>{status.hidden=false;status.textContent='暂未加载，可尝试快速浏览或飞书入口。';});
+ media.addEventListener('error',()=>{status.hidden=false;status.textContent='暂未加载，可直接切换飞书观看。';});
  function playRequested(play){if(!play)return;const attempt=media.play();if(attempt&&typeof attempt.catch==='function')attempt.catch(()=>{if(box.contains(media)&&media.paused){status.hidden=false;status.textContent='轻触播放器开始播放。';}});}
  function clearRestore(){if(pendingRestore){media.removeEventListener('loadedmetadata',pendingRestore);pendingRestore=null;}}
  function restore(at,play,alreadyReady){clearRestore();const apply=()=>{if(at>0&&Number.isFinite(media.duration)&&at<media.duration-1)media.currentTime=at;playRequested(play);};if(alreadyReady){apply();return;}pendingRestore=()=>{clearRestore();apply();};media.addEventListener('loadedmetadata',pendingRestore);}
- function connectDirect(at,play){const reused=media.getAttribute('src')===filmDownload&&media.readyState>0;if(reused){restore(at,play,true);return;}restore(at,play,false);media.src=filmDownload;media.load();playRequested(play);}
+ function connectDirect(at,play){
+  const reused=media.getAttribute('src')===filmDownload&&!media.error&&(media.readyState>0||media.networkState===2);
+  if(reused){const metadataReady=media.readyState>0;restore(at,play,metadataReady);if(!metadataReady)playRequested(play);return;}
+  restore(at,play,false);media.src=filmDownload;media.load();playRequested(play);
+ }
  function loadFilm(quality,at=0,play=true){
-  const request=++filmLoadId;stopStream();media.pause();qualities.forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.quality===quality)));status.hidden=false;status.textContent=quality==='lite'?'正在连接视频…':'正在切换清晰度…';
+  const request=++filmLoadId;stopStream();media.pause();media.dataset.mode=quality;title.textContent=quality==='review'?'《空楼回响》｜18秒选段':button.dataset.title;pointGroup.hidden=quality!=='review';qualities.forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.quality===quality)));status.hidden=false;status.textContent=quality==='review'?'前中后各6秒选段 · 非完整影片':'正在连接完整影片…';
+  if(quality==='review'){PortfolioReview.warm(true).then(url=>{if(request!==filmLoadId||!viewer.open||!box.contains(media))return;media.dataset.cacheReady=String(PortfolioReview.isLocal(url));if(media.getAttribute('src')===url&&media.readyState>0){clearRestore();media.currentTime=at;playRequested(play);return;}restore(at,play,false);media.src=url;media.load();playRequested(play);});return;}
   if(quality==='lite'){connectDirect(at,play);return;}
   const playlist='assets/film/index.m3u8',nativeHls=!!media.canPlayType('application/vnd.apple.mpegurl');
   function fallback(){if(request!==filmLoadId||!viewer.open||!box.contains(media))return;const position=media.currentTime||at;stopStream();qualities.forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.quality==='lite')));connectDirect(position,play);}
@@ -151,7 +183,7 @@ function showMedia(button){
   if(nativeHls||window.Hls)connect();else Promise.race([ensureHls(),new Promise(resolve=>setTimeout(()=>resolve(false),1600))]).then(connect);
  }
  box.append(media);viewer.showModal();const at=watched.get(media.dataset.key)||0;
- if(film)loadFilm('lite',at,true);else{restore(at,true,false);media.src=button.dataset.video;media.load();playRequested(true);}
+ if(film)loadFilm('review',0,true);else{restore(at,true,false);media.src=button.dataset.video;media.load();playRequested(true);}
 }
 document.querySelectorAll('[data-video],[data-image]').forEach(b=>{b.addEventListener('click',()=>showMedia(b));if(b.dataset.video&&b.dataset.video.includes('konglou')){b.addEventListener('pointerenter',prepareFilm);b.addEventListener('focus',prepareFilm);}});
 function closeViewer(){const video=box.querySelector('video');if(video){watched.set(video.dataset.key,video.currentTime);video.pause();stopStream();video.removeAttribute('src');video.load();}viewer.close();if(restoreFocus&&typeof restoreFocus.focus==='function')restoreFocus.focus();setTimeout(prepareFilm,800);}
