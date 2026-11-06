@@ -1,19 +1,21 @@
 {
   "assets/konglou-lite-720p.mp4": {
     "bytes": 73554325,
-    "input_fingerprint": "3f61c4bce610e4abc470382ada452ee99e520f94fb2de9b338ce6c7ba4d261f1",
+    "input_fingerprint": "6d79922cf88a22090477035f64106102f7a728eb121bb7b94e002d8054b263b3",
     "media": {
       "audio_codec": "aac",
       "duration_s": 609.262969,
+      "fps": 25.0,
       "height": 720,
       "video_codec": "h264",
       "width": 1280
     },
+    "method": "ffmpeg-copy-faststart-v1",
     "sha256": "6a8118c2320974007c60d7f85975137c45e00c25afd107727616c762aebfc837"
   },
   "assets/video-fast/konglou-fast-480p.mp4": {
-    "bytes": 39052218,
-    "input_fingerprint": "a706831be149b07515ff3780ce40b5537361648ad635218550e386e1b9757442",
+    "bytes": 39057638,
+    "input_fingerprint": "3c14fa5b0aec1507ad2d97459e18d84962a01a4c36a28e44a9202c7d22f63dcd",
     "media": {
       "audio_codec": "aac",
       "duration_s": 609.24,
@@ -23,11 +25,11 @@
       "width": 854
     },
     "method": "ffmpeg-fast-480p-v1",
-    "sha256": "0bdb0e95e6675be383c84943301652fd6ac2040dc1ffcb8a9eee66d378663d07"
+    "sha256": "56444ab405f9b08d9a9e35b70b6214750d207e1b056a0ebf33e5f037eb8232ff"
   },
   "assets/video-fast/konglou-stream-720p.mp4": {
     "bytes": 73325317,
-    "input_fingerprint": "dcc768910a57825fb625532efcd8462681033219794bc5b7e011a33d4383ba7c",
+    "input_fingerprint": "f55327e4f59c7560faa4f84c3e2d2c9cd20965696b9d444e28e44adfa1c17ea7",
     "media": {
       "audio_codec": "aac",
       "duration_s": 609.262969,
