@@ -4,6 +4,7 @@ import concurrent.futures
 import hashlib
 import json
 import subprocess
+from fractions import Fraction
 from pathlib import Path, PurePosixPath
 from urllib.parse import quote, urljoin
 from urllib.request import Request, urlopen
@@ -55,7 +56,7 @@ state = json.loads(state_path.read_text()) if state_path.is_file() else {}
 def probe_video(path, expected):
     result = subprocess.run([
         args.ffprobe, '-v', 'error', '-show_entries',
-        'format=duration:stream=codec_type,codec_name,width,height,duration',
+        'format=duration:stream=codec_type,codec_name,width,height,duration,avg_frame_rate',
         '-of', 'json', str(path)
     ], capture_output=True, text=True, check=True)
     data = json.loads(result.stdout)
@@ -73,8 +74,29 @@ def probe_video(path, expected):
         raise ValueError('Derived MP4 duration does not match')
     if abs(float(video['duration']) - float(audio['duration'])) > .15:
         raise ValueError('Derived MP4 audio/video duration mismatch')
+    if 'fps' in expected and Fraction(video['avg_frame_rate']) != Fraction(str(expected['fps'])):
+        raise ValueError('Derived MP4 frame rate does not match')
     return {'duration_s': duration, 'width': video['width'], 'height': video['height'],
-            'video_codec': video['codec_name'], 'audio_codec': audio['codec_name']}
+            'video_codec': video['codec_name'], 'audio_codec': audio['codec_name'],
+            'fps': float(Fraction(video['avg_frame_rate']))}
+
+def processing_args(method):
+    # Version these method names if encoding or container settings change.
+    fragmented = ['-movflags', '+frag_keyframe+delay_moov+default_base_moof+global_sidx']
+    if method == 'ffmpeg-copy-faststart-v1':
+        return ['-c', 'copy', '-movflags', '+faststart']
+    if method == 'ffmpeg-fragmented-copy-v1':
+        return ['-c', 'copy'] + fragmented
+    if method == 'ffmpeg-fast-480p-v1':
+        return [
+            '-vf', 'scale=854:480:flags=lanczos,fps=25,setsar=1',
+            '-c:v', 'libx264', '-preset', 'medium', '-crf', '25',
+            '-maxrate', '600k', '-bufsize', '1200k', '-threads', '2',
+            '-profile:v', 'high', '-level:v', '3.0', '-pix_fmt', 'yuv420p',
+            '-g', '50', '-keyint_min', '50', '-sc_threshold', '0',
+            '-c:a', 'aac', '-b:a', '48k', '-ac', '2', '-ar', '44100'
+        ] + fragmented
+    raise ValueError('Unknown derived media method: ' + method)
 
 for item in manifest.get('derived', []):
     target = root.joinpath(*relative_path(item).parts)
@@ -83,8 +105,10 @@ for item in manifest.get('derived', []):
     inputs = sorted((f for f in manifest['files'] if f['path'].startswith(prefix)), key=lambda f: f['path'])
     if not inputs or not any(f['path'] == item['source_playlist'] for f in inputs):
         raise ValueError('Derived MP4 source playlist is not in the verified manifest')
+    method = item.get('method', 'ffmpeg-copy-faststart-v1')
+    output_args = processing_args(method)
     fingerprint = hashlib.sha256(json.dumps({
-        'method': 'ffmpeg-copy-faststart-v1', 'inputs': inputs,
+        'method': method, 'inputs': inputs,
         'source_playlist': item['source_playlist'], 'expected': item['expected']
     }, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
     cached = state.get(item['path'], {})
@@ -103,13 +127,13 @@ for item in manifest.get('derived', []):
         subprocess.run([
             args.ffmpeg, '-hide_banner', '-loglevel', 'error', '-y',
             '-protocol_whitelist', 'file,crypto,data', '-i', str(root.joinpath(*playlist_relative.parts)),
-            '-map', '0:v:0', '-map', '0:a:0', '-c', 'copy',
-            '-movflags', '+faststart', '-f', 'mp4', str(temporary)
-        ], check=True)
+            '-map', '0:v:0', '-map', '0:a:0'
+        ] + output_args + ['-f', 'mp4', str(temporary)], check=True)
         metadata = probe_video(temporary, item['expected'])
         state[item['path']] = {
             'input_fingerprint': fingerprint, 'bytes': temporary.stat().st_size,
-            'sha256': hashlib.sha256(temporary.read_bytes()).hexdigest(), 'media': metadata
+            'sha256': hashlib.sha256(temporary.read_bytes()).hexdigest(), 'media': metadata,
+            'method': method
         }
         temporary.replace(target)
         print('Generated verified MP4: ' + item['path'])

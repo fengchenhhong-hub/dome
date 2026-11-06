@@ -1405,6 +1405,34 @@
         "duration_s": 609.24,
         "duration_tolerance_s": 1.0
       }
+    },
+    {
+      "path": "assets/video-fast/konglou-stream-720p.mp4",
+      "source_playlist": "assets/film-lite/index.m3u8",
+      "method": "ffmpeg-fragmented-copy-v1",
+      "expected": {
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "width": 1280,
+        "height": 720,
+        "fps": 25,
+        "duration_s": 609.24,
+        "duration_tolerance_s": 1.0
+      }
+    },
+    {
+      "path": "assets/video-fast/konglou-fast-480p.mp4",
+      "source_playlist": "assets/film/index.m3u8",
+      "method": "ffmpeg-fast-480p-v1",
+      "expected": {
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "width": 854,
+        "height": 480,
+        "fps": 25,
+        "duration_s": 609.24,
+        "duration_tolerance_s": 1.0
+      }
     }
   ]
 }
