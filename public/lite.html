@@ -45,6 +45,17 @@
   first.addEventListener('ended',()=>report('影片播放完毕。','ended'));
   first.addEventListener('error',()=>report('影片暂时无法载入，请尝试下方单独播放或飞书入口。','error'));
   for(const video of videos)video.addEventListener('play',()=>{for(const other of videos)if(other!==video&&!other.paused)other.pause();});
-  if(!navigator.connection?.saveData){first.preload='metadata';first.load();}
+  first.dataset.warmReady='false';
+  const updateWarmup=()=>{
+    let bufferedEnd=0;
+    for(let i=0;i<first.buffered.length;i++)bufferedEnd=Math.max(bufferedEnd,first.buffered.end(i));
+    if(first.readyState>=2||bufferedEnd>=3)first.dataset.warmReady='true';
+    // preload is a browser hint, not a strict byte or time limit. Keep the current buffer.
+    if(bufferedEnd>=3&&first.preload==='auto')first.preload='metadata';
+  };
+  first.addEventListener('progress',updateWarmup);
+  first.addEventListener('loadeddata',updateWarmup);
+  first.addEventListener('canplay',updateWarmup);
+  if(!(navigator.connection&&navigator.connection.saveData)){first.preload='auto';first.load();}
 })();
 </script></body></html>
