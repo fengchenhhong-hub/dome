@@ -10,5 +10,33 @@
       "width": 1280
     },
     "sha256": "6a8118c2320974007c60d7f85975137c45e00c25afd107727616c762aebfc837"
+  },
+  "assets/video-fast/konglou-fast-480p.mp4": {
+    "bytes": 39052218,
+    "input_fingerprint": "a706831be149b07515ff3780ce40b5537361648ad635218550e386e1b9757442",
+    "media": {
+      "audio_codec": "aac",
+      "duration_s": 609.24,
+      "fps": 25.0,
+      "height": 480,
+      "video_codec": "h264",
+      "width": 854
+    },
+    "method": "ffmpeg-fast-480p-v1",
+    "sha256": "0bdb0e95e6675be383c84943301652fd6ac2040dc1ffcb8a9eee66d378663d07"
+  },
+  "assets/video-fast/konglou-stream-720p.mp4": {
+    "bytes": 73325317,
+    "input_fingerprint": "dcc768910a57825fb625532efcd8462681033219794bc5b7e011a33d4383ba7c",
+    "media": {
+      "audio_codec": "aac",
+      "duration_s": 609.262969,
+      "fps": 25.0,
+      "height": 720,
+      "video_codec": "h264",
+      "width": 1280
+    },
+    "method": "ffmpeg-fragmented-copy-v1",
+    "sha256": "a5a0dac353ad6e8d0223d129ce0c921d3c625f096d41acaa72bb7f218b906786"
   }
 }
