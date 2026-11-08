@@ -1567,7 +1567,114 @@
       "path": "preview-assets/real-unboxing.jpg",
       "bytes": 33816,
       "sha256": "d2da5dd5819cac2e6c75917e4f08a892b58bfb5c9e0093d5731e191f29db6ca5"
+    },
+    {
+      "source": "bracelet-clear-macro-thumb.webp",
+      "path": "assets-v12/bracelet-clear-macro-thumb.webp",
+      "bytes": 6464,
+      "sha256": "2d592c021beefed589522ebd20c9963001b8cbdec3bf035dee36a938d1b89c8c"
+    },
+    {
+      "source": "bracelet-clear-macro.webp",
+      "path": "assets-v12/bracelet-clear-macro.webp",
+      "bytes": 43376,
+      "sha256": "a928297198395b9486244041b1266b476aa8a122b120d9f0a5f71cec2a1901b3"
+    },
+    {
+      "source": "bracelet-pair-packaging-thumb.webp",
+      "path": "assets-v12/bracelet-pair-packaging-thumb.webp",
+      "bytes": 11020,
+      "sha256": "25375ddf774e3683543dfad8fe92b6999c2737ca75eda0f879165073e5d20ddf"
+    },
+    {
+      "source": "bracelet-pair-packaging.webp",
+      "path": "assets-v12/bracelet-pair-packaging.webp",
+      "bytes": 78098,
+      "sha256": "f092f2e03b3a14773c1b418b877983dbd86cb32431289b648a62e522bd617d8d"
+    },
+    {
+      "source": "bracelet-violet-figure-thumb.webp",
+      "path": "assets-v12/bracelet-violet-figure-thumb.webp",
+      "bytes": 7586,
+      "sha256": "ccb85453d0325a992dbc148b247051083a3998133d8cdc0e25ff65826eaf9ec4"
+    },
+    {
+      "source": "bracelet-violet-figure.webp",
+      "path": "assets-v12/bracelet-violet-figure.webp",
+      "bytes": 56614,
+      "sha256": "dc8841460956806f4ed11e4d04bbfba107c863b245539865da574acfabff8a3b"
+    },
+    {
+      "source": "pulse-stones-logo-thumb.webp",
+      "path": "assets-v12/pulse-stones-logo-thumb.webp",
+      "bytes": 4060,
+      "sha256": "da562e879788ad353bdaa68f8e48bf31f6bd469e1858cd41313dfccdbba72c91"
+    },
+    {
+      "source": "pulse-stones-logo.webp",
+      "path": "assets-v12/pulse-stones-logo.webp",
+      "bytes": 11660,
+      "sha256": "f96427faebf68688f85004cb97acdd7e263b369440a051d0c92c9f06a19c4cce"
+    },
+    {
+      "source": "snowdrift-light-after-thumb.webp",
+      "path": "assets-v12/snowdrift-light-after-thumb.webp",
+      "bytes": 7874,
+      "sha256": "faa7b94f070dd41cd23b30a7d7c4a1761db598ea828f6c20e9ccd8cf5df1cdbf"
+    },
+    {
+      "source": "snowdrift-light-after.webp",
+      "path": "assets-v12/snowdrift-light-after.webp",
+      "bytes": 117612,
+      "sha256": "7b2fc1797a7299d9c3bd8059bb7a2145f69646e36b38b9a9d9e56dd49772a121"
+    },
+    {
+      "source": "snowdrift-light-before-thumb.webp",
+      "path": "assets-v12/snowdrift-light-before-thumb.webp",
+      "bytes": 2482,
+      "sha256": "0efbd7e9a39a140564c9f22b6a48c99045fefd5a5035640c17becf757ed86e20"
+    },
+    {
+      "source": "snowdrift-light-before.webp",
+      "path": "assets-v12/snowdrift-light-before.webp",
+      "bytes": 20136,
+      "sha256": "d2de6d02df4d78d69c44aff8bf36e5991cd18bce017f5ff8f074a377961358ba"
+    },
+    {
+      "source": "snowdrift-light-during-thumb.webp",
+      "path": "assets-v12/snowdrift-light-during-thumb.webp",
+      "bytes": 4276,
+      "sha256": "18ebcc39c35d4cf54e7d8b0d6c91a0f72da1222955b5c3a64bba6a92e9924dee"
+    },
+    {
+      "source": "snowdrift-light-during.webp",
+      "path": "assets-v12/snowdrift-light-during.webp",
+      "bytes": 64154,
+      "sha256": "7719c54b250d4da3eafd60440de80e253eb6ae4f787456c3ad292a930926bdd0"
+    },
+    {
+      "source": "snowdrift-snowflake-detail-thumb.webp",
+      "path": "assets-v12/snowdrift-snowflake-detail-thumb.webp",
+      "bytes": 11964,
+      "sha256": "116d4a6e4d237fd9870c62a37e57a1ae6196ce02b94297d98bc01b0306e218f9"
+    },
+    {
+      "source": "snowdrift-snowflake-detail.webp",
+      "path": "assets-v12/snowdrift-snowflake-detail.webp",
+      "bytes": 130030,
+      "sha256": "eb929a4a51406f1d23a656edaf825122d2381937dddb47528e1f82fcb1bc8d1f"
+    },
+    {
+      "source": "snowdrift-snowflake-macro-thumb.webp",
+      "path": "assets-v12/snowdrift-snowflake-macro-thumb.webp",
+      "bytes": 19408,
+      "sha256": "0cb914ee479537d1440472a96aeada2aa38b0e9aa9281aadcb23b69a36dc5f8e"
+    },
+    {
+      "source": "snowdrift-snowflake-macro.webp",
+      "path": "assets-v12/snowdrift-snowflake-macro.webp",
+      "bytes": 149370,
+      "sha256": "a48ccdeab2812887da8e0ec3ea1513493cc30f3e0d3b72530e8d76ff61ce86e6"
     }
   ]
 }
-

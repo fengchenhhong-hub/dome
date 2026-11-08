@@ -74,29 +74,24 @@ dialog{padding:0;border:1px solid #71614c;background:#1d1c19;color:var(--paper);
 
 </style>
 
-<style data-source="preview.css?v=11">
+<style data-source="preview.css?v=12r3">
 .room-world{position:absolute;inset:0;isolation:isolate;transform-origin:50% 50%;will-change:transform}.room-top{z-index:30}.room-foot{z-index:25}.room-list{z-index:40}.room-hint{display:none!important}.room-world .room-heading{z-index:5}.room-world .room-dock{z-index:6}.room-world .room-backdrop{z-index:0}.room-watch{position:relative;z-index:3}.room-world .room-dock .object{transform-style:preserve-3d} @media(prefers-reduced-motion:reduce){.room-world{will-change:auto}}
 
 .room::after{display:none}.room-world::after{content:'';pointer-events:none;position:absolute;inset:0;background:linear-gradient(#100c0785 0%,transparent 25%,#090e0625 55%,#081009b0 100%);z-index:1;pointer-events:none}
 
-</style><style data-source="projection.css?v=11">
+</style><style data-source="projection.css?v=12r3">
 /* Light-memory layer: photographs projected into the quiet wall, not new objects. */
 /* Behind the headline: brighter than before, with soft edges rather than a wall panel. */
 .memory-projection{position:absolute;left:18%;width:60%;top:14%;height:120px;z-index:2;overflow:hidden;pointer-events:auto;opacity:.61;mix-blend-mode:screen;filter:saturate(.56) sepia(.12) contrast(1.14);transform:perspective(1100px) rotateY(-4deg) skewY(-.4deg);transform-origin:0 50%;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 87%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 87%,transparent)}
 .memory-projection::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#211a1050,transparent 17%,transparent 80%,#211a1060);pointer-events:none}
-.memory-projection-track{height:100%;display:flex;width:max-content;animation:studio-memory-scroll 36s linear infinite;will-change:transform}
+.memory-projection-track{height:100%;display:flex;width:max-content;animation:studio-memory-scroll var(--memory-duration,36s) linear infinite;will-change:transform}
 .memory-projection-strip{height:100%;display:flex;gap:18px;padding-right:18px;flex:none}
 .memory-frame{display:block;height:100%;width:var(--memory-frame-width,210px);padding:0;border:0;border-radius:1px;background:transparent;flex:none;cursor:pointer;overflow:hidden;transition:filter .22s,opacity .22s}
 .memory-frame img{display:block;height:100%;width:100%;object-fit:cover;border:0;opacity:1;filter:blur(.12px);pointer-events:none}
 .memory-frame:hover,.memory-frame:focus-visible{filter:brightness(1.35);outline:1px solid #ead6aa;outline-offset:-1px}
-.memory-projection.is-single .memory-projection-track{width:100%;justify-content:center;animation:studio-memory-single 15s ease-in-out infinite}
-.memory-projection.is-single .memory-projection-strip{padding:0}
-.memory-projection.is-single .memory-frame{width:var(--memory-frame-width,210px)}
-.memory-projection.is-single img{object-fit:contain}
-.memory-projection.is-paused .memory-projection-track,.memory-projection:focus-within .memory-projection-track{animation-play-state:paused}
-.memory-projection.is-unavailable,.list-mode .memory-projection{display:none}
+.memory-projection.is-paused .memory-projection-track{animation-play-state:paused}
+.memory-projection.is-unavailable,.list-mode .memory-projection,.chapter-mode .memory-projection{display:none}
 @keyframes studio-memory-scroll{to{transform:translate3d(-50%,0,0)}}
-@keyframes studio-memory-single{0%,100%{transform:translate3d(-18px,0,0)}50%{transform:translate3d(18px,0,0)}}
 /* The projected letters lose light only inside the passing pointer's soft shadow.
    h1 owns both the title and grain, so neither can remain above the occlusion. */
 .room-heading .projection-copy-shadowed{mask-image:radial-gradient(ellipse var(--projection-shadow-rx,38px) var(--projection-shadow-ry,38px) at var(--projection-shadow-x,-1000px) var(--projection-shadow-y,-1000px),transparent 0%,#0000000a 28%,#00000050 58%,#000 100%);-webkit-mask-image:radial-gradient(ellipse var(--projection-shadow-rx,38px) var(--projection-shadow-ry,38px) at var(--projection-shadow-x,-1000px) var(--projection-shadow-y,-1000px),transparent 0%,#0000000a 28%,#00000050 58%,#000 100%);mask-repeat:no-repeat;-webkit-mask-repeat:no-repeat}
@@ -116,12 +111,12 @@ dialog{padding:0;border:1px solid #71614c;background:#1d1c19;color:var(--paper);
 
 @media(prefers-reduced-motion:reduce){.memory-projection-track{animation:none!important;transform:none!important}.studio-lamp-wash,.lamp-source-halo{transition:none}.memory-projection{opacity:.52}}
 
-</style><style data-source="studio-controls.css?v=11">
+</style><style data-source="studio-controls.css?v=12r3">
 /* Preserve the v10 room; only the work-selection band gains a shallow arc. */
 .studio-enhanced .room-world{position:absolute;inset:0;transform-origin:0 0;transform:translate3d(var(--scene-x,0px),var(--scene-y,0px),0) scale(var(--scene-scale,1));transition:transform .18s cubic-bezier(.16,1,.3,1);touch-action:pan-y}
 .studio-enhanced .room-dock{display:block;top:54%;left:50%;height:218px;width:min(1080px,94%);max-width:none;transform:translateX(calc(-50% + var(--dock-x,0px))) translateY(var(--dock-y,0px));perspective:1300px;isolation:isolate}
-.studio-enhanced .room-dock>.object{position:absolute;top:0;left:50%;width:152px;max-width:none;margin:0;--angle:var(--arc-angle,0deg)!important;--pose-angle:var(--angle);z-index:var(--arc-depth,1);transform:translateX(calc(-50% + var(--arc-x,0px))) translateY(var(--arc-y,0px)) scale(var(--arc-scale,1))!important;transform-origin:50% 0;transition:transform .6s cubic-bezier(.16,1,.3,1),opacity .35s;opacity:.87;cursor:pointer}
-.studio-enhanced .room-dock>.object[data-current=true]{opacity:1}
+.studio-enhanced .room-dock>.object{position:absolute;top:0;left:50%;width:152px;max-width:none;margin:0;--angle:var(--arc-angle,0deg)!important;--pose-angle:var(--angle);z-index:var(--arc-depth,1);transform:translateX(calc(-50% + var(--arc-x,0px))) translateY(var(--arc-y,0px)) scale(var(--arc-scale,1))!important;transform-origin:50% 0;transition:transform .6s cubic-bezier(.16,1,.3,1);opacity:1;filter:none;cursor:pointer}
+.studio-enhanced .room-dock>.object:hover,.studio-enhanced .room-dock>.object:focus-visible{--lift:-5px;--pose-angle:calc(var(--angle)*.75);--pose-tilt:2deg}
 .studio-enhanced .room-dock>.object[data-arc-hidden=true]{visibility:hidden;pointer-events:none}
 .studio-enhanced .object-icon{height:142px;width:142px}
 .studio-enhanced .object-title{margin-top:19px}
@@ -157,6 +152,73 @@ dialog{padding:0;border:1px solid #71614c;background:#1d1c19;color:var(--paper);
 
 /* The card already names the current project; avoid a second visible title. */
 .studio-selected-title{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+
+/* A paused/reduced-motion room still selects and opens, without hover lifting. */
+.studio-motion-paused.studio-enhanced .room-dock>.object:hover,.studio-motion-paused.studio-enhanced .room-dock>.object:focus-visible,.studio-reduced-motion.studio-enhanced .room-dock>.object:hover,.studio-reduced-motion.studio-enhanced .room-dock>.object:focus-visible{--lift:0px;--pose-angle:var(--angle);--pose-tilt:0deg}
+@media(prefers-reduced-motion:reduce){.studio-enhanced .room-dock>.object:hover,.studio-enhanced .room-dock>.object:focus-visible{--lift:0px;--pose-angle:var(--angle);--pose-tilt:0deg}}
+
+</style><style data-source="chapter-view.css?v=12r3">
+/* An image-led chapter replaces the image dialog; the room remains the entrance. */
+.chapter-view[hidden]{display:none!important}
+body.chapter-mode{background:#eee5d5;color:#2e2a25;background-image:none}
+.chapter-mode .room,.chapter-mode>.wrap{display:none!important}
+.chapter-view{min-height:100svh;background:#f1e8d8;color:#2e2a25;padding-bottom:1px;overflow-wrap:anywhere}
+.chapter-toolbar{position:relative;background:#eee5d5;border-bottom:1px solid #cfc4b0}
+.chapter-toolbar-inner{max-width:1180px;margin:auto;min-height:75px;padding:0 42px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.chapter-toolbar-label{font:11px var(--sans);letter-spacing:.12em;color:#6a6254}
+.chapter-back{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:7px 0;border:0;background:transparent;color:#35432f;font-size:13px;text-align:left;cursor:pointer}
+.chapter-back::before{content:'';width:14px;height:10px;border-left:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) scale(.7);margin-right:2px}
+.chapter-back:hover{color:#6b4932}
+.chapter-view .chapter-toolbar-watch{font-size:12px;min-height:38px;padding:6px 13px;background:transparent;border:1px solid #a39d85;color:#35432f}
+.chapter-nav{height:auto;min-height:53px;margin:0 auto;border:0;max-width:1180px;padding:0 42px;display:flex;align-items:center;justify-content:flex-start;gap:28px;overflow-x:auto;scrollbar-width:thin}
+.chapter-nav button{flex:none;border:0;border-bottom:2px solid transparent;background:transparent;color:#6a6254;padding:12px 0 10px;min-height:49px;font-size:12px;white-space:nowrap;cursor:pointer}
+.chapter-nav button[aria-current=page]{color:#2f432c;border-bottom-color:#4d5b3d}
+.chapter-nav button:hover{color:#273b25}
+.chapter-content{max-width:1180px;margin:auto;padding:39px 42px 0}
+.chapter-intro{margin:0 0 30px;display:flex;align-items:baseline;justify-content:space-between;gap:35px}
+.chapter-intro h1{font:42px/1.3 var(--serif);font-weight:500;letter-spacing:.04em;margin:0;color:#2e3328}
+.chapter-intro h1:focus{outline:none}
+.chapter-intro-note{font-size:12px;color:#6c6354;line-height:1.8;margin:0;max-width:440px}
+.chapter-work{padding:31px 0 37px;border-top:1px solid #cfc4b0;scroll-margin-top:25px}
+.chapter-work-featured{padding-top:0;border-top:0}
+.chapter-work-lead{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(245px,.9fr);gap:32px;align-items:center}
+.chapter-photo{margin:0;min-width:0}
+.chapter-photo-original{display:block;min-width:0;text-decoration:none;background:#252b22}
+.chapter-photo img{display:block;max-width:100%;width:100%;height:auto;max-height:580px;object-fit:contain;background:#252b22}
+.chapter-photo figcaption{font-size:11px;color:#706758;margin-top:8px;line-height:1.6}
+.chapter-work-copy{min-width:0;max-width:390px}
+.chapter-featured-label{font-size:11px;letter-spacing:.06em;color:#746145;margin:0 0 8px}
+.chapter-work h2{font:29px/1.4 var(--serif);font-weight:500;color:#2e3328;margin:0 0 9px}
+.chapter-work-meta{font-size:12px;color:#716655;line-height:1.7;margin:0 0 17px}
+.chapter-role{font-size:12px;line-height:1.85;color:#3c4233;margin:0 0 14px}
+.chapter-director-credit{font-size:11px;color:#6f6658;margin:0 0 12px}
+.chapter-description{font-size:13px;line-height:1.95;color:#625b4f;margin:0 0 18px}
+.chapter-award{font-size:11px;line-height:1.8;color:#774f37;margin:0 0 19px}
+.chapter-watch{display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:8px 16px;background:#3e4b33;border:1px solid #3e4b33;color:#fff4dd;font-size:12px;line-height:1.5;text-decoration:none;letter-spacing:.02em}
+.chapter-watch:hover{background:#526044;border-color:#526044}
+.chapter-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px;margin-top:25px;align-items:start}
+.chapter-gallery .chapter-photo img{max-height:470px}
+.chapter-gallery-portrait{grid-template-columns:repeat(3,minmax(0,1fr))}
+.chapter-gallery-portrait .chapter-photo img{max-height:500px}
+.chapter-work-portrait .chapter-work-lead{grid-template-columns:minmax(0,1fr) minmax(245px,1fr);gap:55px}
+.chapter-work-portrait .chapter-work-lead>.chapter-photo{width:min(100%,350px);justify-self:center}
+.chapter-work-portrait .chapter-work-lead>.chapter-photo img{max-height:520px}
+.chapter-annotation{font-size:11px;color:#736957;line-height:1.8;max-width:700px;margin:19px 0 0}
+.chapter-brand{max-width:210px;margin:23px auto 41px}
+.chapter-brand .chapter-photo figcaption{text-align:center}
+.chapter-production{min-height:50svh;display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:620px;margin:0 auto 40px;text-align:center;padding:30px 0}
+.chapter-production-duration{font:72px/1.1 var(--serif);color:#526044;margin:0 0 23px}
+.chapter-production h2{font:36px var(--serif);font-weight:500;margin:0 0 13px}
+.chapter-production .chapter-description{margin-bottom:27px}
+.chapter-footer{padding:25px 0 35px;display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid #cfc4b0;margin-top:13px}
+.chapter-footer .chapter-watch{background:transparent;border-color:#9c9a83;color:#35432f}
+.chapter-footer .chapter-watch:hover{background:#dfdccb}
+.chapter-curtain{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:0;background:linear-gradient(110deg,#171b14f5 0%,#313627f2 34%,#bba16aeb 49%,#22291df7 65%,#171b14f5 100%);transform:translateZ(0)}
+.chapter-curtain::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 41%,#ffe5a33b 49%,transparent 57%)}
+.chapter-curtain.is-active{pointer-events:auto}
+@media(max-width:900px){.chapter-toolbar-inner,.chapter-nav{padding-left:28px;padding-right:28px}.chapter-content{padding:31px 28px 0}.chapter-work-lead{grid-template-columns:minmax(0,1.4fr) minmax(220px,1fr);gap:24px}.chapter-intro{display:block;margin-bottom:25px}.chapter-intro-note{margin-top:12px;max-width:600px}.chapter-work h2{font-size:25px}.chapter-work-portrait .chapter-work-lead{gap:30px}.chapter-gallery-portrait{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.chapter-toolbar-inner{min-height:66px;padding:0 20px;gap:15px}.chapter-toolbar-label{display:none}.chapter-back{font-size:12px}.chapter-view .chapter-toolbar-watch{font-size:11px;padding:6px 11px;min-height:40px}.chapter-nav{min-height:49px;gap:23px;padding:0 20px}.chapter-nav button{font-size:12px;min-height:49px}.chapter-content{padding:28px 20px 0}.chapter-intro{margin-bottom:25px}.chapter-intro h1{font-size:34px}.chapter-intro-note{font-size:12px;margin-top:11px}.chapter-work{padding:25px 0 29px}.chapter-work-featured{padding-top:0}.chapter-work-lead,.chapter-work-portrait .chapter-work-lead{grid-template-columns:1fr;gap:18px}.chapter-work-copy{max-width:none}.chapter-work h2{font-size:26px;margin-bottom:8px}.chapter-work-meta{margin-bottom:11px}.chapter-featured-label{font-size:10px;margin-bottom:7px}.chapter-role{font-size:12px;margin-bottom:12px}.chapter-description{font-size:13px;line-height:1.9;margin-bottom:17px}.chapter-award{font-size:11px}.chapter-watch{min-height:44px;font-size:12px}.chapter-photo img{max-height:none}.chapter-gallery,.chapter-gallery-portrait{grid-template-columns:1fr;gap:22px;margin-top:22px}.chapter-gallery .chapter-photo img{max-height:none}.chapter-work-portrait .chapter-work-lead>.chapter-photo{width:min(100%,340px)}.chapter-work-portrait .chapter-work-lead>.chapter-photo img{max-height:560px}.chapter-gallery-portrait .chapter-photo{max-width:340px;justify-self:center;width:100%}.chapter-gallery-portrait .chapter-photo img{max-height:none}.chapter-annotation{font-size:11px}.chapter-footer{align-items:flex-start;padding:23px 0 30px;gap:16px}.chapter-footer .chapter-watch{max-width:180px;text-align:center}.chapter-production{min-height:53svh;margin-bottom:23px}.chapter-production h2{font-size:31px}.chapter-production-duration{font-size:62px}.chapter-brand{max-width:175px}}
+@media(prefers-reduced-motion:reduce){.chapter-curtain{display:none}.chapter-content,.chapter-view{scroll-behavior:auto}}
 
 </style></head>
 <body>
@@ -198,7 +260,7 @@ dialog{padding:0;border:1px solid #71614c;background:#1d1c19;color:var(--paper);
 <figure><button data-image="assets/cake-fruit.jpg" data-title="四季果屿｜商品视觉" aria-label="放大四季果屿商品图"><img src="assets/cake-fruit.jpg" alt="四季果屿蛋糕商品视觉" loading="lazy"></button><figcaption><span>四季果屿 / 鲜果配色</span><span class="mono">002</span></figcaption></figure>
 <figure><button data-image="assets/cake-wishes.jpg" data-title="一帆风顺｜商品视觉" aria-label="放大一帆风顺商品图"><img src="assets/cake-wishes.jpg" alt="一帆风顺蛋糕商品视觉" loading="lazy"></button><figcaption><span>一帆风顺 / 祝福表达</span><span class="mono">003</span></figcaption></figure></div><p class="annotation">200余张含修改及多比例适配版本，仅指麦屿青甜项目，不代表200款独立商品。</p>
 <div class="commercial-poster"><button type="button" data-image="assets/cake-poster-v10.jpg" data-title="麦屿青甜｜线下宣传海报" aria-label="放大麦屿青甜线下宣传海报"><img src="assets/cake-poster-v10.jpg" alt="麦屿青甜线下宣传海报" loading="lazy"></button><div><h3>麦屿青甜 · 线下宣传海报</h3><p>商业宣传设计，与商品主图形成不同使用场景的视觉展示。</p></div></div>
-<div class="visual-project"><h3>Pulse&amp;Stones · 商品静物视觉</h3><p>手链商品的静物视觉案例，与麦屿青甜项目分开展示。</p><div class="gallery bracelet-gallery"><figure><button type="button" data-image="assets/bracelet-purelove-v10.jpg" data-title="Pulse&Stones｜Pure Love 手链静物视觉" aria-label="放大Pure Love手链静物图"><img src="assets/bracelet-purelove-v10.jpg" alt="Pulse&Stones Pure Love手链静物视觉" loading="lazy"></button><figcaption>Pure Love / 商品静物</figcaption></figure><figure><button type="button" data-image="assets/bracelet-violet-v10.jpg" data-title="Pulse&Stones｜Violet 手链静物视觉" aria-label="放大Violet手链静物图"><img src="assets/bracelet-violet-v10.jpg" alt="Pulse&Stones Violet手链静物视觉" loading="lazy"></button><figcaption>Violet / 商品静物</figcaption></figure></div></div></section>
+<div class="visual-project"><h3>Pulse&amp;Stones · 商品影像</h3><p>手链商品的静物视觉案例，与麦屿青甜项目分开展示。</p><div class="gallery bracelet-gallery"><figure><button type="button" data-image="assets-v12/bracelet-clear-macro.webp" data-title="Pulse&Stones｜Pure Love 手链静物视觉" aria-label="放大Pure Love手链静物图"><img src="assets-v12/bracelet-clear-macro.webp" alt="Pulse&Stones Pure Love手链静物视觉" loading="lazy"></button><figcaption>白水晶微距 / 视频画面</figcaption></figure><figure><button type="button" data-image="assets-v12/bracelet-violet-figure.webp" data-title="Pulse&Stones｜Violet 手链静物视觉" aria-label="放大Violet手链静物图"><img src="assets-v12/bracelet-violet-figure.webp" alt="Pulse&Stones Violet手链静物视觉" loading="lazy"></button><figcaption>紫色烟灰 / 视频画面</figcaption></figure></div></div></section>
 <section id="method" class="method"><div><h2>把想法，做成成片。</h2><p>从理解需求开始，<br>在反馈与修改中完成交付。</p></div><div><ol><li>理解需求</li><li>脚本分镜</li><li>拍摄与素材组织</li><li>剪辑调色</li><li>检查修改与交付</li></ol><p class="tools">剪映：剪辑与字幕 / DaVinci Resolve：调色 / Canva、Photoshop：商品视觉与宣传物料 / AI工具：创意辅助与素材迭代</p></div></section><div class="paper-bottom"><span>FENG CHENGHONG / 影视与商业内容作品集</span><span class="mono">ARCHIVE UPDATED / 2026.11</span></div></main>
 <footer class="footer"><div><strong>每一份作品，都附真实分工。</strong><p>本页仅展示作品与制作说明。</p></div><a href="https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg?from=from_copylink" target="_blank" rel="noopener">飞书看完整视频 ↗</a></footer></div>
 <dialog id="viewer" aria-labelledby="viewer-title"><div class="modal-head"><span id="viewer-title"></span><button type="button" id="close-viewer" aria-label="关闭预览">关闭 ×</button></div><p class="modal-note" id="media-note"></p><div class="modal-body" id="media-body"></div><div class="panel-copy" id="panel-copy"></div></dialog>
@@ -209,16 +271,17 @@ const FEISHU_URL='https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg?from=fro
 let restoreFocus;
 function clearNode(node){while(node.firstChild)node.removeChild(node.firstChild);}
 const portfolioCases={
- film:{title:'《空楼回响》',meta:'故事短片 / 10:09 / 已完成',role:'导演、摄影、剪辑',description:'以普通教学楼为主要场景，使用Pocket 3完成约3天拍摄、约14天剪辑。通过取景、镜头组织与剪辑衔接处理场地限制，组织完整叙事。',award:'中国好创意暨全国数字艺术设计大赛 · 吉林赛区本科组社会创新类一等奖',images:[['konglou-poster.jpg','影片封面 / 现场人物与空间'],['film-red-door-v10.jpg','红光门缝 / 灯光与悬念'],['film-warm-transition-v10.jpg','读信转场 / 暖光人物'],['film-conflict-v10.jpg','冲突对峙 / 人物反应与镜头衔接']]},
+ film:{title:'《空楼回响》',meta:'故事短片 / 10:09 / 已完成',role:'导演、摄影、剪辑',description:'在普通教学楼完成叙事短片，通过取景、镜头组织与剪辑衔接处理场地限制。',award:'中国好创意暨全国数字艺术设计大赛 · 吉林赛区本科组社会创新类一等奖',images:[['konglou-poster.jpg','影片封面 / 现场人物与空间'],['film-red-door-v10.jpg','红光门缝 / 灯光与悬念'],['film-warm-transition-v10.jpg','读信转场 / 暖光人物'],['film-conflict-v10.jpg','冲突对峙 / 人物反应与镜头衔接']]},
  real:{title:'商业实拍 / 教程与开箱',meta:'步骤教程15秒 / 开箱推荐15秒',role:'步骤教程：选题与脚本、现场拍摄、剪辑及字幕；开箱推荐：实拍素材剪辑、英文字幕与成片包装。',description:'步骤教程用近景、动作顺序与字幕说明商品使用过程；开箱推荐将实拍素材整理成展示段落，配合英文字幕完成成片包装。两例分别体现步骤表达与推荐内容的剪辑组织。',layout:'portrait',images:[['tutorial-poster.jpg','步骤教程 / 商品使用演示'],['commerce-unboxing-v10.jpg','开箱推荐 / 实拍素材剪辑与字幕包装']]},
  ai:{title:'AI辅助短视频',meta:'本例包含AI生成画面 / 约15秒',role:'创意、提示词设计、素材筛选迭代、剪辑与字幕',description:'围绕日常化妆场景组织人物、商品特写与情境画面，筛选并迭代人物质感和细节，整合为短视频。',layout:'portrait',images:[['ai-cover-medium.jpg','人物持商品中景 / AI生成画面']]},
- hangxiang:{title:'《航向》',meta:'故事短片 / 6:08',role:'导演、摄影、剪辑、调色',description:'围绕青年就业迷茫展开故事，完成演员沟通、镜头设计和现场组织。结合室内对白与城市外景推进叙事，呈现从前期筹备、现场拍摄到后期成片的制作能力。',images:[['hangxiang-cover-v10.jpg','就业主题短片 / 真实影片画面']]},
+ hangxiang:{title:'《航向》',meta:'故事短片 / 6:08',role:'导演、摄影、剪辑、调色',description:'围绕青年就业迷茫展开故事，完成演员沟通、镜头设计和现场组织。结合室内对白与城市外景推进叙事。',images:[['hangxiang-cover-v10.jpg','就业主题短片 / 真实影片画面']]},
  yueding:{title:'《约定》',meta:'故事短片 / 2:52',role:'创意、导演、摄影、剪辑',description:'负责短片创意构思、导演、摄影及剪辑，以人物对话和行动组织故事段落。通过日夜场景转换、双人对白与人物近景呈现情绪变化。',images:[['yueding-cover-v10.jpg','人物关系与对白 / 真实影片画面']]},
- shixianzhiwai:{title:'《视线之外》',meta:'故事短片 / 12:01',role:'副导演、摄影、剪辑',description:'参与办公室、走廊与夜景等不同环境的叙事短片制作。结合人物对白、行动画面与空间纵深组织镜头，呈现实景拍摄、氛围营造与后期叙事能力。',images:[['shixianzhiwai-cover-v10.jpg','多场景叙事 / 真实影片画面']]},
- visual:{title:'商业视觉 / 两组项目',meta:'麦屿青甜 / Pulse&Stones',role:'麦屿青甜：商品图、宣传海报与多比例适配；Pulse&Stones：商品静物视觉案例。',description:'麦屿青甜为持续付费商业合作，围绕门店需求完成视觉制作、适配及反馈修改，累计制作及迭代200余张图，覆盖11类蛋糕甜点。Pulse&Stones为独立的一组手链商品静物视觉，与蛋糕店项目分开展示。',annotation:'200余张仅指麦屿青甜，含迭代与适配版本，不等同于200款独立商品。',images:[['cake-pearl.jpg','复古珍珠 / 装饰细节','麦屿青甜 · 商品与宣传设计'],['cake-fruit.jpg','四季果屿 / 鲜果配色','麦屿青甜 · 商品与宣传设计'],['cake-wishes.jpg','一帆风顺 / 祝福表达','麦屿青甜 · 商品与宣传设计'],['cake-poster-v10.jpg','线下宣传海报 / 商业设计','麦屿青甜 · 商品与宣传设计'],['bracelet-purelove-v10.jpg','Pure Love / 手链静物视觉','Pulse&Stones · 商品静物视觉'],['bracelet-violet-v10.jpg','Violet / 手链静物视觉','Pulse&Stones · 商品静物视觉']]}
+ shixianzhiwai:{title:'《视线之外》',meta:'故事短片 / 12:01',role:'副导演、摄影、剪辑',description:'参与办公室、走廊与夜景等不同环境的叙事短片制作。结合人物对白、行动画面与空间纵深组织镜头。',images:[['shixianzhiwai-cover-v10.jpg','多场景叙事 / 真实影片画面']]},
+ visual:{title:'商业视觉 / 两组项目',meta:'麦屿青甜 / Pulse&Stones',role:'麦屿青甜：商品图、宣传海报与多比例适配；Pulse&Stones：商品静物视觉案例。',description:'麦屿青甜为持续付费商业合作，围绕门店需求完成视觉制作、适配及反馈修改，累计制作及迭代200余张图，覆盖11类蛋糕甜点。Pulse&Stones为独立的一组手链商品静物视觉，与蛋糕店项目分开展示。',annotation:'200余张仅指麦屿青甜，含迭代与适配版本，不等同于200款独立商品。',images:[['cake-pearl.jpg','复古珍珠 / 装饰细节','麦屿青甜 · 商品与宣传设计'],['cake-fruit.jpg','四季果屿 / 鲜果配色','麦屿青甜 · 商品与宣传设计'],['cake-wishes.jpg','一帆风顺 / 祝福表达','麦屿青甜 · 商品与宣传设计'],['cake-poster-v10.jpg','线下宣传海报 / 商业设计','麦屿青甜 · 商品与宣传设计'],['assets-v12/bracelet-clear-macro.webp','Pure Love / 手链静物视觉','Pulse&Stones · 商品静物视觉'],['assets-v12/bracelet-violet-figure.webp','Violet / 手链静物视觉','Pulse&Stones · 商品静物视觉']]}
 };
 const caseWatchLinks={"film": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#doxcnkYwmGN2Kq0LGYmMn5IqDJg", "real": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#doxcnbnzGPZBOjB9NHTFJ4bFEgf", "ai": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#doxcnE7hazSpwaEJaSQ2BPvwNyf", "hangxiang": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#HxsmdegKDoY6ggxJyl2caESPnib", "yueding": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#Ap5WdYPuLoFrw5xHbuucoymcnJf", "shixianzhiwai": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#N4Ihde36Po4ofrxcQ4GcwHeJnUe", "visual": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#doxcnAyiQLOPkmrHAgYQfYciFYd"};
 const frameWatchLinks={"commerce-unboxing-v10.jpg": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#ZqQNdibjPo3BUdxxHdvcnSISnOf", "bracelet-purelove-v10.jpg": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#GppOdUU4GoaKRaxwaghcw0Nyn9e", "bracelet-violet-v10.jpg": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#GppOdUU4GoaKRaxwaghcw0Nyn9e", "cake-poster-v10.jpg": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#SwL6dp6ELoblX0x3XGscaIy4ndd"};
+function caseAssetUrl(src){return src.includes('/')?src:'assets/'+src;}
 function hideRoomIndex(){const list=document.querySelector('.room-list'),toggle=document.querySelector('#open-index');if(list)list.hidden=true;if(toggle)toggle.setAttribute('aria-expanded','false');}
 function appendWatchLink(container,href=FEISHU_URL){const link=document.createElement('a');link.href=href;link.target='_blank';link.rel='noopener';link.className='domestic-watch';link.textContent='飞书看完整视频 ↗';container.append(link);return link;}
 function revealViewer(fallback){if(typeof viewer.showModal==='function'){if(!viewer.open)viewer.showModal();return true;}window.open(fallback||FEISHU_URL,'_blank','noopener');return false;}
@@ -226,9 +289,9 @@ function renderCaseCopy(data){const copy=document.querySelector('#panel-copy');c
 function showGallery(origin,key){const caseKey=key||origin.dataset.gallery,data=portfolioCases[caseKey];if(!data)return;restoreFocus=origin;hideRoomIndex();clearNode(box);clearNode(note);renderCaseCopy(data);title.textContent=data.title+'｜精选图片';const watch=appendWatchLink(note,caseWatchLinks[caseKey]);const route=document.createElement('span');route.className='gallery-route-note';route.textContent='本页为图片展；完整视频在飞书观看。';if((key||origin.dataset.gallery)==='visual')route.textContent='轻触大图可查看原图。';note.append(route);
  const panel=document.createElement('div');panel.className='case-gallery';panel.dataset.layout=data.layout||'landscape';const figure=document.createElement('figure'),original=document.createElement('a'),image=document.createElement('img'),caption=document.createElement('figcaption');original.className='gallery-photo-link';original.target='_blank';original.rel='noopener';original.setAttribute('aria-label','单独查看当前图片原图');image.className='gallery-photo';image.decoding='async';original.append(image);caption.setAttribute('aria-live','polite');figure.append(original,caption);panel.append(figure);
  let current=0;const thumbButtons=[];let count;
- function select(index,moveFocus){current=(index+data.images.length)%data.images.length;const frame=data.images[current];image.src='assets/'+frame[0];image.alt=data.title+' / '+frame[1];original.href=image.src;watch.href=frameWatchLinks[frame[0]]||caseWatchLinks[caseKey]||FEISHU_URL;caption.textContent=(frame[2]?frame[2]+' / ':'')+frame[1];if(count)count.textContent=(current+1)+' / '+data.images.length;thumbButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===current)));if(moveFocus&&thumbButtons[current])thumbButtons[current].focus();}
+ function select(index,moveFocus){current=(index+data.images.length)%data.images.length;const frame=data.images[current];image.src=caseAssetUrl(frame[0]);image.alt=data.title+' / '+frame[1];original.href=image.src;watch.href=frameWatchLinks[frame[0]]||caseWatchLinks[caseKey]||FEISHU_URL;caption.textContent=(frame[2]?frame[2]+' / ':'')+frame[1];if(count)count.textContent=(current+1)+' / '+data.images.length;thumbButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===current)));if(moveFocus&&thumbButtons[current])thumbButtons[current].focus();}
  if(data.images.length>1){const controls=document.createElement('div');controls.className='gallery-controls';const previous=document.createElement('button'),next=document.createElement('button');previous.type=next.type='button';previous.textContent='上一张';next.textContent='下一张';previous.setAttribute('aria-label','上一张精选图片');next.setAttribute('aria-label','下一张精选图片');previous.addEventListener('click',()=>select(current-1));next.addEventListener('click',()=>select(current+1));count=document.createElement('span');count.className='gallery-count';count.setAttribute('aria-hidden','true');controls.append(previous,count,next);panel.append(controls);
- const groups=document.createElement('div');groups.className='gallery-groups';const lists=new Map();data.images.forEach((frame,i)=>{const group=frame[2]||'';if(!lists.has(group)){const section=document.createElement('section');section.className='gallery-thumb-section';if(group){const heading=document.createElement('h4');heading.textContent=group;section.append(heading);}const row=document.createElement('div');row.className='gallery-thumbs';row.setAttribute('role','group');row.setAttribute('aria-label',(group||data.title)+'精选图片');section.append(row);groups.append(section);lists.set(group,row);}const thumbs=lists.get(group);const button=document.createElement('button'),thumb=document.createElement('img'),label=document.createElement('span');button.type='button';button.setAttribute('aria-label','查看第'+(i+1)+'张：'+frame[1]);thumb.src='assets/'+frame[0];thumb.alt='';thumb.loading='lazy';thumb.decoding='async';label.textContent=frame[1];button.append(thumb,label);button.addEventListener('click',()=>select(i));button.addEventListener('keydown',event=>{let at;if(event.key==='ArrowRight'||event.key==='ArrowDown')at=i+1;else if(event.key==='ArrowLeft'||event.key==='ArrowUp')at=i-1;else if(event.key==='Home')at=0;else if(event.key==='End')at=data.images.length-1;else return;event.preventDefault();select(at,true);});thumbButtons.push(button);thumbs.append(button);});panel.append(groups);}
+ const groups=document.createElement('div');groups.className='gallery-groups';const lists=new Map();data.images.forEach((frame,i)=>{const group=frame[2]||'';if(!lists.has(group)){const section=document.createElement('section');section.className='gallery-thumb-section';if(group){const heading=document.createElement('h4');heading.textContent=group;section.append(heading);}const row=document.createElement('div');row.className='gallery-thumbs';row.setAttribute('role','group');row.setAttribute('aria-label',(group||data.title)+'精选图片');section.append(row);groups.append(section);lists.set(group,row);}const thumbs=lists.get(group);const button=document.createElement('button'),thumb=document.createElement('img'),label=document.createElement('span');button.type='button';button.setAttribute('aria-label','查看第'+(i+1)+'张：'+frame[1]);thumb.src=caseAssetUrl(frame[0]);thumb.alt='';thumb.loading='lazy';thumb.decoding='async';label.textContent=frame[1];button.append(thumb,label);button.addEventListener('click',()=>select(i));button.addEventListener('keydown',event=>{let at;if(event.key==='ArrowRight'||event.key==='ArrowDown')at=i+1;else if(event.key==='ArrowLeft'||event.key==='ArrowUp')at=i-1;else if(event.key==='Home')at=0;else if(event.key==='End')at=data.images.length-1;else return;event.preventDefault();select(at,true);});thumbButtons.push(button);thumbs.append(button);});panel.append(groups);}
  const startIndex=origin.dataset.startFrame?data.images.findIndex(frame=>frame[0]===origin.dataset.startFrame):0;select(Math.max(0,startIndex));box.append(panel);revealViewer(watch.href||FEISHU_URL);
 }
 function showImage(origin){restoreFocus=origin;hideRoomIndex();clearNode(box);clearNode(note);clearNode(document.querySelector('#panel-copy'));title.textContent=origin.dataset.title||'商品视觉';const image=document.createElement('img');image.src=origin.dataset.image;image.alt=origin.dataset.title||'商品视觉原图';box.append(image);const link=document.createElement('a');link.href=origin.dataset.image;link.target='_blank';link.rel='noopener';link.className='image-original-link';link.textContent='单独查看原图 ↗';note.append(link);revealViewer(origin.dataset.image);}
@@ -237,7 +300,7 @@ document.querySelectorAll('[data-image]').forEach(button=>button.addEventListene
 function closeViewer(){if(viewer.open)viewer.close();if(restoreFocus&&typeof restoreFocus.focus==='function')restoreFocus.focus();}
 document.querySelector('#close-viewer').addEventListener('click',closeViewer);viewer.addEventListener('cancel',event=>{event.preventDefault();closeViewer();});viewer.addEventListener('click',event=>{if(event.target===viewer){const r=viewer.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeViewer();}});
 
-</script><script src="room.js?v=11"></script><script data-source="projection.js?v=11">
+</script><script src="room.js?v=12r3"></script><script data-source="projection.js?v=12r3">
 /* The light carries real stills; full films remain at the Feishu entry. */
 (() => {
   'use strict';
@@ -257,15 +320,17 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
     yueding: 'preview-assets/beam-yueding.webp',
     shixianzhiwai: 'preview-assets/beam-shixianzhiwai.webp',
     real: 'preview-assets/beam-real.webp',
+    tutorial: 'assets/tutorial-poster.jpg',
     ai: 'preview-assets/beam-ai.webp',
     visual: 'preview-assets/beam-visual.webp',
-    jewelry: 'preview-assets/beam-jewelry.webp'
+    cakePearl: 'assets/cake-pearl.jpg',
+    jewelry: 'assets-v12/bracelet-clear-macro-thumb.webp'
   };
   const sets = {
     film: ['film', 'red', 'warm'],
-    real: ['real'],
+    real: ['real', 'tutorial'],
     ai: ['ai'],
-    visual: ['visual', 'jewelry'],
+    visual: ['cakePearl', 'visual', 'jewelry'],
     hangxiang: ['hangxiang'],
     yueding: ['yueding'],
     shixianzhiwai: ['shixianzhiwai'],
@@ -275,6 +340,9 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   let inView = true;
   let current = 'film';
   let layoutFrame = 0;
+  let stripSignature = '';
+  let temporaryPaused = false;
+  let temporaryPauseTimer = 0;
 
   const ribbon = document.createElement('div');
   ribbon.className = 'memory-projection';
@@ -306,32 +374,68 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   lightStatus.setAttribute('aria-live', 'polite');
   world.append(lightStatus);
 
+  const frameNames = { film: '《空楼回响》', red: '《空楼回响》· 红色门框', warm: '《空楼回响》· 暖光场景', hangxiang: '《航向》', yueding: '《约定》', shixianzhiwai: '《视线之外》', real: '商业实拍·开箱', tutorial: '商业实拍·步骤教程', ai: 'AI影像', visual: '商业视觉·鲜果蛋糕', cakePearl: '商业视觉·珍珠蛋糕', jewelry: '商业视觉·饰品' };
+  const caseFor = name => name === 'red' || name === 'warm' ? 'film' : name === 'jewelry' || name === 'cakePearl' ? 'visual' : name === 'tutorial' ? 'real' : name;
+
   function fill(key) {
     current = key in sets || key === 'production' ? key : 'all';
     ribbon.dataset.case = current;
     room.dataset.projectionCase = current;
+    stripSignature = '';
+    // There are no supplied frames for the new film yet. Never pass an older
+    // finished film off as footage from the work in progress.
+    ribbon.classList.toggle('is-unavailable', current === 'production');
+    if (current === 'production') track.replaceChildren();
+    requestLayout();
+  }
+
+  function pauseBriefly() {
+    temporaryPaused = true;
+    if (temporaryPauseTimer) clearTimeout(temporaryPauseTimer);
+    syncMotion();
+    temporaryPauseTimer = setTimeout(() => {
+      temporaryPauseTimer = 0;
+      temporaryPaused = false;
+      // A short pause ending must not override a menu pause, a hidden tab,
+      // reduced-motion preference, or the separate project chapter view.
+      syncMotion();
+    }, 1000);
+  }
+
+  function coverRibbon(frameWidth) {
+    if (current === 'production') return;
+    const sequence = sets[current] || sets.all;
+    const gap = world.offsetWidth <= 650 ? 10 : 18;
+    const width = Math.max(1, ribbon.clientWidth || world.offsetWidth * .6);
+    const pitch = frameWidth + gap;
+    // Each identical group must cover the entire viewport plus one frame.
+    // Two complete groups can then translate by exactly half the track width
+    // without revealing an empty end, including categories with one image.
+    const cycles = Math.max(1, Math.ceil((width + pitch) / (sequence.length * pitch)));
+    const signature = `${current}:${cycles}:${sequence.join(',')}`;
+    const groupWidth = cycles * sequence.length * pitch;
+    track.style.setProperty('--memory-duration', `${Math.max(20, groupWidth / 30).toFixed(2)}s`);
+    ribbon.dataset.coverageFrames = String(cycles * sequence.length);
+    if (signature === stripSignature) return;
+    stripSignature = signature;
     track.replaceChildren();
-    const empty = current === 'production';
-    ribbon.classList.toggle('is-unavailable', empty);
-    if (empty) return;
-    const sequence = sets[current];
-    ribbon.classList.toggle('is-single', sequence.length === 1);
-    const repeats = sequence.length === 1 ? 1 : 2;
-    const cycleRepeats = sequence.length === 1 ? 1 : 2;
-    const names = { film: '《空楼回响》', red: '《空楼回响》· 红色门框', warm: '《空楼回响》· 暖光场景', hangxiang: '《航向》', yueding: '《约定》', shixianzhiwai: '《视线之外》', real: '商业实拍', ai: 'AI影像', visual: '商业视觉', jewelry: '商业视觉·饰品' };
-    const caseFor = name => name === 'red' || name === 'warm' ? 'film' : name === 'jewelry' ? 'visual' : name;
-    for (let copy = 0; copy < repeats; copy++) {
+    for (let copy = 0; copy < 2; copy++) {
       const strip = document.createElement('div');
       strip.className = 'memory-projection-strip';
       if (copy > 0) strip.setAttribute('aria-hidden', 'true');
-      Array.from({ length: cycleRepeats }, () => sequence).flat().forEach((name, index) => {
+      for (let index = 0; index < cycles * sequence.length; index++) {
+        const name = sequence[index % sequence.length];
         const frame = document.createElement('button');
         frame.type = 'button';
         frame.className = 'memory-frame';
         frame.dataset.case = caseFor(name);
-        frame.setAttribute('aria-label', `选择${names[name] || '作品'}`);
+        frame.setAttribute('aria-label', `选择${frameNames[name] || '作品'}，暂停胶片1秒`);
+        frame.title = '点击暂停1秒';
         frame.tabIndex = copy === 0 && index < sequence.length ? 0 : -1;
-        frame.addEventListener('click', () => document.dispatchEvent(new CustomEvent('studio:request-selection', { detail: { key: caseFor(name) } })));
+        frame.addEventListener('click', () => {
+          document.dispatchEvent(new CustomEvent('studio:request-selection', { detail: { key: caseFor(name) } }));
+          pauseBriefly();
+        });
         const image = document.createElement('img');
         image.src = sources[name];
         image.alt = '';
@@ -340,14 +444,14 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
         image.dataset.still = name;
         frame.append(image);
         strip.append(frame);
-      });
+      }
       track.append(strip);
     }
-    requestLayout();
+    syncMotion();
   }
 
   function syncMotion() {
-    const paused = manualPaused || reduced.matches || document.hidden || !inView || Boolean(dialog && dialog.open) || document.body.classList.contains('list-mode');
+    const paused = manualPaused || temporaryPaused || reduced.matches || document.hidden || !inView || Boolean(dialog && dialog.open) || document.body.classList.contains('list-mode') || document.body.classList.contains('chapter-mode');
     ribbon.classList.toggle('is-paused', paused);
     ribbon.dataset.animationState = paused ? 'paused' : 'running';
   }
@@ -367,7 +471,8 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
     ribbon.style.top = `${Math.round(titleCenter - height * .5)}px`;
     ribbon.style.height = `${Math.round(height)}px`;
     ribbon.classList.remove('is-space-limited');
-    ribbon.style.setProperty('--memory-frame-width', `${Math.round(height * 1.78)}px`);
+    const frameWidth = Math.round(height * 1.78);
+    ribbon.style.setProperty('--memory-frame-width', `${frameWidth}px`);
     // Pin lamp effects to the same untransformed plane as the source photograph.
     // Its own pan/scale and the outer scene zoom then move everything together.
     const bw = backdrop.offsetWidth;
@@ -426,7 +531,7 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
     wash.style.setProperty('--lamp-wash-height', `${(isNarrow ? 240 : 260 * imageScale).toFixed(2)}px`);
     wash.style.setProperty('--lamp-pool-width', `${(isNarrow ? 105 : 170 * imageScale).toFixed(2)}px`);
     wash.style.setProperty('--lamp-pool-height', `${(isNarrow ? 58 : 75 * imageScale).toFixed(2)}px`);
-
+    coverRibbon(frameWidth);
   }
   function requestLayout() {
     if (!layoutFrame) layoutFrame = requestAnimationFrame(layout);
@@ -509,7 +614,7 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   syncMotion();
 })();
 
-</script><script data-source="studio-controls.js?v=11">
+</script><script data-source="studio-controls.js?v=12r3">
 /* Local interactive preview: selection stays in the room; full films stay in Feishu. */
 (() => {
   'use strict';
@@ -540,7 +645,7 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   const instruction = document.createElement('span');
   instruction.className = 'studio-sr-only';
   instruction.id = 'studio-card-instruction';
-  instruction.textContent = '使用左右方向键选择作品，按Home或End选择首尾作品。';
+  instruction.textContent = '点击或按回车、空格打开作品详情；使用左右方向键切换中央作品，按Home或End选择首尾作品。';
   dock.append(instruction);
 
   const selection = document.createElement('div');
@@ -621,7 +726,7 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
       card.style.setProperty('--arc-angle', `${(distance * -7).toFixed(2)}deg`);
       card.style.setProperty('--arc-scale', String(isSelected ? 1.055 : (small.matches ? 0.82 : magnitude === 1 ? 0.94 : 0.86)));
       card.style.setProperty('--arc-depth', String(5 - magnitude));
-      card.setAttribute('aria-pressed', String(isSelected));
+      card.setAttribute('aria-current', String(isSelected));
       card.setAttribute('aria-hidden', String(hiddenAtWidth));
       card.tabIndex = isSelected ? 0 : -1;
     });
@@ -648,18 +753,22 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   }
   cards.forEach(card => {
     const name = card.querySelector('.object-title');
-    card.setAttribute('aria-label', `选择${name ? name.textContent : '作品'}`);
+    const title = name ? name.textContent : '作品';
+    card.setAttribute('aria-label', card.dataset.case === 'production' ? `查看${title}制作中档案` : `打开${title}图片与制作说明`);
     card.setAttribute('aria-describedby', instruction.id);
+    card.setAttribute('aria-haspopup', 'dialog');
+    card.setAttribute('aria-controls', 'viewer');
+    card.removeAttribute('aria-pressed');
     const hint = card.querySelector('.object-hint');
-    if (hint) hint.textContent = '选择作品';
+    if (hint) hint.textContent = '点击查看图片与制作说明';
   });
   dock.addEventListener('click', event => {
     if (explicitDetail) return;
     const card = event.target.closest('.object[data-case]');
     const index = cards.indexOf(card);
     if (index < 0) return;
-    event.preventDefault();
-    event.stopPropagation();
+    // The click already has a stable target. Select it, then let the original
+    // gallery/WIP listener open once; re-dispatching would recurse or double-open.
     select(index);
   }, true);
   dock.addEventListener('keydown', event => {
@@ -690,6 +799,23 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   // A deliberate, recoverable motion preference lives inside the existing menu.
   const menu = document.querySelector('#room-index');
   if (menu) {
+    // The room's legacy menu calls card.click(). Keep menu entries as selection
+    // actions so they do not open a dialog and then pull focus behind it.
+    menu.addEventListener('click', event => {
+      const entry = event.target.closest('[data-launch]');
+      if (!entry || !menu.contains(entry)) return;
+      const index = cards.findIndex(card => card.dataset.case === entry.dataset.launch);
+      if (index < 0) return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (typeof hideRoomIndex === 'function') hideRoomIndex();
+      else {
+        menu.hidden = true;
+        const toggle = document.querySelector('#open-index');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }
+      select(index, true);
+    }, true);
     const pauseButton = document.createElement('button');
     pauseButton.type = 'button';
     pauseButton.id = 'studio-motion';
@@ -787,6 +913,421 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   onReducedChange();
   select(cards.findIndex(card => card.dataset.case === 'film') >= 0 ? cards.findIndex(card => card.dataset.case === 'film') : 0);
   paintView();
+})();
+
+</script><script data-source="chapter-assets.js?v=12r3">
+/* Approved user-supplied frames; no source file paths are exposed. */
+window.FCHChapterAssets = {
+  "visualFrames": [
+    {
+      "src": "assets-v12/bracelet-clear-macro.webp",
+      "thumb": "assets-v12/bracelet-clear-macro-thumb.webp",
+      "caption": "白水晶微距 / 透光与珠面细节",
+      "group": "Pulse&Stones · 商品影像"
+    },
+    {
+      "src": "assets-v12/bracelet-violet-figure.webp",
+      "thumb": "assets-v12/bracelet-violet-figure-thumb.webp",
+      "caption": "紫色烟灰 / 人像道具与字幕画面",
+      "group": "Pulse&Stones · 商品影像"
+    },
+    {
+      "src": "assets-v12/bracelet-pair-packaging.webp",
+      "thumb": "assets-v12/bracelet-pair-packaging-thumb.webp",
+      "caption": "双串包装 / 商品、包装与倒影",
+      "group": "Pulse&Stones · 商品影像"
+    }
+  ],
+  "brand": {
+    "src": "assets-v12/pulse-stones-logo.webp",
+    "thumb": "assets-v12/pulse-stones-logo-thumb.webp",
+    "caption": "Pulse&Stones / 黑底品牌标志",
+    "group": "Pulse&Stones · 商品影像"
+  },
+  "snowdrift": {
+    "title": "Snowdrift Bloom · 扫光与细节",
+    "durationLabel": "商品影像 / 16秒",
+    "description": "由微距细节进入同一段扫光画面，呈现暗部、亮部经过与主体显露。",
+    "frames": [
+      {
+        "src": "assets-v12/snowdrift-snowflake-macro.webp",
+        "thumb": "assets-v12/snowdrift-snowflake-macro-thumb.webp",
+        "caption": "Snowdrift Bloom / 雪花饰件微距",
+        "group": "Snowdrift Bloom · 扫光与细节"
+      },
+      {
+        "src": "assets-v12/snowdrift-snowflake-detail.webp",
+        "thumb": "assets-v12/snowdrift-snowflake-detail-thumb.webp",
+        "caption": "Snowdrift Bloom / 雪花细节与字幕画面",
+        "group": "Snowdrift Bloom · 扫光与细节"
+      },
+      {
+        "src": "assets-v12/snowdrift-light-before.webp",
+        "thumb": "assets-v12/snowdrift-light-before-thumb.webp",
+        "caption": "1.80s / 开场暗部 / 轮廓与字幕",
+        "group": "Snowdrift Bloom · 扫光与细节"
+      },
+      {
+        "src": "assets-v12/snowdrift-light-during.webp",
+        "thumb": "assets-v12/snowdrift-light-during-thumb.webp",
+        "caption": "3.00s / 亮部经过 / 贝壳与饰件逐步显露",
+        "group": "Snowdrift Bloom · 扫光与细节"
+      },
+      {
+        "src": "assets-v12/snowdrift-light-after.webp",
+        "thumb": "assets-v12/snowdrift-light-after-thumb.webp",
+        "caption": "3.60s / 主体显露 / 雪花手串与陈列场景",
+        "group": "Snowdrift Bloom · 扫光与细节"
+      }
+    ],
+    "watchUrl": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#GppOdUU4GoaKRaxwaghcw0Nyn9e"
+  },
+  "pulseWatchUrl": "https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg#GppOdUU4GoaKRaxwaghcw0Nyn9e"
+};
+
+</script><script data-source="chapter-view.js?v=12r3">
+/* Complete, image-led chapters. Full videos remain at the established Feishu entry. */
+(() => {
+  'use strict';
+  const room = document.querySelector('.room');
+  if (!room) return;
+  const cases = typeof portfolioCases === 'object' ? portfolioCases : {};
+  const watchLinks = typeof caseWatchLinks === 'object' ? caseWatchLinks : {};
+  const frameLinks = typeof frameWatchLinks === 'object' ? frameWatchLinks : {};
+  const feishu = typeof FEISHU_URL === 'string' ? FEISHU_URL : 'https://my.feishu.cn/wiki/W1a6wsG2wiyLZnkIknEcfHCQnvg';
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const chapters = {
+    film: { title: '影视叙事', introduction: '从完整短片开始，看镜头如何组织空间、人物与情绪。', number: '01' },
+    real: { title: '商业实拍', introduction: '步骤演示与开箱推荐，把素材组织成清楚的商品表达。', number: '02' },
+    ai: { title: 'AI影像', introduction: '生成画面与剪辑整合，完成有明确情境的短视频。', number: '03' },
+    visual: { title: '商业视觉', introduction: '门店商品设计、手串影像与扫光细节。', number: '04' },
+    production: { title: '制作中', introduction: '新片正在后期制作，完整成片后补充。', number: '05' }
+  };
+  const order = Object.keys(chapters);
+  const filmKeys = ['film', 'hangxiang', 'yueding', 'shixianzhiwai'];
+  const state = { key: null, origin: null, roomScroll: 0, busy: false, queued: null, animations: [] };
+  const originalTitle = document.title;
+  const startUrl = new URL(location.href);
+  const roomUrl = startUrl.pathname + startUrl.search + (/^#chapter\//.test(startUrl.hash) ? '' : startUrl.hash);
+
+  function element(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+  function normalizeKey(key) {
+    if (filmKeys.includes(key)) return 'film';
+    return Object.prototype.hasOwnProperty.call(chapters, key) ? key : null;
+  }
+  function sourceUrl(value) {
+    if (!value || typeof value !== 'string') return '';
+    return value.includes('/') ? value : 'assets/' + value;
+  }
+  function frameData(value) {
+    if (Array.isArray(value)) return { src: sourceUrl(value[0]), caption: value[1] || '', group: value[2] || '' };
+    return { src: sourceUrl(value && value.src), caption: value && value.caption || '', group: value && value.group || '' };
+  }
+  function watchLink(href, text = '飞书看完整视频 ↗') {
+    const link = element('a', 'chapter-watch', text);
+    link.href = href || feishu;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    return link;
+  }
+  function photo(frame, title, first = false) {
+    const data = frameData(frame);
+    const figure = element('figure', 'chapter-photo');
+    const link = element('a', 'chapter-photo-original');
+    link.href = data.src;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.setAttribute('aria-label', '查看原图：' + (data.caption || title));
+    const image = element('img');
+    image.src = data.src;
+    image.alt = data.caption || title;
+    image.decoding = 'async';
+    image.loading = first ? 'eager' : 'lazy';
+    image.addEventListener('load', () => {
+      figure.classList.toggle('chapter-photo-portrait', image.naturalHeight > image.naturalWidth * 1.15);
+    }, { once: true });
+    link.append(image);
+    figure.append(link);
+    if (data.caption) figure.append(element('figcaption', '', data.caption));
+    return figure;
+  }
+
+  const page = element('main', 'chapter-view');
+  page.id = 'chapter-view';
+  page.hidden = true;
+  page.tabIndex = -1;
+  page.setAttribute('aria-labelledby', 'chapter-heading');
+  const curtain = element('div', 'chapter-curtain');
+  curtain.setAttribute('aria-hidden', 'true');
+  document.body.append(page, curtain);
+
+  function currentExtra() { return window.FCHChapterAssets || {}; }
+  function workList(key) {
+    if (key === 'film') return filmKeys.filter(name => cases[name]).map(name => ({ ...cases[name], id: name, watch: watchLinks[name], directorCredit: name === 'shixianzhiwai' ? '导演：李佳颖' : '' }));
+    if (key === 'real') {
+      const data = cases.real || {};
+      const frames = data.images || [];
+      return [
+        { id: 'tutorial', title: '步骤教程', meta: '商业实拍 / 15秒', role: '选题与脚本、现场拍摄、剪辑及字幕', description: '用近景、动作顺序与字幕，把选取、贴合、梳理组织成清楚的演示步骤。', layout: 'portrait', images: frames.slice(0, 1), watch: watchLinks.real },
+        { id: 'unboxing', title: '开箱推荐', meta: '商业实拍 / 15秒', role: '实拍素材剪辑、英文字幕与成片包装', description: '整理实拍开箱素材，通过段落组织与英文字幕完成推荐内容。', layout: 'portrait', images: frames.slice(1), watch: frameLinks['commerce-unboxing-v10.jpg'] || watchLinks.real }
+      ];
+    }
+    if (key === 'ai') return cases.ai ? [{ ...cases.ai, id: 'ai', watch: watchLinks.ai }] : [];
+    if (key === 'visual') {
+      const data = cases.visual || {};
+      const frames = data.images || [];
+      const extra = currentExtra();
+      const bakery = frames.filter(frame => !/bracelet/i.test(Array.isArray(frame) ? frame[0] : frame.src || ''));
+      const bracelets = extra.visualFrames && extra.visualFrames.length ? extra.visualFrames : frames.filter(frame => /bracelet/i.test(Array.isArray(frame) ? frame[0] : frame.src || ''));
+      const works = [{
+        id: 'bakery', title: '麦屿青甜 · 商品与宣传设计', meta: '持续付费商业合作',
+        role: '商品图、宣传海报与多比例适配', description: '围绕门店需求统一风格、制作图片，并结合反馈修改交付。',
+        annotation: data.annotation || '', images: bakery, watch: watchLinks.visual, watchLabel: '飞书看完整案例 ↗'
+      }, {
+        id: 'pulse', title: 'Pulse&Stones · 商品影像', meta: '水晶细节 / 商品与包装',
+        role: '', description: '通过珠体质感、布景与包装画面，展示商品影像的不同观察尺度。',
+        layout: 'portrait', images: bracelets, watch: frameLinks['bracelet-purelove-v10.jpg'] || watchLinks.visual, watchLabel: '飞书看手串案例 ↗'
+      }];
+      if (extra.snowdrift && Array.isArray(extra.snowdrift.frames) && extra.snowdrift.frames.length) {
+        works.push({ id: 'snowdrift', title: extra.snowdrift.title || 'Snowdrift Bloom', meta: extra.snowdrift.durationLabel || '商品影像 / 扫光片段',
+          role: '', description: extra.snowdrift.description || '跟随光线经过饰品表面，观看明暗与闪耀细节的变化。',
+          layout: 'portrait', images: extra.snowdrift.frames, watch: extra.snowdrift.watchUrl || feishu, watchLabel: '飞书看扫光成片 ↗'
+        });
+      }
+      return works;
+    }
+    return [];
+  }
+
+  function makeToolbar(key) {
+    const header = element('header', 'chapter-toolbar');
+    const inside = element('div', 'chapter-toolbar-inner');
+    const back = element('button', 'chapter-back', '返回放映室');
+    back.type = 'button';
+    back.addEventListener('click', backToRoom);
+    const mark = element('span', 'chapter-toolbar-label', '作品档案');
+    const watch = watchLink(feishu, '飞书作品集 ↗');
+    watch.classList.add('chapter-toolbar-watch');
+    inside.append(back, mark, watch);
+    header.append(inside);
+    const nav = element('nav', 'chapter-nav');
+    nav.setAttribute('aria-label', '作品板块');
+    order.forEach(name => {
+      const button = element('button', '', chapters[name].title);
+      button.type = 'button';
+      if (key === name) button.setAttribute('aria-current', 'page');
+      button.addEventListener('click', () => openChapter(name));
+      nav.append(button);
+    });
+    header.append(nav);
+    return header;
+  }
+  function makeWork(data, index) {
+    const article = element('section', 'chapter-work' + (index === 0 ? ' chapter-work-featured' : ''));
+    article.id = 'chapter-work-' + data.id;
+    if (data.layout === 'portrait') article.classList.add('chapter-work-portrait');
+    const lead = element('div', 'chapter-work-lead');
+    const images = Array.isArray(data.images) ? data.images : [];
+    if (images.length) lead.append(photo(images[0], data.title, index === 0));
+    const copy = element('div', 'chapter-work-copy');
+    if (index === 0) copy.append(element('p', 'chapter-featured-label', '代表作品'));
+    const title = element('h2', '', data.title);
+    const meta = element('p', 'chapter-work-meta', data.meta || '');
+    copy.append(title, meta);
+    if (data.role) copy.append(element('p', 'chapter-role', '本人分工｜' + data.role));
+    if (data.directorCredit) copy.append(element('p', 'chapter-director-credit', data.directorCredit));
+    if (data.description) copy.append(element('p', 'chapter-description', data.description));
+    if (data.award) copy.append(element('p', 'chapter-award', data.award));
+    copy.append(watchLink(data.watch, data.watchLabel || '飞书看完整视频 ↗'));
+    lead.append(copy);
+    article.append(lead);
+    if (images.length > 1) {
+      const gallery = element('div', 'chapter-gallery');
+      if (data.layout === 'portrait') gallery.classList.add('chapter-gallery-portrait');
+      images.slice(1).forEach(frame => gallery.append(photo(frame, data.title)));
+      article.append(gallery);
+    }
+    if (data.annotation) article.append(element('p', 'chapter-annotation', data.annotation));
+    return article;
+  }
+  function productionView() {
+    const section = element('section', 'chapter-production');
+    section.append(element('p', 'chapter-production-duration', '23′'));
+    section.append(element('h2', '', '《空楼余烬》'));
+    section.append(element('p', 'chapter-work-meta', '毕业创作 / 约23分钟 / 后期制作中'));
+    section.append(element('p', 'chapter-description', '正在完成剪辑与影像整合，完整成片后补充。'));
+    section.append(watchLink(feishu, '飞书查看作品集 ↗'));
+    return section;
+  }
+  function render(key) {
+    page.replaceChildren();
+    page.dataset.chapter = key;
+    const content = element('div', 'chapter-content');
+    const intro = element('div', 'chapter-intro');
+    const heading = element('h1', '', chapters[key].title);
+    heading.id = 'chapter-heading';
+    heading.tabIndex = -1;
+    intro.append(heading, element('p', 'chapter-intro-note', chapters[key].introduction));
+    content.append(intro);
+    if (key === 'production') content.append(productionView());
+    else workList(key).forEach((work, index) => content.append(makeWork(work, index)));
+    if (key === 'visual') {
+      const brand = currentExtra().brand;
+      if (brand && brand.src) {
+        const signoff = element('div', 'chapter-brand');
+        signoff.append(photo(brand, 'Pulse&Stones'));
+        content.append(signoff);
+      }
+    }
+    const footer = element('footer', 'chapter-footer');
+    const back = element('button', 'chapter-back', '返回放映室');
+    back.type = 'button';
+    back.addEventListener('click', backToRoom);
+    footer.append(back, watchLink(feishu, '飞书看完整作品集 ↗'));
+    content.append(footer);
+    page.append(makeToolbar(key), content);
+  }
+
+  function scrollInstant(top) {
+    try { window.scrollTo({ top, behavior: 'instant' }); }
+    catch (_) { window.scrollTo(0, top); }
+  }
+  async function animate(node, frames, options) {
+    if (reduced.matches || document.hidden) return;
+    if (typeof node.animate !== 'function') return;
+    const animation = node.animate(frames, { ...options, fill: 'both' });
+    state.animations.push(animation);
+    try { await animation.finished; } catch (_) { /* A newer transition may finish it. */ }
+    state.animations = state.animations.filter(item => item !== animation);
+    animation.cancel();
+  }
+  function selectRoom(key) {
+    document.dispatchEvent(new CustomEvent('studio:request-selection', { detail: { key } }));
+  }
+  function roomCard(key) { return room.querySelector('.room-dock [data-case="' + key + '"]'); }
+  function closeLegacyViewer() {
+    const modal = document.querySelector('#viewer');
+    if (modal && modal.open) modal.close();
+  }
+  async function transition(target) {
+    if (state.busy) { state.queued = target; return; }
+    if (target.key && target.key === state.key) return;
+    state.busy = true;
+    const leaving = Boolean(state.key);
+    if (!leaving && target.key) {
+      state.roomScroll = window.scrollY;
+      state.origin = target.origin || roomCard(target.key);
+      selectRoom(target.key);
+    }
+    curtain.classList.add('is-active');
+    await animate(curtain, [{ opacity: 0 }, { opacity: 1 }], { duration: reduced.matches ? 0 : 145, easing: 'ease-out' });
+    const previous = state.key;
+    closeLegacyViewer();
+    if (target.key) {
+      render(target.key);
+      page.hidden = false;
+      document.body.classList.add('chapter-mode');
+      room.setAttribute('inert', '');
+      state.key = target.key;
+      document.title = chapters[target.key].title + '｜冯丞洪作品集';
+      scrollInstant(0);
+    } else {
+      page.hidden = true;
+      document.body.classList.remove('chapter-mode');
+      room.removeAttribute('inert');
+      state.key = null;
+      document.title = originalTitle;
+      selectRoom(previous || 'film');
+      scrollInstant(state.roomScroll);
+    }
+    document.body.dataset.chapterView = state.key || 'room';
+    document.body.dataset.chapterTransition = 'revealing';
+    const arrival = target.key ? page.querySelector('.chapter-content') : room;
+    await Promise.all([
+      animate(curtain, [{ opacity: 1 }, { opacity: 0 }], { duration: leaving && !target.key ? 170 : 230, easing: 'ease-out' }),
+      animate(arrival, [{ opacity: .6, transform: 'translate3d(0,9px,0)' }, { opacity: 1, transform: 'translate3d(0,0,0)' }], { duration: target.key ? 320 : 210, easing: 'cubic-bezier(.16,1,.3,1)' })
+    ]);
+    curtain.classList.remove('is-active');
+    document.body.dataset.chapterTransition = 'idle';
+    if (target.key) {
+      const heading = page.querySelector('#chapter-heading');
+      if (heading) heading.focus({ preventScroll: true });
+    } else {
+      const origin = roomCard(previous) || state.origin;
+      if (origin && typeof origin.focus === 'function') origin.focus({ preventScroll: true });
+    }
+    state.busy = false;
+    const queued = state.queued;
+    state.queued = null;
+    if (queued && queued.key !== state.key) transition(queued);
+  }
+  function setRoute(key) {
+    const url = key ? startUrl.pathname + startUrl.search + '#chapter/' + key : roomUrl;
+    const fromRoom = !state.key && key && !/^#chapter\//.test(location.hash);
+    const data = { ...(history.state || {}), fchChapter: Boolean(key), fchChapterFromRoom: Boolean(key) && Boolean(fromRoom || (history.state && history.state.fchChapterFromRoom)) };
+    if (fromRoom) history.pushState(data, '', url);
+    else history.replaceState(data, '', url);
+  }
+  function openChapter(rawKey, origin, route = true) {
+    const key = normalizeKey(rawKey);
+    if (!key) return;
+    if (route) setRoute(key);
+    transition({ key, origin });
+  }
+  function backToRoom() {
+    if (history.state && history.state.fchChapter && history.state.fchChapterFromRoom) history.back();
+    else { history.replaceState(history.state, '', roomUrl); transition({ key: null }); }
+  }
+  function routeChanged() {
+    const match = location.hash.match(/^#chapter\/([a-z]+)$/);
+    const key = match && normalizeKey(match[1]);
+    if (key) openChapter(key, null, false);
+    else if (state.key || state.busy) transition({ key: null });
+  }
+
+  // Document capture runs before the old dock/gallery listeners. A card now
+  // navigates to its whole chapter instead of opening the small image dialog.
+  document.addEventListener('click', event => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target) return;
+    const card = target.closest('.room-dock .object[data-case]');
+    const detail = target.closest('.studio-case-detail');
+    const menuWork = target.closest('.room-list [data-gallery]');
+    let rawKey;
+    if (card) rawKey = card.dataset.case;
+    else if (detail) rawKey = room.dataset.studioCase || 'film';
+    else if (menuWork) rawKey = menuWork.dataset.gallery;
+    else return;
+    if (!normalizeKey(rawKey)) return;
+    event.preventDefault();
+    event.stopPropagation();
+    if (typeof hideRoomIndex === 'function') hideRoomIndex();
+    openChapter(rawKey, card || detail || menuWork);
+  }, true);
+  document.addEventListener('studio:open-chapter', event => {
+    const detail = event.detail || {};
+    openChapter(detail.key, detail.origin);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && state.key) { event.preventDefault(); backToRoom(); }
+  });
+  addEventListener('popstate', routeChanged);
+  addEventListener('hashchange', routeChanged);
+  const finishMotion = () => {
+    if (document.hidden || reduced.matches) state.animations.slice().forEach(animation => { try { animation.finish(); } catch (_) { /* no active animation */ } });
+  };
+  document.addEventListener('visibilitychange', finishMotion);
+  if (typeof reduced.addEventListener === 'function') reduced.addEventListener('change', finishMotion);
+  room.querySelectorAll('.room-dock .object').forEach(card => {
+    card.removeAttribute('aria-haspopup');
+    card.setAttribute('aria-controls', 'chapter-view');
+  });
+  if (/^#chapter\//.test(location.hash)) routeChanged();
 })();
 
 </script></body></html>
