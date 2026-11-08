@@ -6,7 +6,7 @@
  const heading=document.querySelector('.room-heading');
  function waterStatus(state,reason){canvas.dataset.waterState=state;room.dataset.waterState=state;if(reason)canvas.dataset.waterReason=reason;else delete canvas.dataset.waterReason;}
  waterStatus('initializing');
- function canAnimate(){return active&&textureReady&&inView&&!manualPaused&&!document.hidden&&!reduced.matches&&!viewer.open&&!document.body.classList.contains('list-mode');}
+ function canAnimate(){return active&&textureReady&&inView&&!manualPaused&&!document.hidden&&!reduced.matches&&!viewer.open&&!document.body.classList.contains('list-mode')&&!document.body.classList.contains('chapter-mode');}
  function requestRender(){if(!raf&&canAnimate())raf=requestAnimationFrame(render);}
  function stopRender(){if(raf)cancelAnimationFrame(raf);raf=0;lastTick=performance.now();}
  function syncMotion(){if(active&&textureReady)waterStatus(reduced.matches?'reduced-motion':manualPaused?'paused':canAnimate()?'running':'suspended');if(canAnimate()){lastTick=performance.now();requestRender();}else stopRender();}
