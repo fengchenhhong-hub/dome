@@ -23,11 +23,13 @@ jobs:
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
-          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
-            sudo apt-get update
-            sudo apt-get install --yes --no-install-recommends ffmpeg
+          if ! python3 import-public-site.py --reuse-verified-derived; then
+            if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+              sudo apt-get update
+              sudo apt-get install --yes --no-install-recommends ffmpeg
+            fi
+            python3 import-public-site.py
           fi
-          python3 import-public-site.py
       - name: Keep assets in this repository
         run: |
           git add public
