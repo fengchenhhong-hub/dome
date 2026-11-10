@@ -3,6 +3,7 @@ import argparse
 import concurrent.futures
 import hashlib
 import json
+import math
 import subprocess
 import shutil
 from fractions import Fraction
@@ -13,6 +14,8 @@ from urllib.request import Request, urlopen
 parser = argparse.ArgumentParser()
 parser.add_argument('--destination', default='public')
 parser.add_argument('--verify-only', action='store_true')
+parser.add_argument('--reuse-verified-derived', action='store_true',
+                    help='Reuse byte-identical derived files using previously validated media metadata')
 parser.add_argument('--ffmpeg', default='ffmpeg')
 parser.add_argument('--ffprobe', default='ffprobe')
 args = parser.parse_args()
@@ -81,6 +84,25 @@ def probe_video(path, expected):
             'video_codec': video['codec_name'], 'audio_codec': audio['codec_name'],
             'fps': float(Fraction(video['avg_frame_rate']))}
 
+def verify_cached_media(cached, expected):
+    # The caller has already verified the input fingerprint and output bytes/hash.
+    # These media fields were recorded only after a successful full ffprobe check.
+    media = cached.get('media')
+    if not isinstance(media, dict):
+        raise ValueError('Missing previously verified media metadata')
+    try:
+        if (media['video_codec'], media['width'], media['height'], media['audio_codec']) != (
+            expected['video_codec'], expected['width'], expected['height'], expected['audio_codec']
+        ):
+            raise ValueError('Cached derived MP4 codec or dimensions do not match')
+        duration = float(media['duration_s'])
+        if not math.isfinite(duration) or abs(duration - expected['duration_s']) > expected['duration_tolerance_s']:
+            raise ValueError('Cached derived MP4 duration does not match')
+        if 'fps' in expected and Fraction(str(media['fps'])) != Fraction(str(expected['fps'])):
+            raise ValueError('Cached derived MP4 frame rate does not match')
+    except (KeyError, TypeError, ZeroDivisionError, OverflowError) as error:
+        raise ValueError('Invalid previously verified media metadata') from error
+
 def processing_args(method):
     # Version these method names if encoding or container settings change.
     fragmented = ['-movflags', '+frag_keyframe+delay_moov+default_base_moof+global_sidx']
@@ -117,7 +139,10 @@ for item in manifest.get('derived', []):
         'bytes': cached.get('bytes', -1), 'sha256': cached.get('sha256', '')
     })
     if reusable:
-        probe_video(target, item['expected'])
+        if args.reuse_verified_derived:
+            verify_cached_media(cached, item['expected'])
+        else:
+            probe_video(target, item['expected'])
         print('Reusing verified MP4: ' + item['path'])
         continue
     if args.verify_only:
@@ -160,3 +185,4 @@ for item in manifest.get('local_public_files', []):
 if not args.verify_only and manifest.get('derived'):
     state_path.write_text(json.dumps(state, indent=2, sort_keys=True) + '\n')
 print(f"Verified {len(manifest['files'])} assets and {len(manifest.get('derived', []))} derived videos")
+
