@@ -321,7 +321,9 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
     shixianzhiwai: 'preview-assets/beam-shixianzhiwai.webp',
     real: 'preview-assets/beam-real.webp',
     tutorial: 'assets/tutorial-poster.jpg',
-    ai: 'preview-assets/beam-ai.webp',
+    ai: 'preview-assets/beam-ai-person-v13.webp',
+    aiProduct: 'preview-assets/beam-ai-product-v13.webp',
+    aiDetail: 'preview-assets/beam-ai-detail-v13.webp',
     visual: 'preview-assets/beam-visual.webp',
     cakePearl: 'assets/cake-pearl.jpg',
     jewelry: 'assets-v12/bracelet-clear-macro-thumb.webp'
@@ -329,7 +331,7 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   const sets = {
     film: ['film', 'red', 'warm'],
     real: ['real', 'tutorial'],
-    ai: ['ai'],
+    ai: ['ai', 'aiProduct', 'aiDetail'],
     visual: ['cakePearl', 'visual', 'jewelry'],
     hangxiang: ['hangxiang'],
     yueding: ['yueding'],
@@ -374,8 +376,8 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   lightStatus.setAttribute('aria-live', 'polite');
   world.append(lightStatus);
 
-  const frameNames = { film: '《空楼回响》', red: '《空楼回响》· 红色门框', warm: '《空楼回响》· 暖光场景', hangxiang: '《航向》', yueding: '《约定》', shixianzhiwai: '《视线之外》', real: '商业实拍·开箱', tutorial: '商业实拍·步骤教程', ai: 'AI影像', visual: '商业视觉·鲜果蛋糕', cakePearl: '商业视觉·珍珠蛋糕', jewelry: '商业视觉·饰品' };
-  const caseFor = name => name === 'red' || name === 'warm' ? 'film' : name === 'jewelry' || name === 'cakePearl' ? 'visual' : name === 'tutorial' ? 'real' : name;
+  const frameNames = { film: '《空楼回响》', red: '《空楼回响》· 红色门框', warm: '《空楼回响》· 暖光场景', hangxiang: '《航向》', yueding: '《约定》', shixianzhiwai: '《视线之外》', real: '商业实拍·开箱', tutorial: '商业实拍·步骤教程', ai: 'AI影像·人物与商品', aiProduct: 'AI影像·商品操作', aiDetail: 'AI影像·眼妆细节', visual: '商业视觉·鲜果蛋糕', cakePearl: '商业视觉·珍珠蛋糕', jewelry: '商业视觉·饰品' };
+  const caseFor = name => name === 'red' || name === 'warm' ? 'film' : name === 'jewelry' || name === 'cakePearl' ? 'visual' : name === 'aiProduct' || name === 'aiDetail' ? 'ai' : name === 'tutorial' ? 'real' : name;
 
   function fill(key) {
     current = key in sets || key === 'production' ? key : 'all';
@@ -1331,3 +1333,4 @@ window.FCHChapterAssets = {
 })();
 
 </script></body></html>
+
