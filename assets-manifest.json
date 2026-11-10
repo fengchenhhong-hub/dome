@@ -1675,6 +1675,24 @@
       "path": "assets-v12/snowdrift-snowflake-macro.webp",
       "bytes": 149370,
       "sha256": "a48ccdeab2812887da8e0ec3ea1513493cc30f3e0d3b72530e8d76ff61ce86e6"
+    },
+    {
+      "path": "preview-assets/beam-ai-person-v13.webp",
+      "source": "beam-ai-person-v13.webp",
+      "bytes": 10014,
+      "sha256": "0a3189f4583beb35e1616b0850e11fca15e507f44a42503b69bc6f39204c2ff9"
+    },
+    {
+      "path": "preview-assets/beam-ai-product-v13.webp",
+      "source": "beam-ai-product-v13.webp",
+      "bytes": 15152,
+      "sha256": "1c639846f56d785fa63326d5001cc7247b106474cbb6bc75f0139c0f9b2ab14c"
+    },
+    {
+      "path": "preview-assets/beam-ai-detail-v13.webp",
+      "source": "beam-ai-detail-v13.webp",
+      "bytes": 12444,
+      "sha256": "5ffacc24253aea2c5396271f60fbe6cc2c8e848ce18b6da02915480acfe434f0"
     }
   ]
 }
