@@ -1789,6 +1789,42 @@
       "source": "embers-fire-thumb.webp",
       "bytes": 7000,
       "sha256": "c8c5f9f21d886716768a338e95075c0d2f8a6be2cf79e56c625bb9672868d355"
+    },
+    {
+      "path": "assets-narrative/embers-v2-red-portrait.webp",
+      "source": "embers-v2-red-portrait.webp",
+      "bytes": 57750,
+      "sha256": "e9eb16d8d0030081ce613dac5ff5e8c3e10332aef0a1cf81f23e745474d915e9"
+    },
+    {
+      "path": "assets-narrative/embers-v2-red-portrait-thumb.webp",
+      "source": "embers-v2-red-portrait-thumb.webp",
+      "bytes": 13108,
+      "sha256": "edeaa2bcb53535aef8de74328fefae31d1f33a0c9bd30fce74d3e1c166884ce3"
+    },
+    {
+      "path": "assets-narrative/embers-v2-light-gate.webp",
+      "source": "embers-v2-light-gate.webp",
+      "bytes": 39454,
+      "sha256": "bfdc9448b7077a9a1dc7f14bc4deee5643228c125070e3acf48912f9e84143b0"
+    },
+    {
+      "path": "assets-narrative/embers-v2-cold-reaction.webp",
+      "source": "embers-v2-cold-reaction.webp",
+      "bytes": 44426,
+      "sha256": "91ad41f6e9a859a626836546d9971fb1ae496bca746c5a54931665276e4c6550"
+    },
+    {
+      "path": "assets-narrative/embers-v2-cold-reaction-thumb.webp",
+      "source": "embers-v2-cold-reaction-thumb.webp",
+      "bytes": 7544,
+      "sha256": "8ad0ae660ac3014fa771242f55b307de8660aa9bd0e8928861606ec4d6787d7a"
+    },
+    {
+      "path": "assets-narrative/embers-v2-amber-room.webp",
+      "source": "embers-v2-amber-room.webp",
+      "bytes": 38382,
+      "sha256": "629927b51d33322702349ca12186e029b0ce80130cca6c43297986c2ac7a0fa0"
     }
   ]
 }
