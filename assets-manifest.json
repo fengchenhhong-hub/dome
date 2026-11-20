@@ -1825,6 +1825,12 @@
       "source": "embers-v2-amber-room.webp",
       "bytes": 38382,
       "sha256": "629927b51d33322702349ca12186e029b0ce80130cca6c43297986c2ac7a0fa0"
+    },
+    {
+      "path": "assets-narrative/embers-v2-burning-title.webp",
+      "source": "embers-v2-burning-title.webp",
+      "bytes": 74986,
+      "sha256": "287d3c7042595cfe55606f969e36ae60c7dbe913c406d648928f3927293e38f2"
     }
   ]
 }
