@@ -1693,6 +1693,102 @@
       "source": "beam-ai-detail-v13.webp",
       "bytes": 12444,
       "sha256": "5ffacc24253aea2c5396271f60fbe6cc2c8e848ce18b6da02915480acfe434f0"
+    },
+    {
+      "path": "assets-narrative/echo-cool-staircase.webp",
+      "source": "echo-cool-staircase.webp",
+      "bytes": 62706,
+      "sha256": "0a696f229748981c34ddddfb03bcdee4dceedbf19f1c3df602d55976f8c75b9c"
+    },
+    {
+      "path": "assets-narrative/echo-red-door.webp",
+      "source": "echo-red-door.webp",
+      "bytes": 33200,
+      "sha256": "43641c6b0285289d37de1089328ee072e705a00988f8f3c1234dca091ff01652"
+    },
+    {
+      "path": "assets-narrative/echo-purple-lookback.webp",
+      "source": "echo-purple-lookback.webp",
+      "bytes": 63896,
+      "sha256": "e72a6314716fedd221c9e5072f04e96564586a41433da0301a598e3d5e2d3bfc"
+    },
+    {
+      "path": "assets-narrative/echo-golden-screen.webp",
+      "source": "echo-golden-screen.webp",
+      "bytes": 155006,
+      "sha256": "c398d41baf783a8e79e2aaadce89510b228422ef1a59980ff1ddb6c545a7c0b0"
+    },
+    {
+      "path": "assets-narrative/echo-tilted-corridor.webp",
+      "source": "echo-tilted-corridor.webp",
+      "bytes": 41058,
+      "sha256": "95fa30dbf7ee88cff1a299d2baae95d67efe3891dbd9c01869b530dab1193a22"
+    },
+    {
+      "path": "assets-narrative/echo-qipao-profile.webp",
+      "source": "echo-qipao-profile.webp",
+      "bytes": 51510,
+      "sha256": "8ed2c486420d1869fb9160736641b576b3aacaa09f04149a85c6847442c31868"
+    },
+    {
+      "path": "assets-narrative/echo-screen-duo.webp",
+      "source": "echo-screen-duo.webp",
+      "bytes": 156184,
+      "sha256": "6748855d05a4f902225e5e32b4e615333760aeeaf5329d3789e24fef9d645a3a"
+    },
+    {
+      "path": "assets-narrative/echo-archival-photo.webp",
+      "source": "echo-archival-photo.webp",
+      "bytes": 84946,
+      "sha256": "3134fb230a74a63e819b68cbbf68f9dd61b7d41845b704e82ae344341a462e54"
+    },
+    {
+      "path": "assets-narrative/embers-cover.webp",
+      "source": "embers-cover.webp",
+      "bytes": 65476,
+      "sha256": "cb998db69a21f1bbdcf993ec1b7d8c36e21c8cf3fabad0ef406379e73e32b543"
+    },
+    {
+      "path": "assets-narrative/embers-staircase.webp",
+      "source": "embers-staircase.webp",
+      "bytes": 42774,
+      "sha256": "4d20ae6e118e8b607c5335c4560be244341d36bbf8c670943bfb8bd1290fe2f8"
+    },
+    {
+      "path": "assets-narrative/embers-auditorium.webp",
+      "source": "embers-auditorium.webp",
+      "bytes": 51384,
+      "sha256": "86d94589b5519200463571824e785d589634b8c41c98a6abacc3184ad7372206"
+    },
+    {
+      "path": "assets-narrative/embers-fire.webp",
+      "source": "embers-fire.webp",
+      "bytes": 32716,
+      "sha256": "f09dbc71ac592f381f77c3d7499569ce8e8810a633e01c76ec703db38b262460"
+    },
+    {
+      "path": "assets-narrative/embers-group.webp",
+      "source": "embers-group.webp",
+      "bytes": 38866,
+      "sha256": "dbe98eda4cf20cf9f70bb2c75481f1beb00f0eea6ea0857ed8a29709056345a9"
+    },
+    {
+      "path": "assets-narrative/embers-cover-thumb.webp",
+      "source": "embers-cover-thumb.webp",
+      "bytes": 12846,
+      "sha256": "e94ee1f0e18ce51d70816f094462315d2adbd5eefaa5793175a39ce87aeadd38"
+    },
+    {
+      "path": "assets-narrative/embers-auditorium-thumb.webp",
+      "source": "embers-auditorium-thumb.webp",
+      "bytes": 8056,
+      "sha256": "f57a91bd178e78e13d67a57aefd8f55ef1baa992ee4cc27b53bc468e2ac4cd7f"
+    },
+    {
+      "path": "assets-narrative/embers-fire-thumb.webp",
+      "source": "embers-fire-thumb.webp",
+      "bytes": 7000,
+      "sha256": "c8c5f9f21d886716768a338e95075c0d2f8a6be2cf79e56c625bb9672868d355"
     }
   ]
 }
