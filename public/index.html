@@ -316,7 +316,7 @@ document.querySelectorAll('[data-image]').forEach(button=>button.addEventListene
 function closeViewer(){if(viewer.open)viewer.close();if(restoreFocus&&typeof restoreFocus.focus==='function')restoreFocus.focus();}
 document.querySelector('#close-viewer').addEventListener('click',closeViewer);viewer.addEventListener('cancel',event=>{event.preventDefault();closeViewer();});viewer.addEventListener('click',event=>{if(event.target===viewer){const r=viewer.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeViewer();}});
 
-</script><script src="room.js?v=20261121-embers-first"></script><script data-source="projection.js?v=12r3">
+</script><script src="room.js?v=20261121-portfolio"></script><script data-source="projection.js?v=12r3">
 /* The light carries real stills; full films remain at the Feishu entry. */
 (() => {
   'use strict';
