@@ -1837,6 +1837,24 @@
       "source": "portfolio-1121-fruit-thumb.webp",
       "bytes": 27828,
       "sha256": "6317aeb45b921dbefc35a3f797abb09f9cb31f0c30d94943c40ed4ceabe3696a"
+    },
+    {
+      "path": "assets-narrative/embers-0211-atrium.webp",
+      "source": "embers-0211-atrium.webp",
+      "bytes": 309066,
+      "sha256": "2064db35ba66b2bf4955cc301b9579433875da9a8e20aada49ff2b5ba0b78cab"
+    },
+    {
+      "path": "assets-narrative/embers-0211-atrium-cover.webp",
+      "source": "embers-0211-atrium-cover.webp",
+      "bytes": 75608,
+      "sha256": "7ad81569cd18c66fcdadba54f8129e8b28b83c44effa1773ed07add73786eae5"
+    },
+    {
+      "path": "assets-narrative/echo-0515-screen-duo-cover.webp",
+      "source": "echo-0515-screen-duo-cover.webp",
+      "bytes": 59142,
+      "sha256": "36cc15fbc07de4f9bc8b4e2230a57dbfa10f4a0b390f21f52ca3b5452764fbc8"
     }
   ]
 }
