@@ -1831,6 +1831,12 @@
       "source": "embers-v2-burning-title.webp",
       "bytes": 74986,
       "sha256": "287d3c7042595cfe55606f969e36ae60c7dbe913c406d648928f3927293e38f2"
+    },
+    {
+      "path": "assets-narrative/portfolio-1121-fruit-thumb.webp",
+      "source": "portfolio-1121-fruit-thumb.webp",
+      "bytes": 27828,
+      "sha256": "6317aeb45b921dbefc35a3f797abb09f9cb31f0c30d94943c40ed4ceabe3696a"
     }
   ]
 }
