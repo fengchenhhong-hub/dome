@@ -1855,6 +1855,246 @@
       "source": "echo-0515-screen-duo-cover.webp",
       "bytes": 59142,
       "sha256": "36cc15fbc07de4f9bc8b4e2230a57dbfa10f4a0b390f21f52ca3b5452764fbc8"
+    },
+    {
+      "path": "preview-assets/reel/reel-embers-01-animated-ring.webp",
+      "source": "reel-embers-01-animated-ring.webp",
+      "bytes": 14098,
+      "sha256": "b574e7476424e4a1257f9a04c8aea4b82e5c62749b9abcf9edd7ef0fd7f789f1"
+    },
+    {
+      "path": "preview-assets/reel/reel-embers-02-old-report.webp",
+      "source": "reel-embers-02-old-report.webp",
+      "bytes": 17294,
+      "sha256": "15a5e9f311c95c4f52e6ba268bb6753dd1e7e169182a2752886287e9ff22ae42"
+    },
+    {
+      "path": "preview-assets/reel/reel-embers-03-cold-doorway.webp",
+      "source": "reel-embers-03-cold-doorway.webp",
+      "bytes": 10614,
+      "sha256": "396045dfe7a8d81af5a868b7baeb9f6dd4c3ac98e76787d3d172d35551ded0fb"
+    },
+    {
+      "path": "preview-assets/reel/reel-embers-04-red-door-motion.webp",
+      "source": "reel-embers-04-red-door-motion.webp",
+      "bytes": 5080,
+      "sha256": "caf8f09374b349217173584d4955c438a5a3f6614d53daf0d03e1ec87e80e78e"
+    },
+    {
+      "path": "preview-assets/reel/reel-embers-05-blue-passage.webp",
+      "source": "reel-embers-05-blue-passage.webp",
+      "bytes": 8374,
+      "sha256": "289ae51ef698d1da00ce74953ea4f23b518815d2dad15b73a1c9f4b6d51487fa"
+    },
+    {
+      "path": "preview-assets/reel/reel-embers-06-teal-confrontation.webp",
+      "source": "reel-embers-06-teal-confrontation.webp",
+      "bytes": 8954,
+      "sha256": "d51e7ec6eb4443f8f8db43e37e739f5c2fc991be232d88870cc141a5a0c036f2"
+    },
+    {
+      "path": "preview-assets/reel/reel-embers-07-screen-reveal.webp",
+      "source": "reel-embers-07-screen-reveal.webp",
+      "bytes": 5952,
+      "sha256": "b0546bc3579fdf501c84e45590bdfa66f8a4d88f7c4b3c546b41ea65687a5e0b"
+    },
+    {
+      "path": "preview-assets/reel/reel-embers-08-sunlit-stairs.webp",
+      "source": "reel-embers-08-sunlit-stairs.webp",
+      "bytes": 10342,
+      "sha256": "cc73f3e2c7381b32076d1bdf8e6d311981a1b4b892e0acc89c4b8ccee83ef789"
+    },
+    {
+      "path": "preview-assets/reel/reel-echo-01-lab-box.webp",
+      "source": "reel-echo-01-lab-box.webp",
+      "bytes": 6690,
+      "sha256": "cc5e41d6739900bef14b4fa5a22f8de7a756d829f9c1032d048be313dea0dc95"
+    },
+    {
+      "path": "preview-assets/reel/reel-echo-02-stair-ensemble.webp",
+      "source": "reel-echo-02-stair-ensemble.webp",
+      "bytes": 12414,
+      "sha256": "0f1af2dffdade96290fbd2da69c953f1b40476e568ccc41f7885818c5b5695ef"
+    },
+    {
+      "path": "preview-assets/reel/reel-echo-03-window-light.webp",
+      "source": "reel-echo-03-window-light.webp",
+      "bytes": 5850,
+      "sha256": "1f4a24374027ca671884e99344e640b2f56be34baca7ddc0a7870d352bffc4df"
+    },
+    {
+      "path": "preview-assets/reel/reel-echo-04-room-trio.webp",
+      "source": "reel-echo-04-room-trio.webp",
+      "bytes": 7708,
+      "sha256": "09c1d40648023ef45977081863b21aa722b22659863bdeea648305cdb4fe5ad4"
+    },
+    {
+      "path": "preview-assets/reel/reel-echo-05-period-portrait.webp",
+      "source": "reel-echo-05-period-portrait.webp",
+      "bytes": 9492,
+      "sha256": "1fe4e00c51d7a57d68b7697aa87621e6bf0a03b2328d48e4a5859e2ee69b6728"
+    },
+    {
+      "path": "preview-assets/reel/reel-echo-06-writing-insert.webp",
+      "source": "reel-echo-06-writing-insert.webp",
+      "bytes": 7640,
+      "sha256": "2950a45c2a93ba0f290e7bca051ce30e74277378dccbaa39980645cde2ea6f67"
+    },
+    {
+      "path": "preview-assets/reel/reel-echo-07-telephone-profile.webp",
+      "source": "reel-echo-07-telephone-profile.webp",
+      "bytes": 4946,
+      "sha256": "2b1450d045de65e2b3ba7c147d42a5c265c4fed34b226c5c8a732d1fa9d78d36"
+    },
+    {
+      "path": "preview-assets/reel/reel-echo-08-photograph-insert.webp",
+      "source": "reel-echo-08-photograph-insert.webp",
+      "bytes": 15222,
+      "sha256": "ae367a5c0656a8c2a8572fb5971e18689b074fbebab58e1588e260bfbe520e2e"
+    },
+    {
+      "path": "preview-assets/reel/reel-real-01-kit-lift.webp",
+      "source": "reel-real-01-kit-lift.webp",
+      "bytes": 14836,
+      "sha256": "f4b1dd99ba04bd4b839bf16d66b63ebaa5b7d02d7912465e39e03b8fafa9cdc0"
+    },
+    {
+      "path": "preview-assets/reel/reel-real-02-select-cluster.webp",
+      "source": "reel-real-02-select-cluster.webp",
+      "bytes": 17732,
+      "sha256": "89053b395ca01deb2364630103bc36fd1938edca8430ac78bb4e2f9c234eb455"
+    },
+    {
+      "path": "preview-assets/reel/reel-real-03-tilt-tray.webp",
+      "source": "reel-real-03-tilt-tray.webp",
+      "bytes": 17706,
+      "sha256": "cf101c4724d1dfaa32648f7b4c88bf6e55a05f0622664c7ae69f761522cc6d6b"
+    },
+    {
+      "path": "preview-assets/reel/reel-real-04-apply-cluster.webp",
+      "source": "reel-real-04-apply-cluster.webp",
+      "bytes": 14224,
+      "sha256": "82fee43d8153de7f0f97482c3509171f2b372a01d268506c4e9becfce5a6c2ea"
+    },
+    {
+      "path": "preview-assets/reel/reel-real-05-brush-lashes.webp",
+      "source": "reel-real-05-brush-lashes.webp",
+      "bytes": 17124,
+      "sha256": "a71fbbf22bfd3928be762d2b59f6eaa907b00774f6f8f1626ce63b9ad047fd91"
+    },
+    {
+      "path": "preview-assets/reel/reel-real-06-before-after.webp",
+      "source": "reel-real-06-before-after.webp",
+      "bytes": 15328,
+      "sha256": "41e3dd4056b2bd9d740adde43c4c77f5d382b35d7a507a96acfb13f0adb5d37e"
+    },
+    {
+      "path": "preview-assets/reel/reel-real-07-detail-result.webp",
+      "source": "reel-real-07-detail-result.webp",
+      "bytes": 6082,
+      "sha256": "8e0a5a9f46777dfbd8296050bd2b6a10059fffb0d5db12dc7b2ab4ecd1571f85"
+    },
+    {
+      "path": "preview-assets/reel/reel-real-08-show-result.webp",
+      "source": "reel-real-08-show-result.webp",
+      "bytes": 10240,
+      "sha256": "8399dfdccdda7364c8e7cfa68e5103b37e949bdf5659e196f45ac474d4ede8cd"
+    },
+    {
+      "path": "preview-assets/reel/reel-ai-01-before-makeup.webp",
+      "source": "reel-ai-01-before-makeup.webp",
+      "bytes": 8612,
+      "sha256": "68da2bc0294ee6e60b1c76052ce85b15c6ce296916f7b6b39cd08eacbe4f8b25"
+    },
+    {
+      "path": "preview-assets/reel/reel-ai-02-closed-kit.webp",
+      "source": "reel-ai-02-closed-kit.webp",
+      "bytes": 9106,
+      "sha256": "71cc3bb57078ae2fb3b26296fa3da63c35a52733b50372f8fa12b2fa2d91621d"
+    },
+    {
+      "path": "preview-assets/reel/reel-ai-03-side-face.webp",
+      "source": "reel-ai-03-side-face.webp",
+      "bytes": 5332,
+      "sha256": "d5331c6b2984a8dea5a67d754eb1427dd68a803a58e5eb32953cad52069363c8"
+    },
+    {
+      "path": "preview-assets/reel/reel-ai-04-open-kit.webp",
+      "source": "reel-ai-04-open-kit.webp",
+      "bytes": 10930,
+      "sha256": "60a81b1aaac403193a77f1f03a128b688dd81b2ab8ae7cd91d0531b911bf47a3"
+    },
+    {
+      "path": "preview-assets/reel/reel-ai-05-face-reveal.webp",
+      "source": "reel-ai-05-face-reveal.webp",
+      "bytes": 7752,
+      "sha256": "ddaef5a4b9d5a43a13ab9ebc0f33b364ee365066d127b314ed9379b1d85f60d5"
+    },
+    {
+      "path": "preview-assets/reel/reel-ai-06-tweezer.webp",
+      "source": "reel-ai-06-tweezer.webp",
+      "bytes": 23936,
+      "sha256": "cb9a50d0aba7603060291312fbfd67a403ec0712dcd956a3ba171aeadb72ee71"
+    },
+    {
+      "path": "preview-assets/reel/reel-ai-07-after-makeup.webp",
+      "source": "reel-ai-07-after-makeup.webp",
+      "bytes": 9844,
+      "sha256": "68ac75a367047c82f16dfe1480b458c1890543e3a560020ecefb50bdd60e961d"
+    },
+    {
+      "path": "preview-assets/reel/reel-ai-08-show-kit.webp",
+      "source": "reel-ai-08-show-kit.webp",
+      "bytes": 10594,
+      "sha256": "480a2d52c9d16af7c3f6f2696209ece31e3f5757115efe0c1dd47e817ebc55ba"
+    },
+    {
+      "path": "preview-assets/reel/reel-visual-01-rose-ring.webp",
+      "source": "reel-visual-01-rose-ring.webp",
+      "bytes": 32024,
+      "sha256": "96643b64d94746ae7dc05db43aca91b7e48247752e5799be46cc075eff2fe96c"
+    },
+    {
+      "path": "preview-assets/reel/reel-visual-02-violet-satin.webp",
+      "source": "reel-visual-02-violet-satin.webp",
+      "bytes": 20646,
+      "sha256": "41431c9c6452449f436b030671d1b6c4ec3ddfe4caa70d4a1fba5dea71eed970"
+    },
+    {
+      "path": "preview-assets/reel/reel-visual-03-blue-wave.webp",
+      "source": "reel-visual-03-blue-wave.webp",
+      "bytes": 22180,
+      "sha256": "617362776cd95143cdae73fc2a0e0dee403605c04f1cc1b46555f196ff43ab2c"
+    },
+    {
+      "path": "preview-assets/reel/reel-visual-04-paired-still-life.webp",
+      "source": "reel-visual-04-paired-still-life.webp",
+      "bytes": 19512,
+      "sha256": "b0ce3d78cf86bcf393788c5a50163e21fc57f558f351b5e7566293fa4f45b9c6"
+    },
+    {
+      "path": "preview-assets/reel/reel-visual-05-chocolate-dessert.webp",
+      "source": "reel-visual-05-chocolate-dessert.webp",
+      "bytes": 20818,
+      "sha256": "c970c4d04bfd022dac939a72c46619770c895cc9e7e870964e7f436c02558a13"
+    },
+    {
+      "path": "preview-assets/reel/reel-visual-06-shell-display.webp",
+      "source": "reel-visual-06-shell-display.webp",
+      "bytes": 16190,
+      "sha256": "970251ea3bf8d76b19bf2ab6220a84c31e4f6392f4a73c78313fdcc0383a0db8"
+    },
+    {
+      "path": "preview-assets/reel/reel-visual-07-berry-petals.webp",
+      "source": "reel-visual-07-berry-petals.webp",
+      "bytes": 37236,
+      "sha256": "30c51d5a455bc73200f2e2f7e63026ecdce87795b8fe008af428b90b5280e9c8"
+    },
+    {
+      "path": "preview-assets/reel/reel-visual-08-grape-bloom.webp",
+      "source": "reel-visual-08-grape-bloom.webp",
+      "bytes": 20322,
+      "sha256": "1d38cebf9a555e3afbd79dcda8bf2021135522f042c76637c86c11d7f1256bf7"
     }
   ]
 }

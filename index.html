@@ -316,7 +316,7 @@ document.querySelectorAll('[data-image]').forEach(button=>button.addEventListene
 function closeViewer(){if(viewer.open)viewer.close();if(restoreFocus&&typeof restoreFocus.focus==='function')restoreFocus.focus();}
 document.querySelector('#close-viewer').addEventListener('click',closeViewer);viewer.addEventListener('cancel',event=>{event.preventDefault();closeViewer();});viewer.addEventListener('click',event=>{if(event.target===viewer){const r=viewer.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeViewer();}});
 
-</script><script src="room.js?v=20261121-portfolio"></script><script data-source="projection.js?v=12r3">
+</script><script src="room.js?v=20261121-portfolio"></script><script data-source="projection.js?v=20261121-eight">
 /* The light carries real stills; full films remain at the Feishu entry. */
 (() => {
   'use strict';
@@ -328,35 +328,57 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   const dialog = document.querySelector('#viewer');
   if (!room || !world || !backdrop || !heading || !dock) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const sources = {
-    film: 'assets-narrative/echo-golden-screen.webp',
-    production: 'assets-narrative/embers-0211-atrium.webp',
-    emberReaction: 'assets-narrative/embers-v2-cold-reaction-thumb.webp',
-    emberFire: 'assets-narrative/embers-fire-thumb.webp',
-    red: 'assets-narrative/echo-red-door.webp',
-    warm: 'assets-narrative/echo-purple-lookback.webp',
-    hangxiang: 'preview-assets/beam-hangxiang.webp',
-    yueding: 'preview-assets/beam-yueding.webp',
-    shixianzhiwai: 'preview-assets/beam-shixianzhiwai.webp',
-    real: 'preview-assets/beam-real.webp',
-    tutorial: 'assets/tutorial-poster.jpg',
-    ai: 'preview-assets/beam-ai-person-v13.webp',
-    aiProduct: 'preview-assets/beam-ai-product-v13.webp',
-    aiDetail: 'preview-assets/beam-ai-detail-v13.webp',
-    visual: 'preview-assets/beam-visual.webp',
-    cakePearl: 'assets/cake-pearl.jpg',
-    jewelry: 'assets-v12/bracelet-clear-macro-thumb.webp'
-  };
-  const sets = {
-    film: ['film', 'red', 'warm'],
-    production: ['production', 'emberReaction', 'emberFire'],
-    real: ['real', 'tutorial'],
-    ai: ['ai', 'aiProduct', 'aiDetail'],
-    visual: ['cakePearl', 'visual', 'jewelry'],
-    hangxiang: ['hangxiang'],
-    yueding: ['yueding'],
-    shixianzhiwai: ['shixianzhiwai'],
-    all: ['production', 'film', 'hangxiang', 'yueding', 'shixianzhiwai', 'visual']
+  const reels = {
+    production: [
+      ["preview-assets/reel/reel-embers-01-animated-ring.webp", "片头动画中的火环"],
+      ["preview-assets/reel/reel-embers-02-old-report.webp", "旧报纸上的校园火灾线索"],
+      ["preview-assets/reel/reel-embers-03-cold-doorway.webp", "冷白门口的四人"],
+      ["preview-assets/reel/reel-embers-04-red-door-motion.webp", "从背后看向半开的红门"],
+      ["preview-assets/reel/reel-embers-05-blue-passage.webp", "走近冷色过道的黑衣人物"],
+      ["preview-assets/reel/reel-embers-06-teal-confrontation.webp", "青灰墙前的对峙"],
+      ["preview-assets/reel/reel-embers-07-screen-reveal.webp", "暗室监视屏里的三人"],
+      ["preview-assets/reel/reel-embers-08-sunlit-stairs.webp", "日光斜照下走下楼梯的两人"]
+    ],
+    film: [
+      ["preview-assets/reel/reel-echo-01-lab-box.webp", "白大褂人物与纸盒"],
+      ["preview-assets/reel/reel-echo-02-stair-ensemble.webp", "楼梯间四人群像"],
+      ["preview-assets/reel/reel-echo-03-window-light.webp", "窗框与冷色窗光空镜"],
+      ["preview-assets/reel/reel-echo-04-room-trio.webp", "冷色室内三人探索"],
+      ["preview-assets/reel/reel-echo-05-period-portrait.webp", "旧时服装男子近景"],
+      ["preview-assets/reel/reel-echo-06-writing-insert.webp", "旗袍人物执笔书写特写"],
+      ["preview-assets/reel/reel-echo-07-telephone-profile.webp", "旗袍人物接听电话侧像"],
+      ["preview-assets/reel/reel-echo-08-photograph-insert.webp", "双手持旧照片物证特写"]
+    ],
+    real: [
+      ["preview-assets/reel/reel-real-01-kit-lift.webp", "镜前举起睫毛套盒"],
+      ["preview-assets/reel/reel-real-02-select-cluster.webp", "从睫毛排中夹取单簇"],
+      ["preview-assets/reel/reel-real-03-tilt-tray.webp", "翻转套盒展示商品内托"],
+      ["preview-assets/reel/reel-real-04-apply-cluster.webp", "在练习模型上贴合睫毛"],
+      ["preview-assets/reel/reel-real-05-brush-lashes.webp", "用睫毛刷整理睫毛走向"],
+      ["preview-assets/reel/reel-real-06-before-after.webp", "睫毛贴合前后对照"],
+      ["preview-assets/reel/reel-real-07-detail-result.webp", "近看练习纸上的睫毛成形"],
+      ["preview-assets/reel/reel-real-08-show-result.webp", "手持圆形模型展示完成效果"]
+    ],
+    ai: [
+      ["preview-assets/reel/reel-ai-01-before-makeup.webp", "上妆前的眼部近景"],
+      ["preview-assets/reel/reel-ai-02-closed-kit.webp", "手触桌面合上的粉色套盒"],
+      ["preview-assets/reel/reel-ai-03-side-face.webp", "窗边妆容侧脸"],
+      ["preview-assets/reel/reel-ai-04-open-kit.webp", "打开展开的睫毛盒"],
+      ["preview-assets/reel/reel-ai-05-face-reveal.webp", "室内妆容人物中景"],
+      ["preview-assets/reel/reel-ai-06-tweezer.webp", "镊子从梳排夹取"],
+      ["preview-assets/reel/reel-ai-07-after-makeup.webp", "睫毛成形后的眼部特写"],
+      ["preview-assets/reel/reel-ai-08-show-kit.webp", "人物举盒展示妆容和商品"]
+    ],
+    visual: [
+      ["preview-assets/reel/reel-visual-01-rose-ring.webp", "麦屿青甜·玫瑰花环"],
+      ["preview-assets/reel/reel-visual-02-violet-satin.webp", "Pulse&Stones·紫晶与缎面"],
+      ["preview-assets/reel/reel-visual-03-blue-wave.webp", "麦屿青甜·风生水起"],
+      ["preview-assets/reel/reel-visual-04-paired-still-life.webp", "Pulse&Stones 暖粉台面"],
+      ["preview-assets/reel/reel-visual-05-chocolate-dessert.webp", "麦屿青甜·巧克力浓情"],
+      ["preview-assets/reel/reel-visual-06-shell-display.webp", "Snowdrift Bloom·贝壳与珠串"],
+      ["preview-assets/reel/reel-visual-07-berry-petals.webp", "麦屿青甜·莓好花语"],
+      ["preview-assets/reel/reel-visual-08-grape-bloom.webp", "麦屿青甜·青提花屿"]
+    ]
   };
   let manualPaused = false;
   let inView = true;
@@ -396,12 +418,12 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   lightStatus.setAttribute('aria-live', 'polite');
   world.append(lightStatus);
 
-  const frameNames = { production: '《空楼余烬》', emberReaction: '《空楼余烬》 · 13:10', emberFire: '《空楼余烬》 · 10:23', film: '《空楼回响》', red: '《空楼回响》· 红色门框', warm: '《空楼回响》· 紫光回望', hangxiang: '《航向》', yueding: '《约定》', shixianzhiwai: '《视线之外》', real: '商业实拍·开箱', tutorial: '商业实拍·步骤教程', ai: 'AI影像·人物与商品', aiProduct: 'AI影像·商品操作', aiDetail: 'AI影像·眼妆细节', visual: '商业视觉·鲜果蛋糕', cakePearl: '商业视觉·珍珠蛋糕', jewelry: '商业视觉·饰品' };
-  const caseFor = name => name === 'emberReaction' || name === 'emberFire' ? 'production' : name === 'red' || name === 'warm' ? 'film' : name === 'jewelry' || name === 'cakePearl' ? 'visual' : name === 'aiProduct' || name === 'aiDetail' ? 'ai' : name === 'tutorial' ? 'real' : name;
+  const boardNames = {
+    production: '《空楼余烬》', film: '《空楼回响》', real: '商业实拍', ai: 'AI影像', visual: '商业视觉'
+  };
 
   function fill(key) {
-    current = Object.hasOwn(sets, key) ? key : 'all';
-    ribbon.dataset.case = current;
+    current = Object.hasOwn(reels, key) ? key : 'production';
     room.dataset.projectionCase = current;
     stripSignature = '';
     requestLayout();
@@ -421,18 +443,18 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   }
 
   function coverRibbon(frameWidth) {
-    const sequence = sets[current] || sets.all;
+    const sequence = reels[current];
     const gap = world.offsetWidth <= 650 ? 10 : 18;
     const width = Math.max(1, ribbon.clientWidth || world.offsetWidth * .6);
     const pitch = frameWidth + gap;
-    // Each identical group must cover the entire viewport plus one frame.
-    // Two complete groups can then translate by exactly half the track width
-    // without revealing an empty end, including categories with one image.
+    // The animation advances over whole sequences before wrapping, even at wide viewports.
+    // The second strip continues the first through the wrap and is hidden from assistive technology.
     const cycles = Math.max(1, Math.ceil((width + pitch) / (sequence.length * pitch)));
-    const signature = `${current}:${cycles}:${sequence.join(',')}`;
+    const signature = `${current}:${cycles}`;
     const groupWidth = cycles * sequence.length * pitch;
     track.style.setProperty('--memory-duration', `${Math.max(20, groupWidth / 30).toFixed(2)}s`);
     ribbon.dataset.coverageFrames = String(cycles * sequence.length);
+    ribbon.dataset.uniqueFrames = String(sequence.length);
     if (signature === stripSignature) return;
     stripSignature = signature;
     track.replaceChildren();
@@ -441,29 +463,30 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
       strip.className = 'memory-projection-strip';
       if (copy > 0) strip.setAttribute('aria-hidden', 'true');
       for (let index = 0; index < cycles * sequence.length; index++) {
-        const name = sequence[index % sequence.length];
+        const [url, caption] = sequence[index % sequence.length];
         const frame = document.createElement('button');
         frame.type = 'button';
         frame.className = 'memory-frame';
-        frame.dataset.case = caseFor(name);
-        frame.setAttribute('aria-label', `选择${frameNames[name] || '作品'}，暂停胶片1秒`);
+        frame.dataset.case = current;
+        frame.setAttribute('aria-label', `${boardNames[current]}：${caption}，暂停胶片1秒`);
         frame.title = '点击暂停1秒';
         frame.tabIndex = copy === 0 && index < sequence.length ? 0 : -1;
         frame.addEventListener('click', () => {
-          document.dispatchEvent(new CustomEvent('studio:request-selection', { detail: { key: caseFor(name) } }));
+          document.dispatchEvent(new CustomEvent('studio:request-selection', { detail: { key: frame.dataset.case } }));
           pauseBriefly();
         });
         const image = document.createElement('img');
-        image.src = sources[name];
+        image.src = url;
         image.alt = '';
         image.decoding = 'async';
         image.draggable = false;
-        image.dataset.still = name;
+        image.dataset.still = url.slice(url.lastIndexOf('/') + 1);
         frame.append(image);
         strip.append(frame);
       }
       track.append(strip);
     }
+    ribbon.dataset.case = current;
     syncMotion();
   }
 
