@@ -110,16 +110,46 @@ dialog{padding:0;border:1px solid #71614c;background:#1d1c19;color:var(--paper);
 /* Match the photographed shade opening (about 78 x 8 source pixels), not a bulb sphere. */
 .lamp-source-halo{position:absolute;left:20%;top:76%;width:60%;height:8%;border-radius:50%;background:radial-gradient(ellipse,#f3d8a580 0%,#e9c68142 45%,transparent 76%);filter:blur(.4px);opacity:0;transition:opacity .3s ease;pointer-events:none}
 .studio-lamp-switch:hover .lamp-source-halo{opacity:.4}
-.room[data-light-mode='cool'] .lamp-source-halo{background:radial-gradient(ellipse,#d8f7efb8 0%,#8ac9bf85 42%,transparent 77%);opacity:.85}
-.studio-lamp-wash{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0;background:radial-gradient(ellipse var(--lamp-wash-width,130px) var(--lamp-wash-height,220px) at var(--lamp-wall-x,89%) var(--lamp-spill-y,35%),#327e7f50,transparent 76%),radial-gradient(ellipse var(--lamp-pool-width,145px) var(--lamp-pool-height,65px) at var(--lamp-wall-x,89%) var(--lamp-pool-y,85%),#53a3a538,transparent 80%);mask-image:linear-gradient(180deg,transparent 0,transparent calc(var(--lamp-wall-y,20%) - 5px),#000 calc(var(--lamp-wall-y,20%) + 12px),#000 100%);-webkit-mask-image:linear-gradient(180deg,transparent 0,transparent calc(var(--lamp-wall-y,20%) - 5px),#000 calc(var(--lamp-wall-y,20%) + 12px),#000 100%);mix-blend-mode:color;transition:opacity .9s ease}
-.room[data-light-mode='cool'] .studio-lamp-wash{opacity:1}
+/* Regrade the photographed pool of light without flattening the wall texture. */
+.room[data-light-mode='cool'] .lamp-source-halo{
+  background:radial-gradient(ellipse,#ebf7ee 12%,#cfebe0 51%,#b4ddd39e 72%,transparent 96%);
+  opacity:.9;
+}
+.studio-lamp-wash{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  --wall-mask:radial-gradient(ellipse var(--lamp-wash-width) var(--lamp-wash-height) at var(--lamp-spill-x) var(--lamp-spill-y),#000c 0%,#000a 18%,#0008 34%,#0004 54%,#0002 73%,#0001 85%,transparent 100%);
+  --pool-mask:radial-gradient(ellipse var(--lamp-pool-width) var(--lamp-pool-height) at var(--lamp-wall-x) var(--lamp-pool-y),#0006 0%,#0004 32%,#0002 62%,transparent 100%);
+  --spill-cutoff:linear-gradient(180deg,transparent calc(var(--lamp-wall-y) - 16px),#0005 calc(var(--lamp-wall-y) + 8px),#000 calc(var(--lamp-wall-y) + 52px));
+}
+.studio-lamp-wash::before,.studio-lamp-wash::after{
+  content:'';position:absolute;inset:0;opacity:0;transition:opacity .7s ease;
+}
+.studio-lamp-wash::before{
+  background:radial-gradient(ellipse var(--lamp-wash-width) var(--lamp-wash-height) at var(--lamp-spill-x) var(--lamp-spill-y),#aac9bf29,#a4c7b918 44%,#a7c8ba09 73%,transparent 100%);
+  -webkit-backdrop-filter:saturate(.24) hue-rotate(112deg) brightness(1.06);
+  backdrop-filter:saturate(.24) hue-rotate(112deg) brightness(1.06);
+  -webkit-mask-image:var(--wall-mask),var(--spill-cutoff);
+  mask-image:var(--wall-mask),var(--spill-cutoff);
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect;
+}
+.studio-lamp-wash::after{
+  background:#83aca01a;
+  -webkit-backdrop-filter:saturate(.58) hue-rotate(106deg) brightness(1.025);
+  backdrop-filter:saturate(.58) hue-rotate(106deg) brightness(1.025);
+  -webkit-mask-image:var(--pool-mask);
+  mask-image:var(--pool-mask);
+}
+.room[data-light-mode='cool'] .studio-lamp-wash::before,
+.room[data-light-mode='cool'] .studio-lamp-wash::after{opacity:1}
+.studio-lamp-wash.is-mobile-wash::after{display:none}
 .lamp-mobile-art{display:none}
 .studio-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
 .studio-motion-paused .room-backdrop,.studio-motion-paused .room-heading,.studio-motion-paused .object-reflection,.studio-motion-paused .object-reflection img{transition:none!important}
 @media(max-width:900px){.memory-projection{left:13%;width:65%;opacity:.57}}
 @media(max-width:650px){.memory-projection{left:7%;width:86%;opacity:.48;transform:skewY(-.4deg)}.memory-projection-strip{gap:10px;padding-right:10px}.studio-lamp-switch.is-mobile-lamp{border-radius:0;outline-offset:0;overflow:visible}.lamp-mobile-art{display:block;position:absolute;top:var(--mobile-art-top,-92px);left:0;width:100%;height:var(--mobile-art-height,132.82px);pointer-events:none;background:var(--room-photo) 88.5621% 0/1177.4648% 409.1304% no-repeat,var(--room-photo-fallback) 88.5621% 0/1177.4648% 409.1304% no-repeat;mask-image:linear-gradient(90deg,transparent,#000 17%,#000 83%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 17%,#000 83%,transparent)}.studio-lamp-switch.is-mobile-lamp .lamp-source-halo{left:23.24%;top:var(--mobile-glow-top,31.58px);width:53.52%;height:var(--mobile-glow-height,4.62px)}}
 
-@media(prefers-reduced-motion:reduce){.memory-projection-track{animation:none!important;transform:none!important}.studio-lamp-wash,.lamp-source-halo{transition:none}.memory-projection{opacity:.52}}
+@media(prefers-reduced-motion:reduce){.memory-projection-track{animation:none!important;transform:none!important}.studio-lamp-wash::before,.studio-lamp-wash::after,.lamp-source-halo{transition:none}.memory-projection{opacity:.52}}
 
 </style><style data-source="studio-controls.css?v=12r3">
 /* Preserve the v10 room; only the work-selection band gains a shallow arc. */
@@ -167,6 +197,30 @@ dialog{padding:0;border:1px solid #71614c;background:#1d1c19;color:var(--paper);
 .studio-motion-paused.studio-enhanced .room-dock>.object:hover,.studio-motion-paused.studio-enhanced .room-dock>.object:focus-visible,.studio-reduced-motion.studio-enhanced .room-dock>.object:hover,.studio-reduced-motion.studio-enhanced .room-dock>.object:focus-visible{--lift:0px;--pose-angle:var(--angle);--pose-tilt:0deg}
 @media(prefers-reduced-motion:reduce){.studio-enhanced .room-dock>.object:hover,.studio-enhanced .room-dock>.object:focus-visible{--lift:0px;--pose-angle:var(--angle);--pose-tilt:0deg}}
 
+
+/* Lift just the scene shadows and keep the projector's highlight textured. */
+.room-world .room-backdrop{filter:contrast(.92) brightness(1.035) saturate(.92)}
+.room-world::after{
+  background:linear-gradient(180deg,#120c075e 0%,transparent 27%,#15140d1e 57%,#0a130c85 100%);
+}
+
+/* Keep the action row close to the description, with room below the cards. */
+.studio-enhanced .room-dock{top:min(58%,calc(100% - 383px))}
+.studio-selection{width:min(680px,87%)}
+.studio-selected-role{font-size:12px;line-height:1.7;text-wrap:pretty}
+.studio-selection-actions{margin-top:11px}
+.studio-selection .studio-case-detail{font-size:12px;min-height:36px}
+@media(max-width:650px){
+  .room.studio-enhanced{min-height:660px}
+  .studio-enhanced .room-dock{top:min(55%,calc(100% - 340px))}
+  .studio-selected-role{font-size:11px;min-height:0}
+  .studio-selection-actions{margin-top:9px}
+  .studio-selection button{min-height:44px}
+  .studio-selection .studio-case-detail{font-size:11px}
+}
+@media(max-width:360px){
+  .studio-enhanced .room-dock{top:min(51%,calc(100% - 377px))}
+}
 </style><style data-source="chapter-view.css?v=12r3">
 /* An image-led chapter replaces the image dialog; the room remains the entrance. */
 .chapter-view[hidden]{display:none!important}
@@ -531,6 +585,7 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
     if (lamp.parentNode !== lampPlane) lampPlane.append(lamp);
     if (wash.parentNode !== lampPlane) lampPlane.append(wash);
     lamp.classList.toggle('is-mobile-lamp', isNarrow);
+    wash.classList.toggle('is-mobile-wash', isNarrow);
     if (isNarrow) {
       // Keep the complete ceiling cord as non-interactive artwork. Only the
       // shade is a hit target, so its center stays below the navigation bar.
@@ -565,10 +620,11 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
     }
     wash.style.setProperty('--lamp-wall-x', `${cx.toFixed(2)}px`);
     wash.style.setProperty('--lamp-wall-y', `${cy.toFixed(2)}px`);
-    wash.style.setProperty('--lamp-spill-y', `${(cy + (isNarrow ? 110 : 125 * imageScale)).toFixed(2)}px`);
-    wash.style.setProperty('--lamp-pool-y', `${(isNarrow ? world.offsetHeight * .85 : imageTop + 790 * imageScale).toFixed(2)}px`);
-    wash.style.setProperty('--lamp-wash-width', `${(isNarrow ? 112 : 155 * imageScale).toFixed(2)}px`);
-    wash.style.setProperty('--lamp-wash-height', `${(isNarrow ? 240 : 260 * imageScale).toFixed(2)}px`);
+    wash.style.setProperty('--lamp-spill-x', `${(cx - (isNarrow ? 27 : 36 * imageScale)).toFixed(2)}px`);
+    wash.style.setProperty('--lamp-spill-y', `${(cy + (isNarrow ? 78 : 98 * imageScale)).toFixed(2)}px`);
+    wash.style.setProperty('--lamp-pool-y', `${(imageTop + 765 * imageScale).toFixed(2)}px`);
+    wash.style.setProperty('--lamp-wash-width', `${(isNarrow ? 199 : 325 * imageScale).toFixed(2)}px`);
+    wash.style.setProperty('--lamp-wash-height', `${(isNarrow ? 226 : 302 * imageScale).toFixed(2)}px`);
     wash.style.setProperty('--lamp-pool-width', `${(isNarrow ? 105 : 170 * imageScale).toFixed(2)}px`);
     wash.style.setProperty('--lamp-pool-height', `${(isNarrow ? 58 : 75 * imageScale).toFixed(2)}px`);
     coverRibbon(frameWidth);
@@ -748,6 +804,7 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   function updateGeometry() {
     const width = room.getBoundingClientRect().width;
     const spacing = small.matches ? Math.min(108, width * 0.282) : Math.min(204, width * 0.162);
+    let captionBottom = 0;
     cards.forEach((card, index) => {
       const distance = circularDistance(index);
       const magnitude = Math.abs(distance);
@@ -757,14 +814,23 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
       card.dataset.current = String(isSelected);
       card.dataset.arcHidden = String(hiddenAtWidth);
       card.style.setProperty('--arc-x', `${(distance * spacing).toFixed(2)}px`);
-      card.style.setProperty('--arc-y', `${(magnitude * (small.matches ? 16 : 10)).toFixed(2)}px`);
+      const cardY = magnitude * (small.matches ? 16 : 10);
+      const cardScale = isSelected ? 1.055 : small.matches ? 0.82 : magnitude === 1 ? 0.94 : 0.86;
+      card.style.setProperty('--arc-y', `${cardY}px`);
       card.style.setProperty('--arc-angle', `${(distance * -7).toFixed(2)}deg`);
-      card.style.setProperty('--arc-scale', String(isSelected ? 1.055 : (small.matches ? 0.82 : magnitude === 1 ? 0.94 : 0.86)));
+      card.style.setProperty('--arc-scale', String(cardScale));
+      const caption = card.querySelector('.object-sub');
+      if (!hiddenAtWidth && caption) {
+        const bottom = card.offsetTop + cardY + (caption.offsetTop + caption.offsetHeight) * cardScale;
+        captionBottom = Math.max(captionBottom, bottom);
+      }
       card.style.setProperty('--arc-depth', String(5 - magnitude));
       card.setAttribute('aria-current', String(isSelected));
       card.setAttribute('aria-hidden', String(hiddenAtWidth));
       card.tabIndex = isSelected ? 0 : -1;
     });
+    const gap = small.matches ? 21 : 26;
+    selection.style.top = `${Math.ceil(dock.offsetTop + captionBottom + gap)}px`;
   }
   function select(index, focusCard = false) {
     selected = (index + cards.length) % cards.length;
@@ -946,6 +1012,7 @@ document.querySelector('#close-viewer').addEventListener('click',closeViewer);vi
   else if (typeof reduced.addListener === 'function') reduced.addListener(onReducedChange);
   onReducedChange();
   select(0);
+  if (document.fonts) document.fonts.ready.then(updateGeometry);
   paintView();
 })();
 
